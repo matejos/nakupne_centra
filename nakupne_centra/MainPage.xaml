@@ -7,7 +7,38 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="CentresItemTemplate">
+            <Grid Height="110" Width="480" Margin="10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                    <Image Source="{Binding LogoBig}" Height="110" Width="110"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                    <TextBlock Text="{Binding Name}" Style="{StaticResource TitleTextBlockStyle}"/>
+                    <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{Binding Source={StaticResource CentresSampleDataSource}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="Header" Grid.Row="0" Background="AliceBlue">
+            <TextBlock Text="Nákupné centrá" HorizontalAlignment="Center" FontSize="24"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <SearchBox SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <ListView x:Name="CentreListView" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplate}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_SelectionChanged" />
+        </Grid> 
     </Grid>
 </Page>

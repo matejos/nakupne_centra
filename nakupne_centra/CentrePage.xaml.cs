@@ -6,7 +6,6 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,16 +14,17 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace nakupne_centra
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CentrePage : Page
     {
-        public MainPage()
+        object currentCentre;
+        public CentrePage()
         {
             this.InitializeComponent();
         }
@@ -32,12 +32,13 @@ namespace nakupne_centra
         private void centresStoreSearch_QueryChanged(SearchBox sender,
          SearchBoxQueryChangedEventArgs args)
         {
-            this.Frame.Navigate(typeof(MainPage), args.QueryText);
+            this.Frame.Navigate(typeof(CentrePage), args.QueryText);
         }
 
-        private void CentreListView_SelectionChanged(object sender, ItemClickEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.Frame.Navigate(typeof(CentrePage), e.ClickedItem);
+            currentCentre = e.Parameter as object;
+            MainGrid.DataContext = currentCentre;
         }
     }
 }
