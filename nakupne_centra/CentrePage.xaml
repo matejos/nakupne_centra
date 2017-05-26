@@ -6,22 +6,67 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
     <Grid x:Name="MainGrid">
+
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="{StaticResource HeaderHeight}"/>
+            <RowDefinition Height="{StaticResource SearchBarHeight}"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" x:Name="Header" Background="AliceBlue">
-            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontSize="24"/>
+        <Grid Grid.Row="0" Style="{StaticResource HeaderBackground}">
+            <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Grid>
-        <Grid Grid.Row="1" x:Name="SearchBar">
+        <Grid Grid.Row="1">
             <SearchBox SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
         </Grid>
-        <Grid Grid.Row="2" x:Name="Logo">
-            <Image Source="{Binding LogoBig}" Width="110" Height="110"/>
-        </Grid>
+        <ScrollViewer Grid.Row="2">
+            
         
+        <Grid >
+            <Grid x:Name="ContentGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="ContentRow0"/>
+                    <RowDefinition x:Name="ContentRow1"/>
+                    <RowDefinition x:Name="ContentRow2"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="ContentColumn0"/>
+                    <ColumnDefinition x:Name="ContentColumn1"/>
+                    <ColumnDefinition x:Name="ContentColumn2"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" Source="{Binding LogoBig}"/>
+                <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">Obchody</Button>
+                <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">Mapa</Button>
+                <StackPanel x:Name="HoursPanel" Grid.Row="1" Grid.Column="0" Margin="0,30">
+                    <TextBlock Text="Otváracie hodiny" Style="{StaticResource SubheaderStyle}"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <StackPanel Margin="10">
+                            <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
+                            <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+                        </StackPanel>
+                        <StackPanel Margin="10">
+                            <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Tuesday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Wednesday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Thursday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Friday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Saturday}" Style="{StaticResource HoursTimeStyle}"/>
+                            <TextBlock Text="{Binding Hours.Sunday}" Style="{StaticResource HoursTimeStyle}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        </ScrollViewer>
+
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="WideState">
@@ -29,7 +74,17 @@
                         <AdaptiveTrigger MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MainGrid.Margin" Value="24"/>
+                        <Setter Target="ButtonStores.(Grid.Row)" Value="0"/>
+                        <Setter Target="ButtonStores.(Grid.Column)" Value="1"/>
+                        <Setter Target="ButtonMap.(Grid.Row)" Value="0"/>
+                        <Setter Target="ButtonMap.(Grid.Column)" Value="2"/>
+                        <Setter Target="HoursPanel.(Grid.Row)" Value="1"/>
+                        <Setter Target="Logo.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="HoursPanel.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="ContentColumn2.Width" Value="*"/>
+                        <Setter Target="ContentRow0.Height" Value="75"/>
+                        <Setter Target="ContentRow1.Height" Value="*"/>
+                        <Setter Target="ContentRow2.Height" Value="0"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="NarrowState">
@@ -37,7 +92,17 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MainGrid.Margin" Value="12"/>
+                        <Setter Target="ButtonStores.(Grid.Row)" Value="1"/>
+                        <Setter Target="ButtonStores.(Grid.Column)" Value="0"/>
+                        <Setter Target="ButtonMap.(Grid.Row)" Value="1"/>
+                        <Setter Target="ButtonMap.(Grid.Column)" Value="1"/>
+                        <Setter Target="HoursPanel.(Grid.Row)" Value="2"/>
+                        <Setter Target="Logo.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="HoursPanel.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="ContentColumn2.Width" Value="0"/>
+                        <Setter Target="ContentRow0.Height" Value="100"/>
+                        <Setter Target="ContentRow1.Height" Value="50"/>
+                        <Setter Target="ContentRow2.Height" Value="*"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

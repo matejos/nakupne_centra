@@ -25,20 +25,16 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{Binding Source={StaticResource CentresSampleDataSource}}">
+    <Grid DataContext="{Binding Source={StaticResource CentresSampleDataSource}}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="32"/>
+            <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="32"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Header" Grid.Row="0" Background="AliceBlue">
-            <TextBlock Text="Nákupné centrá" HorizontalAlignment="Center" FontSize="24"/>
+        <Border x:Name="Header" Grid.Row="0" Background="AliceBlue">
+            <TextBlock Text="Nákupné centrá" Style="{StaticResource HeaderStyle}"/>
+        </Border>
+        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
+        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplate}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_SelectionChanged" />
         </Grid>
-        <Grid Grid.Row="1">
-            <SearchBox SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
-        </Grid>
-        <Grid Grid.Row="2">
-            <ListView x:Name="CentreListView" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplate}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_SelectionChanged" />
-        </Grid> 
-    </Grid>
 </Page>

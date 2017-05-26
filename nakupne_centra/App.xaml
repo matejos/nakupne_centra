@@ -7,5 +7,26 @@
     RequestedTheme="Light">
     <Application.Resources>
         <SampleData:CentresSampleDataSource x:Key="CentresSampleDataSource" d:IsDataSource="True"/>
+        <GridLength x:Key="HeaderHeight">40</GridLength>
+        <GridLength x:Key="SearchBarHeight">32</GridLength>
+        <Style x:Key="HeaderBackground" TargetType="Grid">
+            <Setter Property="Background" Value="Bisque"/>
+        </Style>
+        <Style x:Key="HeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="SubheaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="HoursTimeStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="HoursDayStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
     </Application.Resources>
 </Application>
