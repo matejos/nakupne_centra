@@ -8,7 +8,6 @@
     mc:Ignorable="d">
 
     <Grid x:Name="MainGrid">
-
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>
@@ -18,51 +17,65 @@
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
+        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged" PlaceholderText="Hľadať obchod"/>
         <ScrollViewer Grid.Row="2">
-            
-        
-        <Grid >
-            <Grid x:Name="ContentGrid">
-                <Grid.RowDefinitions>
-                    <RowDefinition x:Name="ContentRow0"/>
-                    <RowDefinition x:Name="ContentRow1"/>
-                    <RowDefinition x:Name="ContentRow2"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition x:Name="ContentColumn0"/>
-                    <ColumnDefinition x:Name="ContentColumn1"/>
-                    <ColumnDefinition x:Name="ContentColumn2"/>
-                </Grid.ColumnDefinitions>
 
-                <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" Source="{Binding LogoBig}"/>
-                <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">Obchody</Button>
-                <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">Mapa</Button>
-                <StackPanel x:Name="HoursPanel" Grid.Row="1" Grid.Column="0" Margin="0,30">
-                    <TextBlock Text="Otváracie hodiny" Style="{StaticResource SubheaderStyle}"/>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <StackPanel Margin="10">
-                            <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
-                            <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+
+            <Grid>
+                <Grid x:Name="ContentGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Name="ContentRow0"/>
+                        <RowDefinition x:Name="ContentRow1"/>
+                        <RowDefinition x:Name="ContentRow2"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="ContentColumn0"/>
+                        <ColumnDefinition x:Name="ContentColumn1"/>
+                        <ColumnDefinition x:Name="ContentColumn2"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" Source="{Binding LogoRect}"/>
+                    <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Shop"/>
+                            <TextBlock Text="Obchody" Margin="10"/>
                         </StackPanel>
-                        <StackPanel Margin="10">
-                            <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Tuesday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Wednesday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Thursday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Friday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Saturday}" Style="{StaticResource HoursTimeStyle}"/>
-                            <TextBlock Text="{Binding Hours.Sunday}" Style="{StaticResource HoursTimeStyle}"/>
+                    </Button>
+                    <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Map"/>
+                            <TextBlock Text="Mapa" Margin="10"/>
+                        </StackPanel>
+                    </Button>
+                    <StackPanel x:Name="HoursPanel" Grid.Row="1" Grid.Column="0" Margin="0,30">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <SymbolIcon Symbol="Clock"/>
+                            <TextBlock Text="Otváracie hodiny" Style="{StaticResource SubheaderStyle}" Margin="10"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+                            </StackPanel>
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Tuesday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Wednesday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Thursday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Friday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Saturday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Sunday}" Style="{StaticResource HoursTimeStyle}"/>
+                            </StackPanel>
                         </StackPanel>
                     </StackPanel>
-                </StackPanel>
+                </Grid>
             </Grid>
-        </Grid>
         </ScrollViewer>
 
         <VisualStateManager.VisualStateGroups>

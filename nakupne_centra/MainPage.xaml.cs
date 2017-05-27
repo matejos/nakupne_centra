@@ -29,13 +29,11 @@ namespace nakupne_centra
             this.InitializeComponent();
         }
 
-        private void centresStoreSearch_QueryChanged(SearchBox sender,
-         SearchBoxQueryChangedEventArgs args)
+        private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
-            this.Frame.Navigate(typeof(MainPage), args.QueryText);
         }
 
-        private void CentreListView_SelectionChanged(object sender, ItemClickEventArgs e)
+        private void CentreListView_ItemClicked(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(CentrePage), e.ClickedItem);
         }

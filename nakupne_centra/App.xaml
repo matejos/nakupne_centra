@@ -9,6 +9,9 @@
         <SampleData:CentresSampleDataSource x:Key="CentresSampleDataSource" d:IsDataSource="True"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
+        <Style x:Key="ListViewItemBackground" TargetType="Border">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
         <Style x:Key="HeaderBackground" TargetType="Border">
             <Setter Property="Background" Value="Bisque"/>
         </Style>

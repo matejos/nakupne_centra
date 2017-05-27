@@ -29,10 +29,8 @@ namespace nakupne_centra
             this.InitializeComponent();
         }
 
-        private void centresStoreSearch_QueryChanged(SearchBox sender,
-         SearchBoxQueryChangedEventArgs args)
+        private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
-            this.Frame.Navigate(typeof(CentrePage), args.QueryText);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
