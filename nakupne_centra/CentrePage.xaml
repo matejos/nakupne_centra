@@ -15,12 +15,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Style="{StaticResource HeaderBackground}">
+        <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
-        </Grid>
-        <Grid Grid.Row="1">
-            <SearchBox SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
-        </Grid>
+        </Border>
+        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
         <ScrollViewer Grid.Row="2">
             
         

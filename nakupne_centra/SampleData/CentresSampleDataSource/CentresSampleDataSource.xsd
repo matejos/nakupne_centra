@@ -19,12 +19,36 @@
   <xs:complexType name="CentresItem">
     <xs:sequence>
       <xs:element name="Hours" type="tns:Hours" />
+      <xs:element name="Stores" type="tns:Stores" />
     </xs:sequence>
-    <xs:attribute blend:Format="Name" name="Name" type="xs:string" />
-    <xs:attribute name="LogoBig" type="tns:Basic-Image" />
-    <xs:attribute name="LogoSmall" type="tns:Basic-Image" />
+    <xs:attribute blend:Format="Company Name" name="Name" type="xs:string" />
+    <xs:attribute name="LogoSquare" type="tns:Basic-Image" />
+    <xs:attribute name="LogoRect" type="tns:Basic-Image" />
+    <xs:attribute blend:Format="Address" name="Address" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="Hours">
+    <xs:attribute blend:Format="Time" name="Monday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Tuesday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Wednesday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Thursday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Friday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Saturday" type="xs:string" />
+    <xs:attribute blend:Format="Time" name="Sunday" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Stores">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="StoresItem" type="tns:StoresItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StoresItem">
+    <xs:sequence>
+      <xs:element name="Hours" type="tns:Hours1" />
+    </xs:sequence>
+    <xs:attribute blend:Format="Company Name" name="Name" type="xs:string" />
+    <xs:attribute blend:FormatParameters="16,8" name="Desc" type="xs:string" />
+    <xs:attribute blend:FormatParameters="2,8" name="Category" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Hours1">
     <xs:attribute blend:Format="Time" name="Monday" type="xs:string" />
     <xs:attribute blend:Format="Time" name="Tuesday" type="xs:string" />
     <xs:attribute blend:Format="Time" name="Wednesday" type="xs:string" />

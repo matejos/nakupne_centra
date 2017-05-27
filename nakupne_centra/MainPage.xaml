@@ -12,17 +12,23 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*" MinWidth="50" MaxWidth="100"/>
                 </Grid.ColumnDefinitions>
                 <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                    <Image Source="{Binding LogoBig}" Height="110" Width="110"/>
+                    <Image Source="{Binding LogoSquare}" Height="110" Width="110"/>
                 </Border>
+
                 <StackPanel Grid.Column="1" Margin="10,0">
-                    <TextBlock Text="{Binding Name}" FontSize="40"/>
-                    <TextBlock Text="{Binding Name}" FontSize="28"/>
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Name}" FontSize="40" FontFamily="Verdana"/>
+                    </Viewbox>
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Address}" FontSize="28" FontFamily="Verdana"/>
+                    </Viewbox>
                 </StackPanel>
-                <Button Grid.Column="2" VerticalAlignment="Stretch">
+
+                <Button Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <SymbolIcon Symbol="Find"/>
                 </Button>
             </Grid>
@@ -32,14 +38,14 @@
     <Grid DataContext="{Binding Source={StaticResource CentresSampleDataSource}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
-            <RowDefinition Height="32"/>
+            <RowDefinition Height="{StaticResource SearchBarHeight}"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border x:Name="Header" Grid.Row="0" Background="AliceBlue">
+        <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="Nákupné centrá" Style="{StaticResource HeaderStyle}"/>
         </Border>
         <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged"/>
-        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplate}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_SelectionChanged">
+        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplate}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_SelectionChanged" ContainerContentChanging="CentreListView_ContainerContentChanging">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>

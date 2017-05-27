@@ -39,5 +39,17 @@ namespace nakupne_centra
         {
             this.Frame.Navigate(typeof(CentrePage), e.ClickedItem);
         }
+
+        private void CentreListView_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)
+        {
+            if (args.ItemIndex % 2 == 0)
+            {
+                args.ItemContainer.Background = new SolidColorBrush(Windows.UI.Colors.White);
+            }
+            else
+            {
+                args.ItemContainer.Background = new SolidColorBrush(Windows.UI.Colors.AliceBlue);
+            }
+        }
     }
 }

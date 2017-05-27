@@ -9,11 +9,12 @@
         <SampleData:CentresSampleDataSource x:Key="CentresSampleDataSource" d:IsDataSource="True"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
-        <Style x:Key="HeaderBackground" TargetType="Grid">
+        <Style x:Key="HeaderBackground" TargetType="Border">
             <Setter Property="Background" Value="Bisque"/>
         </Style>
         <Style x:Key="HeaderStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <Style x:Key="SubheaderStyle" TargetType="TextBlock">
