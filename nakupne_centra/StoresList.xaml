@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="nakupne_centra.StoresList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:nakupne_centra"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="StoresItemTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <SymbolIcon Symbol="Find"/>
+                </Button>
+
+                <StackPanel Grid.Column="1" Margin="10,0">
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
+                    </Viewbox>
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Address}" Style="{StaticResource CentreAddressStyle}"/>
+                    </Viewbox>
+                </StackPanel>
+                <SymbolIcon Grid.Column="2" Symbol="Forward"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource HeaderHeight}"/>
+            <RowDefinition Height="{StaticResource SearchBarHeight}"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
+            <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
+        </Border>
+        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged" PlaceholderText="Hľadať obchod"/>
+        <SplitView x:Name="MainSplitView" Grid.Row="2" IsPaneOpen="True" DisplayMode="Inline">
+            <SplitView.Pane>
+                <ListView x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding Stores}">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </SplitView.Pane>
+            <ScrollViewer Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
+                <RelativePanel Margin="10, 10, 10, 10" DataContext="{Binding SelectedItem, ElementName=NotesListView}">
+                    <Border x:Name="thumbnail" Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="80" Height="80">
+                        <Image Height="80" Width="80"/>
+                    </Border>
+                    <StackPanel RelativePanel.RightOf="thumbnail" Grid.Column="1" Margin="10,0,0,0">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource TitleTextBlockStyle}"/>
+                        <TextBlock Text="{Binding Category}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+                        <TextBlock Text="{Binding Desc}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="NoWrap"/>
+                    </StackPanel>
+                </RelativePanel>
+            </ScrollViewer>
+        </SplitView>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WidthDisplayStates">
+                <VisualState x:Name="FullView">
+                    <VisualState.Setters>
+                        <Setter Target="MainSplitView.OpenPaneLength" Value="320" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="ListView">
+                    <VisualState.Setters>
+                        <Setter Target="MainSplitView.IsPaneOpen" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="DetailView">
+                    <VisualState.Setters>
+                        <Setter Target="MainSplitView.IsPaneOpen" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>

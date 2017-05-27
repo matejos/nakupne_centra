@@ -27,16 +27,38 @@ namespace nakupne_centra
         public CentrePage()
         {
             this.InitializeComponent();
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
 
         private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
         }
 
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             currentCentre = e.Parameter as object;
             MainGrid.DataContext = currentCentre;
+        }
+
+        private void ButtonStores_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(StoresList), currentCentre);
+        }
+
+        public void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if (rootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
         }
     }
 }

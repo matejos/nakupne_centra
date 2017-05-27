@@ -23,6 +23,7 @@ namespace nakupne_centra
     /// </summary>
     sealed partial class App : Application
     {
+        public object kek;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -66,9 +67,7 @@ namespace nakupne_centra
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
 
-                // Register a handler for BackRequested events and set the
-                // visibility of the Back button
-                SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+                
 
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                 rootFrame.CanGoBack ?
@@ -121,17 +120,6 @@ namespace nakupne_centra
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
-        }
-
-        private void OnBackRequested(object sender, BackRequestedEventArgs e)
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
-
-            if (rootFrame.CanGoBack)
-            {
-                e.Handled = true;
-                rootFrame.GoBack();
-            }
         }
     }
 }

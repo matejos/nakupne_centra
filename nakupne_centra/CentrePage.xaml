@@ -35,7 +35,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" Source="{Binding LogoRect}"/>
-                    <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">
+                    <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="ButtonStores_Click">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Shop"/>
                             <TextBlock Text="Obchody" Margin="10"/>
