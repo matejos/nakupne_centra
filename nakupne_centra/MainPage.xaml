@@ -21,10 +21,10 @@
 
                 <StackPanel Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" FontSize="40" FontFamily="Verdana"/>
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
                     </Viewbox>
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Address}" FontSize="28" FontFamily="Verdana"/>
+                        <TextBlock Text="{Binding Address}" Style="{StaticResource CentreAddressStyle}"/>
                     </Viewbox>
                 </StackPanel>
 
@@ -38,8 +38,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*" MinWidth="50" MaxWidth="100"/>
-                    <ColumnDefinition Width="*" MinWidth="50" MaxWidth="100"/>
+                    <ColumnDefinition Width="*" MinWidth="80" MaxWidth="120"/>
+                    <ColumnDefinition Width="*" MinWidth="80" MaxWidth="120"/>
                 </Grid.ColumnDefinitions>
                 
                 <Border Style="{StaticResource ListViewItemBackground}" Width="200" Height="100">
@@ -48,10 +48,10 @@
 
                 <StackPanel Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" FontSize="40" FontFamily="Verdana"/>
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
                     </Viewbox>
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Address}" FontSize="28" FontFamily="Verdana"/>
+                        <TextBlock Text="{Binding Address}" Style="{StaticResource CentreAddressStyle}"/>
                     </Viewbox>
                 </StackPanel>
 
