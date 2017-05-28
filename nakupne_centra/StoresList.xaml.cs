@@ -1,4 +1,5 @@
 ﻿using Blend.SampleData.CentresSampleDataSource;
+using nakupne_centra.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,8 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class StoresList : Page
     {
-        CentresItem currentCentre;
+        private StoresListViewModel viewModel;
+
         public StoresList()
         {
             this.InitializeComponent();
@@ -38,9 +40,8 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            currentCentre = e.Parameter as CentresItem;
-            MainGrid.DataContext = currentCentre;
-            Map.Source = currentCentre.LogoRect;
+            viewModel = new StoresListViewModel(e.Parameter as CentresItem);
+            DataContext = viewModel;
         }
 
         void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
@@ -91,7 +92,7 @@ namespace nakupne_centra
                     VisualStateManager.GoToState(this, "ListView", false);
                 }
             }
-            
+            viewModel.SelectedStore = StoresListView.SelectedItem as StoresItem;
         }
 
         private void StoresList_BackRequested(object sender, BackRequestedEventArgs e)

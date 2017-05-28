@@ -110,6 +110,7 @@
     <Compile Include="StoresList.xaml.cs">
       <DependentUpon>StoresList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\StoresListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
