@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Converters\NullToVisibilityConv.cs" />
     <Compile Include="DataModel\Centre.cs" />
+    <Compile Include="DataModel\CentreStoreSearch.cs" />
     <Compile Include="DataModel\Hours.cs" />
     <Compile Include="DataModel\Store.cs" />
     <Compile Include="MainPage.xaml.cs">

@@ -40,7 +40,9 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new StoresListViewModel(e.Parameter as Centre);
+            CentreStoreSearch css = e.Parameter as CentreStoreSearch;
+            viewModel = new StoresListViewModel(css.Centre);
+            viewModel.NameFilter = css.Query;
             DataContext = viewModel;
         }
 

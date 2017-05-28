@@ -35,6 +35,8 @@ namespace nakupne_centra
 
         private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
+            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, args.QueryText);
+            this.Frame.Navigate(typeof(StoresList), css);
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -50,7 +52,8 @@ namespace nakupne_centra
 
         private void ButtonStores_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(StoresList), viewModel.Centre);
+            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre);
+            this.Frame.Navigate(typeof(StoresList), css);
         }
 
         public void OnBackRequested(object sender, BackRequestedEventArgs e)
