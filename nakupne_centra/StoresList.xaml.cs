@@ -46,6 +46,12 @@ namespace nakupne_centra
             DataContext = viewModel;
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (viewModel.NameFilter != "")
+                SearchBox.Focus(FocusState.Programmatic);
+        }
+
         void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
         {
             UpdateActiveViewState(e.Size.Width);
