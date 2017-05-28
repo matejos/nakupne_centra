@@ -45,7 +45,7 @@ namespace nakupne_centra
         }
         private void UpdateActiveViewState(double windowWidth)
         {
-            if (windowWidth > 700)
+            if (windowWidth > 720)
             {
                 EnsureViewStateActive("FullView", WidthDisplayStates);
             }
@@ -73,16 +73,14 @@ namespace nakupne_centra
             UpdateActiveViewState(Window.Current.Bounds.Width);
         }        private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name ==
-           "ListView")
+            if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "ListView")
             {
                 if (StoresListView.SelectedItem != null)
                 {
                     VisualStateManager.GoToState(this, "DetailView", false);
                 }
             }
-            else if (WidthDisplayStates.CurrentState != null &&
-           WidthDisplayStates.CurrentState.Name == "DetailView")
+            else if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "DetailView")
             {
                 if (StoresListView.SelectedItem == null)
                 {

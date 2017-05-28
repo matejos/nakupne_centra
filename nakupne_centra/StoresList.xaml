@@ -15,19 +15,18 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
+                
                 <Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <SymbolIcon Symbol="Find"/>
+                    <FontIcon HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE816;" FontSize="20"/>
                 </Button>
 
                 <StackPanel Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
                         <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
                     </Viewbox>
-                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Address}" Style="{StaticResource CentreAddressStyle}"/>
-                    </Viewbox>
                 </StackPanel>
-                <SymbolIcon Grid.Column="2" Symbol="Forward"/>
+                
+                <FontIcon Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE0E3;" FontSize="20"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -53,18 +52,42 @@
                     </ListView.ItemContainerStyle>
                 </ListView>
             </SplitView.Pane>
-            <ScrollViewer Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
-                <RelativePanel Margin="10, 10, 10, 10" DataContext="{Binding SelectedItem, ElementName=NotesListView}">
-                    <Border x:Name="thumbnail" Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="80" Height="80">
-                        <Image Height="80" Width="80"/>
-                    </Border>
-                    <StackPanel RelativePanel.RightOf="thumbnail" Grid.Column="1" Margin="10,0,0,0">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource TitleTextBlockStyle}"/>
-                        <TextBlock Text="{Binding Category}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
-                        <TextBlock Text="{Binding Desc}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="NoWrap"/>
-                    </StackPanel>
-                </RelativePanel>
-            </ScrollViewer>
+            <Grid>
+                <Image Grid.Row="0" x:Name="Map" Source="{Binding LogoSquare}" Margin="0,10" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
+                    <Grid DataContext="{Binding SelectedItem, ElementName=StoresListView}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="32"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Polygon Grid.Row="0" Margin="0,10" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" />
+                        <TextBlock Grid.Row="1" Text="{Binding Name}" Style="{StaticResource SubheaderStyle}"/>
+                        <TextBlock Grid.Row="2" Text="{Binding Desc}" Style="{StaticResource StoreDescriptionStyle}" Margin="25" TextWrapping="WrapWholeWords"/>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+                            </StackPanel>
+                            <StackPanel Margin="10">
+                                <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Tuesday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Wednesday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Thursday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Friday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Saturday}" Style="{StaticResource HoursTimeStyle}"/>
+                                <TextBlock Text="{Binding Hours.Sunday}" Style="{StaticResource HoursTimeStyle}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
         </SplitView>
 
         <VisualStateManager.VisualStateGroups>
