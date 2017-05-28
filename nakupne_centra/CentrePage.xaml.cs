@@ -33,9 +33,9 @@ namespace nakupne_centra
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
 
-        private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
+        private void centresStoreSearch_QueryChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
-            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, args.QueryText, null, true);
+            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, sender.Text, null, true);
             this.Frame.Navigate(typeof(StoresList), css);
         }
 

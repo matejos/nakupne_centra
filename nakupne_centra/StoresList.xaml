@@ -41,7 +41,7 @@
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <SearchBox x:Name="SearchBox" Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" PlaceholderText="Hľadať obchod" QueryText="{Binding Path=NameFilter, Mode=TwoWay}"/>
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" PlaceholderText="Hľadať obchod" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
         <SplitView x:Name="MainSplitView" Grid.Row="2" IsPaneOpen="True" DisplayMode="Inline">
             <SplitView.Pane>
                 <ListView x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
