@@ -8,6 +8,7 @@
     RequestedTheme="Light">
     <Application.Resources>
         <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+        <converters:EmptyToVisibilityConverter x:Key="EmptyToVisibilityConverter"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
         <Style x:Key="ListViewItemBackground" TargetType="Border">

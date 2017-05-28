@@ -54,8 +54,8 @@
                     <SymbolIcon Symbol="Find"/>
                 </Button>
 
-                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0">
-                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}"/>
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0" Visibility="{Binding QueryText, ElementName=SearchBox, Converter={StaticResource EmptyToVisibilityConverter}}">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -99,8 +99,8 @@
                     </StackPanel>
                 </Button>
 
-                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0">
-                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}"/>
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0" Visibility="{Binding QueryText, ElementName=SearchBox, Converter={StaticResource EmptyToVisibilityConverter}}">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>

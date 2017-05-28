@@ -2,6 +2,7 @@
 using nakupne_centra.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -36,6 +37,13 @@ namespace nakupne_centra
         private void CentreListView_ItemClicked(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(CentrePage), e.ClickedItem);
+        }
+
+        private void StoreList_ItemClicked(object sender, ItemClickEventArgs e)
+        {
+            Debug.WriteLine((sender as ListView).Tag);
+            //CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, "");
+            //this.Frame.Navigate(typeof(StoresList), css);
         }
 
         private void CentreListView_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)

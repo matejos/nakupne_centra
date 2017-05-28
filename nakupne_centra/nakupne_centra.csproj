@@ -99,7 +99,8 @@
     <Compile Include="CentrePage.xaml.cs">
       <DependentUpon>CentrePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Converters\NullToVisibilityConv.cs" />
+    <Compile Include="Converters\EmptyToVisibilityConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="DataModel\Centre.cs" />
     <Compile Include="DataModel\CentreStoreSearch.cs" />
     <Compile Include="DataModel\Hours.cs" />
