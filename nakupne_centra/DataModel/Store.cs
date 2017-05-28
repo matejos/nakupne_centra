@@ -8,8 +8,9 @@ namespace nakupne_centra.DataModel
 {
     public class Store
     {
-        public Store(string name, string description, string category, string floor, Hours hours)
+        public Store(Centre centre, string name, string description, string category, string floor, Hours hours)
         {
+            this.Centre = centre;
             this.Name = name;
             this.Description = description;
             this.Category = category;
@@ -17,6 +18,7 @@ namespace nakupne_centra.DataModel
             this.StoreHours = hours;
         }
 
+        public Centre Centre { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public string Category { get; private set; }

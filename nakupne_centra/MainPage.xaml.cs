@@ -41,9 +41,9 @@ namespace nakupne_centra
 
         private void StoreList_ItemClicked(object sender, ItemClickEventArgs e)
         {
-            Debug.WriteLine((sender as ListView).Tag);
-            //CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, "");
-            //this.Frame.Navigate(typeof(StoresList), css);
+            Store clickedStore = e.ClickedItem as Store;
+            CentreStoreSearch css = new CentreStoreSearch(clickedStore.Centre, "", clickedStore);
+            this.Frame.Navigate(typeof(StoresList), css);
         }
 
         private void CentreListView_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)

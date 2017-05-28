@@ -11,7 +11,7 @@ namespace nakupne_centra.DataModel
 {
     public class Centre
     {
-        public Centre(string name, string address, ImageSource logoSquare, ImageSource logoRect, ImageSource floor0, ImageSource floor1, Hours hours, ObservableCollection<Store> stores)
+        public Centre(string name, string address, ImageSource logoSquare, ImageSource logoRect, ImageSource floor0, ImageSource floor1, Hours hours)
         {
             this.Name = name;
             this.Address = address;
@@ -20,7 +20,6 @@ namespace nakupne_centra.DataModel
             this.Floor0 = floor0;
             this.Floor1 = floor1;
             this.Hours = hours;
-            this.Stores = stores;
         }
 
         public string Name { get; private set; }
@@ -30,7 +29,7 @@ namespace nakupne_centra.DataModel
         public ImageSource Floor0 { get; private set; }
         public ImageSource Floor1 { get; private set; }
         public Hours Hours { get; private set; }
-        public ObservableCollection<Store> Stores { get; private set; }
+        public ObservableCollection<Store> Stores { get; set; }
         public StoresListViewModel viewModel { get; set; }
     }
 }

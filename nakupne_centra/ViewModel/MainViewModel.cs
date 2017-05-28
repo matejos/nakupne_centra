@@ -68,6 +68,16 @@ namespace nakupne_centra.ViewModel
                     centreObject["Hours"].GetObject()["Wednesday"].GetString(), centreObject["Hours"].GetObject()["Thursday"].GetString(),
                     centreObject["Hours"].GetObject()["Friday"].GetString(), centreObject["Hours"].GetObject()["Saturday"].GetString(),
                     centreObject["Hours"].GetObject()["Sunday"].GetString());
+                string dataFolder = centreObject["DataFolder"].GetString();
+
+                Centre centre = new Centre(centreObject["Name"].GetString(),
+                                                       centreObject["Address"].GetString(),
+                                                       new BitmapImage(new Uri(dataFolder + "logoSquare.png")),
+                                                       new BitmapImage(new Uri(dataFolder + "logoRect.png")),
+                                                       new BitmapImage(new Uri(dataFolder + "floor0.png")),
+                                                       new BitmapImage(new Uri(dataFolder + "floor1.png")),
+                                                       centreHours);
+
                 ObservableCollection<Store> stores = new ObservableCollection<Store>();
                 foreach (JsonValue storeJson in centreObject["Stores"].GetArray())
                 {
@@ -76,22 +86,15 @@ namespace nakupne_centra.ViewModel
                     storeObject["Hours"].GetObject()["Wednesday"].GetString(), storeObject["Hours"].GetObject()["Thursday"].GetString(),
                     storeObject["Hours"].GetObject()["Friday"].GetString(), storeObject["Hours"].GetObject()["Saturday"].GetString(),
                     storeObject["Hours"].GetObject()["Sunday"].GetString());
-                    stores.Add(new Store(storeObject["Name"].GetString(),
+                    stores.Add(new Store(centre, storeObject["Name"].GetString(),
                         storeObject["Description"].GetString(),
                         storeObject["Category"].GetString(),
                         storeObject["Floor"].GetString(),
                         storeHours
                         ));
                 }
-                string dataFolder = centreObject["DataFolder"].GetString();
-                Centre centre = new Centre(centreObject["Name"].GetString(),
-                                                       centreObject["Address"].GetString(),
-                                                       new BitmapImage(new Uri(dataFolder + "logoSquare.png")),
-                                                       new BitmapImage(new Uri(dataFolder + "logoRect.png")),
-                                                       new BitmapImage(new Uri(dataFolder + "floor0.png")),
-                                                       new BitmapImage(new Uri(dataFolder + "floor1.png")),
-                                                       centreHours,
-                                                       stores);
+                
+                centre.Stores = stores;
                 centre.viewModel = new StoresListViewModel(centre);
                 Centres.Add(centre);
             }
