@@ -26,6 +26,7 @@ namespace nakupne_centra
     public sealed partial class StoresList : Page
     {
         private StoresListViewModel viewModel;
+        private bool focusSearchBar;
 
         public StoresList()
         {
@@ -34,8 +35,6 @@ namespace nakupne_centra
             this.Loaded += Page_Loaded;
             StoresListView.SelectionChanged += StoresListView_SelectionChanged;
             SystemNavigationManager.GetForCurrentView().BackRequested += StoresList_BackRequested;
-
-            
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -45,11 +44,12 @@ namespace nakupne_centra
             viewModel.NameFilter = css.Query;
             DataContext = viewModel;
             viewModel.SelectedStore = css.Store;
+            focusSearchBar = css.FocusSearchBar;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (viewModel.NameFilter != "")
+            if (focusSearchBar)
                 SearchBox.Focus(FocusState.Programmatic);
             if (viewModel.SelectedStore != null)
                 StoresListView.SelectedItem = viewModel.SelectedStore;

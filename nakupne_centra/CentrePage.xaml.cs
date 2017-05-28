@@ -35,7 +35,7 @@ namespace nakupne_centra
 
         private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
-            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, args.QueryText);
+            CentreStoreSearch css = new CentreStoreSearch(viewModel.Centre, args.QueryText, null, true);
             this.Frame.Navigate(typeof(StoresList), css);
         }
 

@@ -118,18 +118,25 @@ namespace nakupne_centra.ViewModel
 
         private void RefreshSelectedStore()
         {
-            StoreName = SelectedStore.Name;
-            StoreDesc = SelectedStore.Description;
-            Hours = SelectedStore.StoreHours;
-            Map = Centre.LogoRect;
-            string storeFloor = SelectedStore.Floor;
-            if (storeFloor.Equals("0"))
+            if (SelectedStore != null)
             {
-                Map = Centre.Floor0;
+                StoreName = SelectedStore.Name;
+                StoreDesc = SelectedStore.Description;
+                Hours = SelectedStore.StoreHours;
+                string storeFloor = SelectedStore.Floor;
+                Debug.WriteLine(storeFloor);
+                if (storeFloor.Equals("0"))
+                {
+                    Map = Centre.Floor0;
+                }
+                else
+                {
+                    Map = Centre.Floor1;
+                }
             }
             else
             {
-                Map = Centre.Floor1;
+                Map = Centre.Floor0;
             }
         }
 

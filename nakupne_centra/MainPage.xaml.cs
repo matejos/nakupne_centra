@@ -62,5 +62,12 @@ namespace nakupne_centra
         {
             viewModel.RefreshFilteredData();
         }
+
+        private void CentreStoresButtonClick(object sender, RoutedEventArgs e)
+        {
+            /*Store clickedStore = e.ClickedItem as Store;
+            CentreStoreSearch css = new CentreStoreSearch(clickedStore.Centre, "", clickedStore);
+            this.Frame.Navigate(typeof(StoresList), css);*/
+        }
     }
 }

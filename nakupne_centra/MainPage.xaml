@@ -85,7 +85,7 @@
                     </Viewbox>
                 </StackPanel>
 
-                <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="CentreStoresButtonClick">
                     <StackPanel>
                         <SymbolIcon Symbol="Find"/>
                         <TextBlock Text="Obchody"/>
