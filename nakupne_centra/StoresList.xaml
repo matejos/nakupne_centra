@@ -53,8 +53,8 @@
                 </ListView>
             </SplitView.Pane>
             <Grid>
-                <Image Grid.Row="0" x:Name="Map" Source="{Binding LogoSquare}" Margin="0,10" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
+                
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid DataContext="{Binding SelectedItem, ElementName=StoresListView}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="200"/>
@@ -62,10 +62,11 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Polygon Grid.Row="0" Margin="0,10" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" />
-                        <TextBlock Grid.Row="1" Text="{Binding Name}" Style="{StaticResource SubheaderStyle}"/>
-                        <TextBlock Grid.Row="2" Text="{Binding Desc}" Style="{StaticResource StoreDescriptionStyle}" Margin="25" TextWrapping="WrapWholeWords"/>
-                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Image Grid.Row="0" x:Name="Map" Margin="0,10" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                        <Polygon Grid.Row="0" Margin="0,10" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <TextBlock Grid.Row="1" Text="{Binding Name}" Style="{StaticResource SubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <TextBlock Grid.Row="2" Text="{Binding Desc}" Style="{StaticResource StoreDescriptionStyle}" Margin="25" TextWrapping="WrapWholeWords" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
                             <StackPanel Margin="10">
                                 <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
                                 <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>

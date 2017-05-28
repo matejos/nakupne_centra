@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blend.SampleData.CentresSampleDataSource;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class StoresList : Page
     {
-        object currentCentre;
+        CentresItem currentCentre;
         public StoresList()
         {
             this.InitializeComponent();
@@ -31,12 +32,15 @@ namespace nakupne_centra
             this.Loaded += MainPage_Loaded;
             StoresListView.SelectionChanged += StoresListView_SelectionChanged;
             SystemNavigationManager.GetForCurrentView().BackRequested += StoresList_BackRequested;
+
+            
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            currentCentre = e.Parameter as object;
+            currentCentre = e.Parameter as CentresItem;
             MainGrid.DataContext = currentCentre;
+            Map.Source = currentCentre.LogoRect;
         }
 
         void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
@@ -87,6 +91,7 @@ namespace nakupne_centra
                     VisualStateManager.GoToState(this, "ListView", false);
                 }
             }
+            
         }
 
         private void StoresList_BackRequested(object sender, BackRequestedEventArgs e)

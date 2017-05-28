@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blend.SampleData.CentresSampleDataSource;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class CentrePage : Page
     {
-        object currentCentre;
+        CentresItem currentCentre;
         public CentrePage()
         {
             this.InitializeComponent();
@@ -41,7 +42,7 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            currentCentre = e.Parameter as object;
+            currentCentre = e.Parameter as CentresItem;
             MainGrid.DataContext = currentCentre;
         }
 
