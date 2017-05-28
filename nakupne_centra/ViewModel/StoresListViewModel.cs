@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,17 +102,23 @@ namespace nakupne_centra.ViewModel
             set { _hours = value; NotifyPropertyChanged("Hours"); }
         }
 
-        private void RefreshFilteredData()
+        public void RefreshFilteredData()
         {
-            var fr = from fobjs in Stores
+            if (NameFilter.Equals(""))
+            {
+                FilteredStores = new ObservableCollection<Store>();
+                return;
+            }
+            var fs = from fobjs in Stores
                      where fobjs.Name.ToLower().Contains(NameFilter.ToLower())
                      select fobjs;
+            
+            ObservableCollection<Store> newFilteredStores = new ObservableCollection<Store>(fs);
 
-            //  This will limit the amount of view refreshes
-            if (FilteredStores == null || FilteredStores.Count == fr.Count())
+            if (FilteredStores.Except(newFilteredStores).Count() == 0 && newFilteredStores.Except(FilteredStores).Count() == 0)
                 return;
 
-            FilteredStores = new ObservableCollection<Store>(fr);
+            FilteredStores = newFilteredStores;
         }
 
         private void RefreshSelectedStore()

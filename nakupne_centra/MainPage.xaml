@@ -8,6 +8,23 @@
     mc:Ignorable="d">
 
     <Page.Resources>
+        <DataTemplate x:Key="CentreStoresTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <FontIcon HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE816;" FontSize="20"/>
+                </Button>
+
+                <StackPanel Grid.Column="1" Margin="10,0">
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreAddressStyle}"/>
+                    </Viewbox>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
         <DataTemplate x:Key="CentresItemTemplateNarrow">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -15,11 +32,16 @@
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="*" MinWidth="50" MaxWidth="100"/>
                 </Grid.ColumnDefinitions>
-                <Border Style="{StaticResource ListViewItemBackground}" Width="100" Height="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Width="100" Height="100">
                     <Image x:Name="Logo" Source="{Binding LogoSquare}"/>
                 </Border>
 
-                <StackPanel Grid.Column="1" Margin="10,0">
+                <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
                         <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
                     </Viewbox>
@@ -28,9 +50,13 @@
                     </Viewbox>
                 </StackPanel>
 
-                <Button Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <SymbolIcon Symbol="Find"/>
                 </Button>
+
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}"/>
+                </StackPanel>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="CentresItemTemplateWide">
@@ -41,12 +67,16 @@
                     <ColumnDefinition Width="*" MinWidth="80" MaxWidth="120"/>
                     <ColumnDefinition Width="*" MinWidth="80" MaxWidth="120"/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
                 
-                <Border Style="{StaticResource ListViewItemBackground}" Width="200" Height="100">
+                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Width="200" Height="100">
                     <Image Source="{Binding LogoRect}"/>
                 </Border>
 
-                <StackPanel Grid.Column="1" Margin="10,0">
+                <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
                         <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
                     </Viewbox>
@@ -55,19 +85,23 @@
                     </Viewbox>
                 </StackPanel>
 
-                <Button Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <StackPanel>
                         <SymbolIcon Symbol="Find"/>
                         <TextBlock Text="Obchody"/>
                     </StackPanel>
                 </Button>
 
-                <Button Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button Grid.Row="0" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <StackPanel>
                         <SymbolIcon Symbol="Map"/>
                         <TextBlock Text="Mapa"/>
                     </StackPanel>
                 </Button>
+
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}"/>
+                </StackPanel>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -81,7 +115,7 @@
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="Nákupné centrá" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <SearchBox Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" QueryChanged="centresStoreSearch_QueryChanged" PlaceholderText="Hľadať obchod"/>
+        <SearchBox x:Name="SearchBox" Grid.Row="1" SearchHistoryEnabled="False" FocusOnKeyboardInput="True" PlaceholderText="Hľadať obchod" QueryText="{Binding Path=NameFilter, Mode=TwoWay}"/>
         <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_ItemClicked" ContainerContentChanging="CentreListView_ContainerContentChanging">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

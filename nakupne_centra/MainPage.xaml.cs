@@ -1,4 +1,5 @@
-﻿using nakupne_centra.ViewModel;
+﻿using nakupne_centra.DataModel;
+using nakupne_centra.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,10 +33,6 @@ namespace nakupne_centra
             this.DataContext = viewModel;
         }
 
-        private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
-        {
-        }
-
         private void CentreListView_ItemClicked(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(CentrePage), e.ClickedItem);
@@ -53,5 +50,9 @@ namespace nakupne_centra
             }
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            viewModel.RefreshFilteredData();
+        }
     }
 }

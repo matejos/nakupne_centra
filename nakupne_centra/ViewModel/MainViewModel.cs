@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,9 @@ namespace nakupne_centra.ViewModel
         public MainViewModel()
         {
             Centres = new ObservableCollection<Centre>();
+            NameFilter = "";
             LoadData();
+            RefreshFilteredData();
         }
 
         private ObservableCollection<Centre> _centres;
@@ -29,22 +32,6 @@ namespace nakupne_centra.ViewModel
             set { _centres = value; NotifyPropertyChanged("Centres"); }
         }
 
-        private ObservableCollection<Store> _stores;
-
-        public ObservableCollection<Store> Stores
-        {
-            get { return _stores; }
-            set { _stores = value; NotifyPropertyChanged("Stores"); }
-        }
-
-        private ObservableCollection<Store> _filteredStores;
-
-        public ObservableCollection<Store> FilteredStores
-        {
-            get { return _filteredStores; }
-            set { _filteredStores = value; NotifyPropertyChanged("FilteredStores"); }
-        }
-
         private string _nameFilter;
 
         public string NameFilter
@@ -53,17 +40,13 @@ namespace nakupne_centra.ViewModel
             set { _nameFilter = value; NotifyPropertyChanged("NameFilter"); RefreshFilteredData(); }
         }
 
-        private void RefreshFilteredData()
+        public void RefreshFilteredData()
         {
-            var fr = from fobjs in Stores
-                     where fobjs.Name.ToLower().Contains(NameFilter.ToLower())
-                     select fobjs;
-
-            //  This will limit the amount of view refreshes
-            if (FilteredStores == null || FilteredStores.Count == fr.Count())
-                return;
-
-            FilteredStores = new ObservableCollection<Store>(fr);
+            foreach (var centre in Centres)
+            {
+                centre.viewModel.NameFilter = NameFilter;
+                centre.viewModel.RefreshFilteredData();
+            }
         }
 
         private async void LoadData()
@@ -101,14 +84,16 @@ namespace nakupne_centra.ViewModel
                         ));
                 }
                 string dataFolder = centreObject["DataFolder"].GetString();
-                Centres.Add(new Centre(centreObject["Name"].GetString(),
+                Centre centre = new Centre(centreObject["Name"].GetString(),
                                                        centreObject["Address"].GetString(),
                                                        new BitmapImage(new Uri(dataFolder + "logoSquare.png")),
                                                        new BitmapImage(new Uri(dataFolder + "logoRect.png")),
                                                        new BitmapImage(new Uri(dataFolder + "floor0.png")),
                                                        new BitmapImage(new Uri(dataFolder + "floor1.png")),
                                                        centreHours,
-                                                       stores));
+                                                       stores);
+                centre.viewModel = new StoresListViewModel(centre);
+                Centres.Add(centre);
             }
         }
 

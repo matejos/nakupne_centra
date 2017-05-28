@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nakupne_centra.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -30,5 +31,6 @@ namespace nakupne_centra.DataModel
         public ImageSource Floor1 { get; private set; }
         public Hours Hours { get; private set; }
         public ObservableCollection<Store> Stores { get; private set; }
+        public StoresListViewModel viewModel { get; set; }
     }
 }
