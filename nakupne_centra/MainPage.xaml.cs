@@ -65,9 +65,9 @@ namespace nakupne_centra
 
         private void CentreStoresButtonClick(object sender, RoutedEventArgs e)
         {
-            /*Store clickedStore = e.ClickedItem as Store;
-            CentreStoreSearch css = new CentreStoreSearch(clickedStore.Centre, "", clickedStore);
-            this.Frame.Navigate(typeof(StoresList), css);*/
+            var centre = (sender as FrameworkElement).DataContext as Centre;
+            CentreStoreSearch css = new CentreStoreSearch(centre, "", null, true);
+            this.Frame.Navigate(typeof(StoresList), css);
         }
     }
 }
