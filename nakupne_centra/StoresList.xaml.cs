@@ -1,4 +1,4 @@
-﻿using Blend.SampleData.CentresSampleDataSource;
+﻿using nakupne_centra.DataModel;
 using nakupne_centra.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new StoresListViewModel(e.Parameter as CentresItem);
+            viewModel = new StoresListViewModel(e.Parameter as Centre);
             DataContext = viewModel;
         }
 
@@ -73,15 +73,20 @@ namespace nakupne_centra
             {
                 VisualStateManager.GoToState(this, viewState, false);
             }
-        }        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             UpdateActiveViewState(Window.Current.Bounds.Width);
-        }        private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        }
+
+        private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "ListView")
             {
                 if (StoresListView.SelectedItem != null)
                 {
+                    
                     VisualStateManager.GoToState(this, "DetailView", false);
                 }
             }
@@ -92,7 +97,8 @@ namespace nakupne_centra
                     VisualStateManager.GoToState(this, "ListView", false);
                 }
             }
-            viewModel.SelectedStore = StoresListView.SelectedItem as StoresItem;
+            if (StoresListView.SelectedItem != null)
+                viewModel.SelectedStore = StoresListView.SelectedItem as Store;
         }
 
         private void StoresList_BackRequested(object sender, BackRequestedEventArgs e)

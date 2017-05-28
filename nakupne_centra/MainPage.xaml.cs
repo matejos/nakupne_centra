@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nakupne_centra.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,9 +25,11 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private MainViewModel viewModel = new MainViewModel();
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = viewModel;
         }
 
         private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
@@ -49,5 +52,6 @@ namespace nakupne_centra
                 args.ItemContainer.Background = new SolidColorBrush(Windows.UI.Colors.AliceBlue);
             }
         }
+
     }
 }

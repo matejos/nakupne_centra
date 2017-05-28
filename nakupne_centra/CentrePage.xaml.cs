@@ -1,4 +1,5 @@
-﻿using Blend.SampleData.CentresSampleDataSource;
+﻿using nakupne_centra.DataModel;
+using nakupne_centra.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,8 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class CentrePage : Page
     {
-        CentresItem currentCentre;
+        private CentreViewModel viewModel;
+
         public CentrePage()
         {
             this.InitializeComponent();
@@ -42,13 +44,13 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            currentCentre = e.Parameter as CentresItem;
-            MainGrid.DataContext = currentCentre;
+            viewModel = new CentreViewModel(e.Parameter as Centre);
+            DataContext = viewModel;
         }
 
         private void ButtonStores_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(StoresList), currentCentre);
+            this.Frame.Navigate(typeof(StoresList), viewModel.Centre);
         }
 
         public void OnBackRequested(object sender, BackRequestedEventArgs e)

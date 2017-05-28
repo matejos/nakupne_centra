@@ -1,4 +1,4 @@
-﻿using Blend.SampleData.CentresSampleDataSource;
+﻿using nakupne_centra.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,33 +12,34 @@ namespace nakupne_centra.ViewModel
 {
     public class StoresListViewModel : INotifyPropertyChanged
     {
-        public StoresListViewModel(CentresItem centre)
+        public StoresListViewModel(Centre centre)
         {
             Centre = centre;
+            Name = Centre.Name;
             Stores = centre.Stores;
             FilteredStores = Stores;
-            Map = Centre.LogoRect;
+            Map = Centre.Floor0;
         }
 
-        private CentresItem _centre;
+        private Centre _centre;
 
-        public CentresItem Centre
+        public Centre Centre
         {
             get { return _centre; }
             set { _centre = value; NotifyPropertyChanged("Centre"); }
         }
 
-        private ObservableCollection<StoresItem> _stores;
+        private ObservableCollection<Store> _stores;
 
-        public ObservableCollection<StoresItem> Stores
+        public ObservableCollection<Store> Stores
         {
             get { return _stores; }
             set { _stores = value; NotifyPropertyChanged("Stores"); }
         }
 
-        private ObservableCollection<StoresItem> _filteredStores;
+        private ObservableCollection<Store> _filteredStores;
 
-        public ObservableCollection<StoresItem> FilteredStores
+        public ObservableCollection<Store> FilteredStores
         {
             get { return _filteredStores; }
             set { _filteredStores = value; NotifyPropertyChanged("FilteredStores"); }
@@ -52,9 +53,9 @@ namespace nakupne_centra.ViewModel
             set { _nameFilter = value; NotifyPropertyChanged("NameFilter"); RefreshFilteredData(); }
         }
 
-        private StoresItem _selectedStore;
+        private Store _selectedStore;
 
-        public StoresItem SelectedStore
+        public Store SelectedStore
         {
             get { return _selectedStore; }
             set { _selectedStore = value; NotifyPropertyChanged("SelectedStore"); RefreshSelectedStore(); }
@@ -66,6 +67,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _map; }
             set { _map = value; NotifyPropertyChanged("Map"); }
+        }
+
+        private string _name;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; NotifyPropertyChanged("Name"); }
         }
 
         private string _storeName;
@@ -84,6 +93,14 @@ namespace nakupne_centra.ViewModel
             set { _storeDesc = value; NotifyPropertyChanged("StoreDesc"); }
         }
 
+        private Hours _hours;
+
+        public Hours Hours
+        {
+            get { return _hours; }
+            set { _hours = value; NotifyPropertyChanged("Hours"); }
+        }
+
         private void RefreshFilteredData()
         {
             var fr = from fobjs in Stores
@@ -94,22 +111,23 @@ namespace nakupne_centra.ViewModel
             if (FilteredStores == null || FilteredStores.Count == fr.Count())
                 return;
 
-            FilteredStores = new ObservableCollection<StoresItem>(fr);
+            FilteredStores = new ObservableCollection<Store>(fr);
         }
 
         private void RefreshSelectedStore()
         {
             StoreName = SelectedStore.Name;
-            StoreDesc = SelectedStore.Desc;
+            StoreDesc = SelectedStore.Description;
+            Hours = SelectedStore.StoreHours;
             Map = Centre.LogoRect;
-            string storeFloor = SelectedStore.Category;
-            if (storeFloor == "0")
+            string storeFloor = SelectedStore.Floor;
+            if (storeFloor.Equals("0"))
             {
-                Map = Centre.LogoRect;
+                Map = Centre.Floor0;
             }
             else
             {
-                Map = Centre.LogoSquare;
+                Map = Centre.Floor1;
             }
         }
 

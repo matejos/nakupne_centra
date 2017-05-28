@@ -72,7 +72,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid DataContext="{Binding Source={StaticResource CentresSampleDataSource}}">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>

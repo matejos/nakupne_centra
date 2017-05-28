@@ -57,15 +57,15 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="32"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Image Grid.Row="0" x:Name="Map" Margin="0,10" Height="200" VerticalAlignment="Top" HorizontalAlignment="Center" Source="{Binding Map}"/>
-                        <Polygon Grid.Row="0" Margin="0,10" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
-                        <TextBlock Grid.Row="1" Text="{Binding StoreName}" Style="{StaticResource SubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
-                        <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Style="{StaticResource StoreDescriptionStyle}" Margin="25" TextWrapping="WrapWholeWords" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <TextBlock Grid.Row="0" Text="{Binding StoreName}" Margin="0,10,0,0" Style="{StaticResource SubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <Image Grid.Row="1" x:Name="Map" Margin="0,10,0,0" MaxHeight="500" VerticalAlignment="Top" HorizontalAlignment="Center" Source="{Binding Map}"/>
+                        <Polygon Grid.Row="1" Margin="0,10,0,0" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="WrapWholeWords" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
                         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
                             <StackPanel Margin="10">
                                 <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>

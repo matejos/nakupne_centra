@@ -89,8 +89,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="DataModel\CentresData.json" />
     <None Include="project.json" />
-    <None Include="SampleData\CentresSampleDataSource\CentresSampleDataSource.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -100,16 +100,18 @@
       <DependentUpon>CentrePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\NullToVisibilityConv.cs" />
+    <Compile Include="DataModel\Centre.cs" />
+    <Compile Include="DataModel\Hours.cs" />
+    <Compile Include="DataModel\Store.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleData\CentresSampleDataSource\CentresSampleDataSource.xaml.cs">
-      <DependentUpon>CentresSampleDataSource.xaml</DependentUpon>
-    </Compile>
     <Compile Include="StoresList.xaml.cs">
       <DependentUpon>StoresList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\CentreViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\StoresListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +121,14 @@
     <None Include="nakupne_centra_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Olympia\floor0.png" />
+    <Content Include="Data\Olympia\floor1.png" />
+    <Content Include="Data\Olympia\logoRect.png" />
+    <Content Include="Data\Olympia\logoSquare.png" />
+    <Content Include="Data\Vankovka\floor0.png" />
+    <Content Include="Data\Vankovka\floor1.png" />
+    <Content Include="Data\Vankovka\logoRect.png" />
+    <Content Include="Data\Vankovka\logoSquare.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -127,11 +137,6 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-    <Content Include="SampleData\CentresSampleDataSource\CentresSampleDataSource_Files\image01.png" />
-    <Content Include="SampleData\CentresSampleDataSource\CentresSampleDataSource_Files\image02.png" />
-    <Content Include="SampleData\CentresSampleDataSource\CentresSampleDataSource_Files\image03.png" />
-    <Content Include="SampleData\CentresSampleDataSource\CentresSampleDataSource_Files\image04.png" />
-    <Content Include="SampleData\CentresSampleDataSource\CentresSampleDataSource_Files\image05.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -143,10 +148,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SampleData\CentresSampleDataSource\CentresSampleDataSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

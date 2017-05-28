@@ -1,0 +1,104 @@
+{"Centres":
+    [
+      {
+        "Name": "Vankovka",
+        "Address": "keppe 123",
+        "DataFolder": "ms-appx:///Data/Vankovka/",
+        "Hours": 
+			{
+			"Monday": "08:00-22:00",
+			"Tuesday": "08:00-22:00",
+			"Wednesday": "08:00-22:00",
+			"Thursday": "08:00-22:00",
+			"Friday": "08:00-22:00",
+			"Saturday": "08:00-22:00",
+			"Sunday": "08:00-22:00"
+			},
+        "Stores":
+			[
+				{
+					"Name": "Albert Hypermarket",
+					"Description": "Albert je hypermarket, kde nikdy nic nemaju",
+					"Category": "Potraviny",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "08:00-22:00"
+						}
+				},
+				{
+					"Name": "H&M",
+					"Description": "Kup si daco na seba",
+					"Category": "Moda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "08:00-22:00"
+						}
+				}
+			]
+      },
+      {
+        "Name": "Olympia",
+        "Address": "adresa 123",
+        "DataFolder": "ms-appx:///Data/Olympia/",
+        "Hours": 
+			{
+			"Monday": "07:00-22:00",
+			"Tuesday": "07:00-22:00",
+			"Wednesday": "07:00-22:00",
+			"Thursday": "07:00-22:00",
+			"Friday": "07:00-22:00",
+			"Saturday": "07:00-22:00",
+			"Sunday": "07:00-22:00"
+			},
+        "Stores":
+			[
+				{
+					"Name": "McDonalds",
+					"Description": "mekac",
+					"Category": "Restauracie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "08:00-22:00"
+						}
+				},
+				{
+					"Name": "C&A",
+					"Description": "Kup si daco na seba",
+					"Category": "Moda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "08:00-22:00"
+						}
+				}
+			]
+      }
+    ]
+  }

@@ -8,7 +8,6 @@
     RequestedTheme="Light">
     <Application.Resources>
         <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
-        <SampleData:CentresSampleDataSource x:Key="CentresSampleDataSource" d:IsDataSource="True"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
         <Style x:Key="ListViewItemBackground" TargetType="Border">
