@@ -34,7 +34,9 @@
                         <ColumnDefinition x:Name="ContentColumn2"/>
                     </Grid.ColumnDefinitions>
 
-                    <Image x:Name="Logo" Grid.Row="0" Grid.Column="0" Source="{Binding LogoRect}"/>
+                    <Border x:Name="Logo" Grid.Row="0" Grid.Column="0" Background="{Binding LogoColor}">
+                        <Image Source="{Binding LogoRect}"/>
+                    </Border>
                     <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="ButtonStores_Click">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Shop"/>
@@ -112,7 +114,7 @@
                         <Setter Target="HoursPanel.(Grid.ColumnSpan)" Value="2"/>
                         <Setter Target="ContentColumn2.Width" Value="0"/>
                         <Setter Target="ContentRow0.Height" Value="100"/>
-                        <Setter Target="ContentRow1.Height" Value="50"/>
+                        <Setter Target="ContentRow1.Height" Value="55"/>
                         <Setter Target="ContentRow2.Height" Value="*"/>
                     </VisualState.Setters>
                 </VisualState>

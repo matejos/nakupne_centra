@@ -37,7 +37,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Width="100" Height="100">
+                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Background="{Binding LogoColor}" Width="100" Height="100">
                     <Image x:Name="Logo" Source="{Binding LogoSquare}"/>
                 </Border>
 
@@ -72,7 +72,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 
-                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Width="200" Height="100">
+                <Border Grid.Row="0" Style="{StaticResource ListViewItemBackground}" Background="{Binding LogoColor}" Width="200" Height="100">
                     <Image Source="{Binding LogoRect}"/>
                 </Border>
 

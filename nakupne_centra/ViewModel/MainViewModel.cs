@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 using Windows.Storage;
+using Windows.UI;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
@@ -76,7 +77,8 @@ namespace nakupne_centra.ViewModel
                                                        new BitmapImage(new Uri(dataFolder + "logoRect.png")),
                                                        new BitmapImage(new Uri(dataFolder + "floor0.png")),
                                                        new BitmapImage(new Uri(dataFolder + "floor1.png")),
-                                                       centreHours);
+                                                       centreHours,
+                                                       centreObject["LogoColor"].GetString());
 
                 ObservableCollection<Store> stores = new ObservableCollection<Store>();
                 foreach (JsonValue storeJson in centreObject["Stores"].GetArray())

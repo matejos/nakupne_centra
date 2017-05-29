@@ -4,6 +4,7 @@
         "Name": "Vankovka",
         "Address": "keppe 123",
         "DataFolder": "ms-appx:///Data/Vankovka/",
+        "LogoColor": "#FFFFFF",
         "Hours": 
 			{
 			"Monday": "08:00-22:00",
@@ -54,6 +55,7 @@
         "Name": "Olympia",
         "Address": "adresa 123",
         "DataFolder": "ms-appx:///Data/Olympia/",
+        "LogoColor": "#00306E",
         "Hours": 
 			{
 			"Monday": "07:00-22:00",
