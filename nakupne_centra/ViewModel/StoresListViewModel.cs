@@ -112,8 +112,9 @@ namespace nakupne_centra.ViewModel
 
         public void RefreshFilteredData()
         {
+            var filter = NameFilter.ToLower();
             var fs = from fobjs in Stores
-                     where fobjs.Name.ToLower().Contains(NameFilter.ToLower())
+                     where StoreFilter.Match(fobjs.Name, filter)
                      select fobjs;
             
             ObservableCollection<Store> newFilteredStores = new ObservableCollection<Store>(fs);
@@ -122,6 +123,11 @@ namespace nakupne_centra.ViewModel
                 return;
 
             FilteredStores = newFilteredStores;
+        }
+
+        private bool MatchesFilter(string name, string filter)
+        {
+            return true;
         }
 
         private void RefreshSelectedStore()
