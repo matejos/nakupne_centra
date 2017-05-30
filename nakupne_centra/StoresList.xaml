@@ -57,12 +57,15 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding StoreName}" Margin="0,10,0,0" Style="{StaticResource SubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        <StackPanel Grid.Row="0" >
+                            <TextBlock Text="{Binding StoreName}" Margin="0,10,0,0" Style="{StaticResource HeaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                        </StackPanel>
                         <Image Grid.Row="1" x:Name="Map" Margin="0,10,0,0" MaxHeight="500" VerticalAlignment="Top" HorizontalAlignment="Center" Source="{Binding Map}"/>
                         <Polygon Grid.Row="1" Margin="0,10,0,0" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
                         <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="WrapWholeWords" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>

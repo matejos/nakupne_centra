@@ -94,6 +94,14 @@ namespace nakupne_centra.ViewModel
             set { _storeDesc = value; NotifyPropertyChanged("StoreDesc"); }
         }
 
+        private string _storeCategory;
+
+        public string StoreCategory
+        {
+            get { return _storeCategory; }
+            set { _storeCategory = value; NotifyPropertyChanged("StoreCategory"); }
+        }
+
         private Hours _hours;
 
         public Hours Hours
@@ -122,6 +130,7 @@ namespace nakupne_centra.ViewModel
             {
                 StoreName = SelectedStore.Name;
                 StoreDesc = SelectedStore.Description;
+                StoreCategory = SelectedStore.Category;
                 Hours = SelectedStore.StoreHours;
                 string storeFloor = SelectedStore.Floor;
                 Debug.WriteLine(storeFloor);
