@@ -139,7 +139,6 @@ namespace nakupne_centra.ViewModel
                 StoreCategory = SelectedStore.Category;
                 Hours = SelectedStore.StoreHours;
                 string storeFloor = SelectedStore.Floor;
-                Debug.WriteLine(storeFloor);
                 if (storeFloor.Equals("0"))
                 {
                     Map = Centre.Floor0;
