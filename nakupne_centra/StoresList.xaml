@@ -15,16 +15,19 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
-                
-                <Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="0" Margin="0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <FontIcon HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE816;" FontSize="20"/>
                 </Button>
 
-                <StackPanel Grid.Column="1" Margin="10,0">
-                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}"/>
+                <Border Grid.Column="1" Margin="10,0">
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}" />
                     </Viewbox>
-                </StackPanel>
+                </Border>
                 
                 <FontIcon Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE0E3;" FontSize="20"/>
             </Grid>
