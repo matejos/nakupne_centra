@@ -88,14 +88,14 @@
                 <Button Grid.Row="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="CentreStoresButtonClick">
                     <StackPanel>
                         <SymbolIcon Symbol="Find"/>
-                        <TextBlock Text="Obchody"/>
+                        <TextBlock x:Uid="Stores"/>
                     </StackPanel>
                 </Button>
 
                 <Button Grid.Row="0" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <StackPanel>
                         <SymbolIcon Symbol="Map"/>
-                        <TextBlock Text="Mapa"/>
+                        <TextBlock x:Uid="Map"/>
                     </StackPanel>
                 </Button>
 
@@ -113,9 +113,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
-            <TextBlock Text="Nákupné centrá" Style="{StaticResource HeaderStyle}"/>
+            <TextBlock x:Uid="MainPageHeader" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" PlaceholderText="Hľadať obchod" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
         <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding FilteredCentres}" ItemClick="CentreListView_ItemClicked" ContainerContentChanging="CentreListView_ContainerContentChanging">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

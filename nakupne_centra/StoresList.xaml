@@ -44,7 +44,7 @@
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" PlaceholderText="Hľadať obchod" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
         <SplitView x:Name="MainSplitView" Grid.Row="2" IsPaneOpen="True" DisplayMode="Inline">
             <SplitView.Pane>
                 <ListView x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
@@ -74,13 +74,13 @@
                         <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="WrapWholeWords" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
                         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}">
                             <StackPanel Margin="10">
-                                <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Monday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Tuesday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Wednesday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Thursday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Friday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Saturday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Sunday" Style="{StaticResource HoursDayStyle}"/>
                             </StackPanel>
                             <StackPanel Margin="10">
                                 <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>

@@ -17,7 +17,7 @@
         <Border x:Name="Header" Grid.Row="0" Style="{StaticResource HeaderBackground}">
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
-        <AutoSuggestBox Grid.Row="1" TextChanged="centresStoreSearch_QueryChanged" PlaceholderText="Hľadať obchod"/>
+        <AutoSuggestBox Grid.Row="1" TextChanged="centresStoreSearch_QueryChanged" x:Uid="SearchStore"/>
         <ScrollViewer Grid.Row="2">
 
 
@@ -40,30 +40,30 @@
                     <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="ButtonStores_Click">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Shop"/>
-                            <TextBlock Text="Obchody" Margin="10"/>
+                            <TextBlock x:Uid="Stores" Margin="10"/>
                         </StackPanel>
                     </Button>
                     <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Map"/>
-                            <TextBlock Text="Mapa" Margin="10"/>
+                            <TextBlock x:Uid="Map" Margin="10"/>
                         </StackPanel>
                     </Button>
                     <StackPanel x:Name="HoursPanel" Grid.Row="1" Grid.Column="0" Margin="0,30">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <SymbolIcon Symbol="Clock"/>
-                            <TextBlock Text="Otváracie hodiny" Style="{StaticResource SubheaderStyle}" Margin="10"/>
+                            <TextBlock x:Uid="OpeningHours" Style="{StaticResource SubheaderStyle}" Margin="10"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <StackPanel Margin="10">
-                                <TextBlock Text="Po:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Ut:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="St:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Št:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Pi:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="So:" Style="{StaticResource HoursDayStyle}"/>
-                                <TextBlock Text="Ne:" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Monday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Tuesday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Wednesday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Thursday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Friday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Saturday" Style="{StaticResource HoursDayStyle}"/>
+                                <TextBlock x:Uid="Sunday" Style="{StaticResource HoursDayStyle}"/>
                             </StackPanel>
                             <StackPanel Margin="10">
                                 <TextBlock Text="{Binding Hours.Monday}" Style="{StaticResource HoursTimeStyle}"/>
@@ -98,6 +98,7 @@
                         <Setter Target="ContentRow0.Height" Value="75"/>
                         <Setter Target="ContentRow1.Height" Value="*"/>
                         <Setter Target="ContentRow2.Height" Value="0"/>
+                        <Setter Target="ContentColumn0.MinWidth" Value="300"/>
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="NarrowState">
@@ -116,6 +117,7 @@
                         <Setter Target="ContentRow0.Height" Value="100"/>
                         <Setter Target="ContentRow1.Height" Value="55"/>
                         <Setter Target="ContentRow2.Height" Value="*"/>
+                        <Setter Target="ContentColumn0.MinWidth" Value="0"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
