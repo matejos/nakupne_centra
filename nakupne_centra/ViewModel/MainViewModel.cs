@@ -43,8 +43,12 @@ namespace nakupne_centra.ViewModel
 
         public void RefreshFilteredData()
         {
-            
             FilteredCentres = new ObservableCollection<Centre>();
+            if (NameFilter == "")
+            {
+                FilteredCentres = _centres;
+                return;
+            }
             foreach (var centre in _centres)
             {
                 centre.viewModel.NameFilter = NameFilter;
