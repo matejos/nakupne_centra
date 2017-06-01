@@ -110,7 +110,7 @@ namespace nakupne_centra.ViewModel
             set { _hours = value; NotifyPropertyChanged("Hours"); }
         }
 
-        public void RefreshFilteredData()
+        public int RefreshFilteredData()
         {
             var filter = NameFilter.ToLower();
             var fs = from fobjs in Stores
@@ -120,9 +120,11 @@ namespace nakupne_centra.ViewModel
             ObservableCollection<Store> newFilteredStores = new ObservableCollection<Store>(fs);
 
             if (FilteredStores.Except(newFilteredStores).Count() == 0 && newFilteredStores.Except(FilteredStores).Count() == 0)
-                return;
+                return FilteredStores.Count;
 
             FilteredStores = newFilteredStores;
+            
+            return FilteredStores.Count;
         }
 
         private bool MatchesFilter(string name, string filter)

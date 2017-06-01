@@ -19,18 +19,18 @@ namespace nakupne_centra.ViewModel
     {
         public MainViewModel()
         {
-            Centres = new ObservableCollection<Centre>();
-            NameFilter = "";
+            _centres = new ObservableCollection<Centre>();
             LoadData();
-            RefreshFilteredData();
         }
 
         private ObservableCollection<Centre> _centres;
 
-        public ObservableCollection<Centre> Centres
+        private ObservableCollection<Centre> _filteredCentres;
+
+        public ObservableCollection<Centre> FilteredCentres
         {
-            get { return _centres; }
-            set { _centres = value; NotifyPropertyChanged("Centres"); }
+            get { return _filteredCentres; }
+            set { _filteredCentres = value; NotifyPropertyChanged("FilteredCentres"); }
         }
 
         private string _nameFilter;
@@ -43,10 +43,16 @@ namespace nakupne_centra.ViewModel
 
         public void RefreshFilteredData()
         {
-            foreach (var centre in Centres)
+            
+            FilteredCentres = new ObservableCollection<Centre>();
+            foreach (var centre in _centres)
             {
                 centre.viewModel.NameFilter = NameFilter;
-                centre.viewModel.RefreshFilteredData();
+                int stores = centre.viewModel.RefreshFilteredData();
+                if (stores > 0)
+                {
+                    FilteredCentres.Add(centre);
+                }
             }
         }
 
@@ -54,7 +60,6 @@ namespace nakupne_centra.ViewModel
         {
             if (this._centres.Count != 0)
                 return;
-
             Uri dataUri = new Uri("ms-appx:///DataModel/CentresData.json");
 
             StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
@@ -98,8 +103,9 @@ namespace nakupne_centra.ViewModel
                 
                 centre.Stores = stores;
                 centre.viewModel = new StoresListViewModel(centre);
-                Centres.Add(centre);
+                _centres.Add(centre);
             }
+            NameFilter = "";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

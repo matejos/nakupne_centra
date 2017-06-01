@@ -27,11 +27,10 @@ namespace nakupne_centra
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private MainViewModel viewModel = new MainViewModel();
+        private MainViewModel viewModel;
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = viewModel;
         }
 
         private void CentreListView_ItemClicked(object sender, ItemClickEventArgs e)
@@ -60,7 +59,8 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel.RefreshFilteredData();
+            viewModel = new MainViewModel();
+            DataContext = viewModel;
         }
 
         private void CentreStoresButtonClick(object sender, RoutedEventArgs e)

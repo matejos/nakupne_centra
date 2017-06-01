@@ -116,7 +116,7 @@
             <TextBlock Text="Nákupné centrá" Style="{StaticResource HeaderStyle}"/>
         </Border>
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" PlaceholderText="Hľadať obchod" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
-        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding Centres}" ItemClick="CentreListView_ItemClicked" ContainerContentChanging="CentreListView_ContainerContentChanging">
+        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding FilteredCentres}" ItemClick="CentreListView_ItemClicked" ContainerContentChanging="CentreListView_ContainerContentChanging">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
