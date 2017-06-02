@@ -74,6 +74,7 @@ namespace nakupne_centra
                 else
                 {
                     EnsureViewStateActive("DetailView", WidthDisplayStates);
+                    MainSplitView.OpenPaneLength = 0;
                 }
             }
         }
@@ -85,11 +86,6 @@ namespace nakupne_centra
             }
         }
 
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             OpeningHoursPanel.Visibility = Visibility.Visible;
@@ -99,6 +95,7 @@ namespace nakupne_centra
                 if ((sender as ListView).SelectedItem != null)
                 {
                     VisualStateManager.GoToState(this, "DetailView", false);
+                    MainSplitView.OpenPaneLength = 0;
                 }
             }
             else if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "DetailView")
@@ -106,6 +103,7 @@ namespace nakupne_centra
                 if ((sender as ListView).SelectedItem == null)
                 {
                     VisualStateManager.GoToState(this, "ListView", false);
+                    MainSplitView.OpenPaneLength = Window.Current.Bounds.Width;
                 }
             }
             if ((sender as ListView).SelectedItem != null)
@@ -120,7 +118,6 @@ namespace nakupne_centra
                 IEnumerable<ListView> lists = _Children.OfType<ListView>()
                     .Where(x => x.Name.Equals("CategoryStoresList") && x != sender);
 
-                // test & set color
                 foreach (var list in lists)
                     list.SelectedItem = null;
             }
@@ -144,7 +141,6 @@ namespace nakupne_centra
         {
             if (WidthDisplayStates.CurrentState.Name == "DetailView")
             {
-                //StoresListView.SelectedItem = null;
                 EnsureViewStateActive("ListView", WidthDisplayStates);
                 MainSplitView.OpenPaneLength = Window.Current.Bounds.Width;
                 e.Handled = true;

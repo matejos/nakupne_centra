@@ -152,14 +152,8 @@
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="ListView">
-                    <VisualState.Setters>
-                        <Setter Target="MainSplitView.IsPaneOpen" Value="True" />
-                    </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="DetailView">
-                    <VisualState.Setters>
-                        <Setter Target="MainSplitView.IsPaneOpen" Value="False" />
-                    </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
             <VisualStateGroup x:Name="SortingTypeStates">
