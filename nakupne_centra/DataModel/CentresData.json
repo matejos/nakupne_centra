@@ -936,7 +936,7 @@
 				
 				
 				{
-					"Name": "dm drogerie mark s.r.o.",
+					"Name": "dm drogerie",
 					"Description": "V dm naleznete široký sortiment výrobků péče o tělo, vlasy a pleť, dekorativní kosmetiku, kosmetiku pro muže, biopotraviny, přírodní kosmetiku, krmivo pro domácí mazlíčky, produkty péče o dítě a dětskou výživu.\n \n Je zde možnost zpracování fotografií a široká nabídka fotodárků. Nabízíme i velký výběr vysoce kvalitních produktů dm značek, které jsou k dostání za příznivé ceny.\n\n dm má pro své zákazníky navíc atraktivní věrnostní programy dm active beauty svět výhod a dm babybonus.",
 					"Category": "Drogerie, kosmetika a zdraví",
 					"Floor": "0",
@@ -1808,7 +1808,7 @@
 						}
 				},
 				{
-					"Name": "Mister Minit - opravna obuvi, výroba klíčů",
+					"Name": "Mister Minit",
 					"Description": "Oprava obuvi, výroba klíčů, autoklíče, crypto klíče, zabezpečovací technika-zámky-vložky, broušení, rytecké práce, výměna baterií a řemínků, prodej péče o obuv a doplňkového sortimentu. Nabízíme služby na počkání nebo během vašeho nákupu.",
 					"Category": "Služby",
 					"Floor": "0",
@@ -1905,6 +1905,8 @@
 				},
 				
 				
+				
+				
 				{
 					"Name": "Allure",
 					"Description": "Šperky stříbrné, zlaté i z chirurgické oceli.",
@@ -1922,7 +1924,7 @@
 						}
 				},
 				{
-					"Name": "Prodej bižuterie a stříbra pro denní i večerní příležitost, např. značky Senso Di Donna.",
+					"Name": "Bijou Brigitte",
 					"Description": "Prodej bižuterie a stříbra pro denní i večerní příležitost, např. značky Senso Di Donna.",
 					"Category": "Hodiny, klenoty, bižuterie",
 					"Floor": "0",
