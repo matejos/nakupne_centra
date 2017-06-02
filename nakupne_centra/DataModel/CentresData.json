@@ -18,19 +18,419 @@
         "Stores":
 			[
 				{
-					"Name": "Albert Hypermarket",
-					"Description": "Hypermarket Albert v obchodním centru Galerie Vaňkovka nabízí na své ploše 4000 m² opravdu vše pod jednou střechou. Díky přehledné orientaci zde pohodlně uděláte jak rodinný nákup, tak pořídíte i rychlou svačinu do školy či do práce. Vybrat si můžete z více než 25 000 položek. Díky prestižnímu ocenění Národní cena kvality České republiky, které obchodní řetězec Albert získal již potřetí, si můžete být jisti kvalitou nabízeného zboží. Takto oceněné společnosti musí trvale splňovat nebo dokonce překračovat očekávání a především pak projevovat každodenní úsilí zkvalitnit nabídku výrobků a služeb pro koncové zákazníky.",
-					"Category": "Potraviny",
+					"Name": "Bershka",
+					"Description": "V roce 1998 vytvořila skupina Inditex Group nový komerční formát v reakci na omezenou poptávku ze strany mladých lidí a trendových zákazníků. Ve světě módy je Bershka referenčním bodem, který se zaměřuje na tyto nové a stále národnější zákazníky. Každou sezónu Bershka představí své nejnovější módní trendy pro DÍVKY a CHLAPCE a naplní své obchody barvami a styly, které jsou právě „IN“.\n\n Značka Bershka je známá pro svou špičkovou módu i proto, že své prodejny přeměňuje do avantgardních a rozlehlých prostor, jejichž image pečlivě pěstuje – od výloh až po způsob vystavení oděvů v prodejně.\n\n Prodejny značky Bershka jsou navrženy pro mladé zákazníky, kteří se zde mají cítit příjemně, tak aby se i nakupování stalo zábavou. Během procházení, vybírání a zkoušení oděvů mohou tito mladí znalci módy poslouchat nejnovější hity a sledovat městské umělecké trendy, které interpretují grafiky a módní fotografie zdobící interiér prodejny.\n Bershka je součástí Inditex Group a má více než 800 obchodů v 57 zemích.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Blažek",
+					"Description": "Módní dům Blažek je významnou českou značkou pánských oděvů. Zaměřuje se především na vysokou kvalitu, precizní zpracování a nadstandardní doplňkové služby. Dvakrát do roka uvádí na trh nové kolekce, které nabízí výhradně ve vlastní síti značkových prodejen.\n\n Módní dům Blažek představuje kolekci Jaro/léto 2017\n\n Portugalsko, rozmanitá země plná barev a jižanského temperamentu, inspirovalo návrhářky pánského módního domu Blažek při tvorbě nové kolekce jaro/léto 2017. Z kolekce v tónech oceánu čiší svěžest a uvolněnost. Do použitých materiálů vtisklo Portugalsko svůj rukopis v podobě výrazných dezénů, potisků, vzorů a tolik typických symbolů pro tuto část Pyrenejského poloostrova. Kolekce vznikla pod vedením designérského dua Jany Kuťkové a Věry Jakubíčkové, kterým se v ní podařilo propojit nadčasový design spolu s nejnovějšími módními trendy. Mezi přední výrobce látek použitých v nové kolekci patří respektovaná jména módního průmyslu jako Cerruti, Loro Piana či Vitale Barberis Canonico.",
+					"Category": "Móda",
 					"Floor": "0",
 					"Hours": 
 						{
-						"Monday": "07:00-22:00",
-						"Tuesday": "07:00-22:00",
-						"Wednesday": "07:00-22:00",
-						"Thursday": "07:00-22:00",
-						"Friday": "07:00-22:00",
-						"Saturday": "07:00-22:00",
-						"Sunday": "07:00-22:00"
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Bushman",
+					"Description": "Vysoce kvalitní přírodní materiály, atraktivní střihy, přehlídka špičkových technologií a finálních úprav pro pohyb nejen v divočině, ale i v městské džungli.\n Oblečení je maximálně pohodlné, praktické a velmi slušivé.\n Pánské modely jsou vyráběny až do velikosti 4XL a dámské do 3XL.\n V kolekci najdete originální trička, mikiny a svetry, velký výběr košil, praktické a odolné kapsáče, klasické kalhoty a jeansy, bundy a vesty s funkčními detaily a v neposlední řadě dámskou kolekci BUSHMAN FOR LADIES vyznačující se pohodlnými střihy v kombinaci s barevnou škálou přírodních barev, jejichž decentnost ocení každá žena.\n\n Bushman netvoří jen modely na jednu sezonu, klademe důraz na nadčasovost a trvanlivost a na vybrané výrobky poskytujeme až 4letou záruku kvality.\n\n Nabízíme také originální doplňky, opasky, spodní prádlo, ponožky, víno, tašky a peněženky CAMEL ACTIVE, klobouky a kabáty SCIPPIS, špičkové nože VICTORINOX a pohodlnou americkou obuv KEEN.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "C&A",
+					"Description": "C&A je jedna z největších a nejsilnějších oděvních firem v Evropě. C&A nabízí módu pro celou rodinu za příznivé ceny. Kromě dámské, pánské a dětské módy, je to také XL kolekce pro plnoštíhlé, těhotenská móda a široká nabídka doplňků. Mladou trendy módu pro teenagery najdete pod značkou CLOCKHOUSE.\n\n Společnost C&A byla založena v roce 1841 a k jejímu výročí 170 let vznikla jedinečná kolekce 1841, která je exkluzivně k dostání právě na pobočce v Galerii Vaňkovka.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Calzedonia",
+					"Description": "Značka Calzedonia vznikla v italské Veroně v roce 1986 jako první z pěti značek dynamicky rostoucí společnosti Calzedonia S.p.A. Letos můžeme ve světě najít více než 1600 prodejen této značky. Calzedonia se specializuje na prodej plavek, plážového oblečení, legín, punčochového zboží a ponožek pro ženy, muže i děti. Nabízí jak sezónní kolekce, ve kterých se vždy odráží ty nejaktuálnější světové módní trendy, tak i kolekce „basic“, kde najdou zákazníci své oblíbené produkty pro každodenní využití v základních barvách. Letní plavková kolekce Calzedonia je známá svou širokou nabídkou mnoha kalhotek a podprsenek, které mezi sebou lze libovolně kombinovat s cílem vždy vybrat plavky každé ženě přímo na míru. Také nabídka speciálních artiklů, jako jsou např. „push up“ legíny, si rychle získala svou popularitu. Calzedonia je aktuálním lídrem na trhu, nabízí nejžhavější módní trendy, širokou škálu střihů a barev, zakládá si na vysoké kvalitě materiálů a zároveň dostupné ceně. Ve výrobcích Calzedonia se budete cítit sebevědomě, trendy a pohodlně v každé situaci.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Camaïeu",
+					"Description": "Francouzská značka Camaïeu patří mezi největší řetězce dámské módy (přes 1 000 prodejen v 18 zemích světa) a přináší všem zákaznicím žensky působící a nápaditou módu podle nejnovějších trendů.\n\n Kolekce jsou pravidelně aktualizovány a na prodejnách naleznete každý týden nové zboží ve vkusném stylu a přívětivých cenách. Přáním Camaïeu je docílit toho, aby co nejvíce žen dokázalo lépe vyjádřit svou ženskost a krásu. Naše prodejní týmy jsou vždy připraveny Vám poradit a pomoci s výběrem.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "CELIO*",
+					"Description": "CELIO* je mezinárodní značka zaměřená na pánskou módu. Zákazníkům nabízíme ucelené kolekce módního oblečení pro volný čas, do práce i do společnosti. Každý rok CELIO* připravuje 6 kolekcí, které obsahují více než 400 modelů v dostupných cenách. CELIO* provozuje již více než 1200 obchodů a nyní je nově také v obchodním centru GALERIE VAŇKOVKA.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Desigual",
+					"Description": "Unikátní španělská módní značka Desigual Vám představí svět jedinečných barev a střihů, čímž je proslulá po celém světě. Desigual ve svých kolekcí používá ty nejkvalitnější materiály, nebojí se záplavy netradičních střihů a na každém svém produktu se soustředí na nejmenší detaily – at´ jsou to různé výšivky či aplikace zdůrazňující její osobitost. \n\n To, jak značka šíří svá pozitivní poselství prostřednictvím svým produktů a obchodů, se můžete přesvědčit sami v nově otevřeném obchodě Desigual v 1. patře, kde značka nabízí dámskou, pánskou a dětskou kolekci včetně nepřeberného množství různých módních doplňků.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "GANT",
+					"Description": "Značka GANT je protkána bohatou tradicí výroby neformálního oblečení vysoké kvality. Spojuje americkou ležérnost s evropskou elegancí. Její hodnoty jsou nerozlučně spjaty s autentickým dědictvím amerického východního pobřeží, pocházejícím z roku 1949, kdy byla společnost založena. Od té doby se dále vyvíjela, načerpala inspiraci z Evropy nejen v oblasti látek a návrhů, ale i v oblasti životního stylu. Dnes je vskutku globální lifestylovou značkou. Kolekce značky GANT nabízí široký sortiment pánské, dámské i dětské módy nejen pro volný čas. V licenci značky GANT se také navrhují a prodávají hodinky, obuv, brýle, pánské spodní prádlo, parfémy a v neposlední řadě luxusní bytové doplňky GANT Home.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "GTF (Diesel)",
+					"Description": "Prodejna se značkami Diesel a Mel. Italský módní label Diesel je nejvíce známý díky svým džínům, které vynikají svou naprostou kvalitou, stylem a nadčasovostí. Nesmíme však zapomenout ani na vršky, které mnohdy oplývají extravagancí, ať už střihem nebo naprosto stylovými potisky. Těšit se ale můžete i na kabelky, boty a ostatní doplňky. \n Tuto značku skvěle doplňuje brazilská značka Mel, což dámy zajisté ocení! Mel je ekologická recyklovatelná značka, jejíž botky jsou známé svou dokonalou vůní. Kolekce této značky jsou plné střevíčků na podpatku, stejně jako nízkých modelů zdobených srdíčky a stuhami, které jejich nositelce dodávají ten správný šmrnc.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "H&M",
+					"Description": "Značka H&M nabízí svým zákazníkům v Galerii Vaňkovka dámské oděvy, doplňky a spodní prádlo v duchu svého sloganu Móda a kvalita za nejlepší cenu.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "House",
+					"Description": "V kampani SS17 jsme se zaměřili na mladé lidi, sledovali jsme jejich chování - někdy z dálky, někdy s posměšky, ale závěr je takový, že si jich vážíme pro to, že jsou spolu. To vše z důvodu, aby House byl co nejblíže mladým lidem a byl s nimi při jejich každodenní zábavě, setkání s přáteli, ježdění na skateboardu nebo při zábavě na bláznivých koncertech.\n\n Nová kampaň šíří pozitivní energii, štěstí a smysl pro humor. Pro muže House připravil především oblečení pro volný čas, ve kterém každý fanoušek tohoto stylu najde to své, mnoho denimu a barevné potisky.\n\n V dámské kolekci najdeme květované šaty, bundy, džíny a mikiny s nápisy. Jaro představuje zábavu, pestrost a především zcela nový přístup k módě, která má být zajímavá a přirozená.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "II Faces (Armani)",
+					"Description": "Prestižní italská značka ARMANI JEANS vám přináší ty nejnovější trendy z dílny slavného návrháře Giorgia Armaniho. Značka je ztělesněním vize mladistvé, moderní a uvolněné casual módy vhodné pro každodenní nošení. První kolekce vznikla již v roce 1981 a za tu dobu si vybudovala renomé u všech módních znalců i vyznavačů konzervativnějšího stylu.\n\n V naší prodejně najdete taky sportovnější značku EA7 (Emporio Armani 7), spodní prádlo Emporio Armani a italskou značku REPLAY, která patří mezi lídry v distribuci denimové módy.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Intimissimi",
+					"Description": "Značka Intimissimi vznikla v italské Veroně v roce 1996 jako druhá značka dynamicky rostoucí společnosti Calzedonia S.p.A. (zal. 1986). Letos můžeme ve světě najít více než 1100 prodejen této značky. Intimissimi se specializuje na spodní prádlo, topy, pyžama a domácí oblečení pro ženy a muže. V sezónních kolekcích Intimissimi se odráží aktuální módní trendy, jak v barvách, tak i ve zpracování, a v kolekci „basic“ si zákazníci mohou vybírat ze široké nabídky artiklů pro každodenní využití. Nedávno tato značka navíc rozšířila svoji nabídku podprsenek a zákaznice mohou volit nejen z obrovské škály střihů, ale nov ě také mezi košíčky A, B, C a D. V dámské kolekci najdete různé topy, šaty, svetříky, spodničky a legíny v trendy střizích, barvách a z velmi pohodlných a snadno udržovatelných materiálů. Intimissimi si zakládá na kvalitě použitých materiálů a jejich zpracování, na pohodlí svých model ů a cenové dostupnosti. Ve výrobcích Intimissimi se budete cítit sebevědomě, trendy a pohodlně v každé situaci.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Le Premier",
+					"Description": "",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Levi’s",
+					"Description": "Když se řekne klasické džíny, mnoha lidem se vybaví Levi´s.\n\n Levi’s® je původní nejstarší americká džínová značka. První džíny na světě patentoval Levi Strauss již v roce 1873. Nyní se i Vy, můžete stát hrdými majiteli těchto vyjímečných džínů. Zveme Vás do prodejny Levi´s, kde naleznete široký sortiment produktů od této značky. Mimo širokého sortimentu džínu, u nás naleznete velký výběr svršků a originálních doplňků. S výběrem těch nejlépe padnoucích džínů, Vám ochotně pomůže odborně vyškolený personál.\n Tak neváhejte a staňte se vyjímečnými v originálních Leviskách.\n\n - Úprava délky u nás zakoupených džínů ZDARMA (neplatí na zlevněné džíny)\n - V prodeji dárkové poukazy v hodnotě 500Kč, 1000Kč\n - Věrnostní program pro zákazníky se slevou až 20 %",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "LUGGI",
+					"Description": "Pánská značková móda Pierre Cardin, Bugatti, Jupiter, Eterna a další.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Mohito",
+					"Description": "Kampaň L.A. Play je výzva k zábavě a experimentování. Nic není tak zřejmé, jak se zdá - džínová bunda se proměnila v korzet, kožené sukně se vrací na vrchol a třpytivé doplňky tvoří neodmyslitenou část outfitů. Milovníci klasiky ale také nepřijdou zkrátka - oblíbené bundy perfektích střihů, cigaretové kalhoty nebo skládané sukně v široké škále barev, stále tvoří základ naší nabídky.\n\n V jarních novinkách dominuje růžová barva - od tmavých odstínů až po ty nejsvětlejší, vyjímkou nejsou ani výšivky a květinové vzory. Mezi top doplňky tuto sezónu řadíme velurové sandály, pásky s ozdobnými přezkami, vlasové doplňky a náhrdelníky.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "New Yorker",
+					"Description": "New Yorker má přes 1000 prodejen, je zastoupen ve více než 40 zemích a tím patří k vedoucím společnostem v evropském segmentu mladé módy. Nabízí módu pro zákazníky, kteří vyhledávají nejnovější módní trendy.\n\n Rozmanitý a široký sortiment se skládá z vlastních známých značek FISHBONE, FISHBONE SISTER (sportovní a streetové oblečení), AMISU a SMOG (neformální a elegantní oblečení), CENSORED (spodní prádlo a plavky).\n Vše doladí a zvýrazní doplňková linie ACCESSOIRES s nápaditým zbožím.\n\n Všechny kolekce nabízejí velký výběr a denně jsou doplňovány novým zbožím.\n\n S New Yorker mottem „Dress for the moment“ zákazníkům neunikne žádný módní trend a vždy najdou oblečení pro každou příležitost.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "O bag store",
+					"Description": "Nudí vás nosit jednu a tu samou kabelku? Nově otevřený O bag store ve Vaňkovce je tím pravým místem pro Vás! Tělo z odolného materiálu EVA, ucha, vnitřní tašky a doplňky v podobě lemů a přívěsků Vám naše ochotné asistenky pomohou nakombinovat podle Vašich představ. Domů tak odejdete s krásným a originálním kouskem italské módy. Kromě kabelek si u nás můžete udělat radost hodinkami či slunečními brýlemi, které si rovněž můžete nakombinovat tak, aby nejlépe ladily s Vaším outfitem! :) Fantazii se u nás meze opravdu nekladou, tak přijďte!",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Original Marines",
+					"Description": "„Be Original“\n\n Original Marines navrhuje a vyrábí módní kolekce pro děti. Vytváří dětské oblečení a doplňky pro rodiny, které vyznávají aktivní životní styl. V našem oblečení v ležérním, městsky-sportovním stylu mají děti dostatek volnosti a pohybu pro svůj svět plný her a fantazie. Nezapomínáme ani na teenagery, kteří se ve svém oblečení chtějí cítit trendy a cool.\n Nasloucháme potřebám našich malých i velkých zákazníků. Do všech našich kolekcí vkládáme svoji vášeň, tvořivost a cit pro aktuální trendy. Naším posláním je najít si k rodinám takový vztah, aby si ti malí, až jednou budou velcí, zvolili z vlastní dobré zkušenosti pro své děti právě značku Original Marines.\n \n Věrnostní klub Original Marines\n Ceníme si Vaší důvěry a máme pro Vás připravený věrnostní program Original Marines. \n S klubou kartou Original Marines získáváte informace o slevách a akcích dříve než ostatní. \n Když nasbíráte 100 bodů (1 bod = 100 Kč) za rok, stáváte se členem VIP OM klubu a nakupujete celý rok se slevou 10 %. \n Přesná pravidla věrnostního klubu Vám podá personál OM.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Orsay",
+					"Description": "ORSAY je zárukou mladého, módního a cenově dostupného oblečení, které dokáže kdykoli vyjádřit individualitu každé ženy. Tento slib je pro nás největší výzvou a k jeho splnění směřujeme naše každodenní počínání a úsilí.\n \n Obchody ORSAY \n Nejdůležitější součást komunikace se denně odehrává ve 620 obchodech ORSAY: Zde se rozhoduje, zda se zákaznice bude s ORSAY cítit dobře. Je třeba, aby zákaznice měla z kontaktu s odborně vyškolenými pracovnicemi v obchodě příjemný emocionální zážitek – tzv. „ORSAY-Feeling“. Ale i design obchodu, přehledná prezentace zboží a inspirující výlohy se v každém jednotlivém obchodě starají o příjemnou atmosféru.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Peek&Cloppenburg",
+					"Description": "Německý řetězec s luxusní dámskou a pánskou módou.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Pietro Filipi",
+					"Description": "Módní autorská značka PIETRO FILIPI působí na českém a slovenském trhu už více než dvacet let, sází na nadčasové minimalistické střihy, kvalitní materiály a perfektní krejčovské zpracování oděvů. Za značkou stojí přední čeští a zahraniční designeři a osobnosti, což její produkci zaručuje originalitu i nepřetržitý kontakt s aktuálními módními trendy.\n\n  Ready to wear kolekce PIETRO FILIPI jaro-léto 2017 prezentována na Mercedes-Benz Prague Fashion Week vychází z hlavní inspirace – parallel horizons.\n\n Koncept Parallel Horizons představuje mezinárodní prostor, kde se potkávají různé vize a destinace, představující různé typy osobností, které jsou propojeny jedním stylem .",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Promod",
+					"Description": "PROMOD je nezávislá rodinná firma, založená v roce 1975 ve Francii. V současné době má víc než 1000 prodejen v Evropě, na Blízkém východě, Africe a Asii.\n\n Kolekci Promod tvoří skupina stylistů a návrhářů, kteří bdí nad tím, aby v každé sezóně prezentovali ženské a zároveň pohodlné modely a doplňky. Žena Promod by měla být aktivní a moderní.\n\n Značka jde s dobou, a co dva týdny osvěžuje svojí nabídku v prodejnách i na internetu tak, aby každá klientka měla šanci najít v Promod svoje oblíbené trendy a vytvořit svůj vysněný vzhled.\n\n Více informací o PROMOD se dozvíte na www.promod.cz.\n\n KOLEKCE JARO - LÉTO 2016\n\n Nahlédněte s námi do nové kolekce Promod JARO-LÉTO 2016 a inspirujte se trendy této sezóny!",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Pull&Bear",
+					"Description": "Koncepce: Komunita věčně mladých\n\n Značka Pull&Bear vznikla v roce 1991 s jasným záměrem rozšíření do zahraničí. Jejím cílem bylo oblékat mladé zákazníky vyznávající ducha pospolitosti. Mladé lidé, kteří se oblékají ležérně, vyhýbají se stereotypům a chtějí se ve svém oblečení cítit dobře. Těmto zákazníkům nabízí Pull&Bear nejnovější mezinárodní trendy, kombinuje je s vlivy městské ulice a nejmodernějších nočních klubů a pod značkou svého řetězce je transformuje do pohodlného, příjemného oblečení, vždy za nejlepší ceny.\n\n Pull&Bear se vyvíjí spolu se svými zákazníky, kteří neustále sledují nové technologie, sociální trendy a novinky v oblasti umění a hudby. To vše se odráží nejen v módních návrzích tohoto řetězce, ale také v prodejnách, pro které byly inspirací lofty v New Yorku a které působí vřele a srdečně. Kolekce se neustále inovují. Všechny prodejny značky Pull&Bear po celém světě dostávají nové zboží dvakrát týdně.\n\n Pull&Bear, součást skupiny Inditex Group (Zara, Pull&Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Zara Home a Uterqüe), má se sítí 745 obchodů zastoupení v 58 zemích světa (v 51 v podobě kamenných prodejen a v dalších 7 díky internetovým obchodům).",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
 						}
 				},
 				{
@@ -48,7 +448,155 @@
 						"Saturday": "09:00-21:00",
 						"Sunday": "10:00-20:00"
 						}
+				},
+				{
+					"Name": "Steilmann",
+					"Description": "Prostorná prodejna Steilmann ve 2. patře Galerie Vaňkovka nabízí plnou šíři značkové dámské i pánské konfekce. Vedle aktuálních trendů znamená pro modely elegantních dámských značek Steilmann a APANAGE a prestižní pánské značky STONES hlavní prioritu také vysoká kvalita použitých materiálů, jejich zpracování a přijatelná cena. Stylově se jedná o ležérní eleganci s atraktivními detaily. V bohaté škále střihů si každý zákazník vybere ten, který mu padne.\n\n V prodejně najdete i luxusní dámské kabelky a doplňky italské značky MAZZINI.\n Více informací o aktuální nabídce se dovíte na www.steilmann.cz.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Stradivarius",
+					"Description": "Móda v neustálém pohybu obsahující půvab a styl, po kterém každá žena touží. Duch značky Stradivarius je ženský, svěží a kreativní.\n\n  Stradivarius má malý šperk ve tvaru houslového klíče, symbol pro rytmus, dynamiku a odlišnost značky, který se přetransformoval do svého vlastního významu: začátek melodie.\n\n Stradivarius vybírá nejnovější módní trendy a přizpůsobuje je pro své příjemné a exkluzivně navržené prodejny, které představují kouzelný svět značky Stradivarius.\n\n Módě značky Stradivarius nechybí městský styl a půvab.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tally Weijl",
+					"Description": "Švýcarská značka TALLY WEiJL je dámská móda určená pro mladé dívky a ženy, které se chtějí cítit sexy. V našich kolekcích najdete široké spektrum oblečení od večerní módy až po oblečení do práce a do školy. S výběrem oblečení Vám pomůže ochotný a příjemný personál. Vždy se u nás můžete těšit na spoustu slev a zajímavých akcí.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tezenis",
+					"Description": "Tezenis je značka, která vznikla v italské Veroně v roce 2003 jako třetí značka dynamicky rostoucí společnosti Calzedonia S.p.A. (zal. 1986). Tezenis se specializuje na prodej spodního prádla, pyžam, punčochového zboží a jiného oblečení pro ženy, muže a děti. V letní sezóně svůj sortiment navíc rozšiřuje také o plavky a plážovou módu. Značka Tezenis je velmi mladistvá a urbanistická a v jejich sezónních kolekcích se odráží nejposlednější módní trendy.\n Značka Tezenis je mezi zákazníky oblíbena nejen pro široký sortiment a trendy styl, ale také díky velmi příznivým cenám, za které své produkty nabízí. Časté promoakce jsou skvělou příležitostí pro velmi výhodný nákup.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tom Tailor",
+					"Description": "Dámská i pánská volnočasová móda.",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tommy Hilfiger",
+					"Description": "Značka Tommy Hilfiger je jedním z celosvětových lídrů lifestylových desingových značek, známá svým pověstným „classic – american – cool“ stylem. Svým zákazníkům přináší po celém světě stylovou dámskou a pánskou módu nejvyšší kvality a trendy doplňky.\n V aktuální kolekci SUMMER 2017 objevíme sílu indiga, japonskem inspirované potisky květů a neoddělitelnou kombinaci bílé, modré a červené a hlavně silnou touhu zažít nekonečné léto. \n Šatník ženy je výrazně ovlivněný objevováním nových destinací. Toulky kalifornskými plážemi způsobily výrazné použití lehké bavlny. \n I v pánské části je kolekce ovlivněná výrazným vzorem. Inspirace pochází z každého města, které Tommy v průběhu své cesty navštívil. Prevážně to jsou místa s teplejším podnebím. Japonskem inspirované květiny se tentokrát zobrazují v umiernenejší modro-bílé kombinaci. \n Dámy a pánové, přijměte pozvání a prožijte to dobrodružství s námi!",
+					"Category": "Móda",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Triumph",
+					"Description": "Značka Triumph nabízí atraktivní modely, sledující nejnovější trendy, mladistvé modely pro dívky ale také funkční modely pro ženy, které potřebují korigovat svou postavu. Kromě toho obsahuje nabídka pohodlné spodní prádlo pro každý den, bavlněné košilky a kalhotky a v neposlední řadě také sportovní podprsenky. Ani pánové nepřijdou zkrátka. Pro ně je připravena kolekce značky sloggi. Každý rok u nás naleznete novou trendovou kolekci plavek. Celou nabídku doplňuje dámské noční prádlo, pyžama a župany.",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Wrangler Lee",
+					"Description": "Džínová móda, která je stále fenoménem dnešní doby... Je až neuvěřitelné, kolik lidí obléká právě tento druh oblečení zvláště značek Lee a Wrangler. Pravě tyto značky, které mají kořeny v dávné minulosti, udávají směr, kterým se džínová móda bude ubírat. Co za novinky můžete právě nyní najít u těchto značek? Sezónní povrchové úpravy džínsů, nepřehlédnutelné barvy topů a v neposlední řadě střihy, které padnou každému. Džínové značky Wrangler a Lee jsou plně zásobeny zbožím právě pro Vás, stačí jen přijít a vybrat si to pravé!",
+					"Category": "Móda",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				
+				{
+					"Name": "Albert Hypermarket",
+					"Description": "Hypermarket Albert v obchodním centru Galerie Vaňkovka nabízí na své ploše 4000 m² opravdu vše pod jednou střechou. Díky přehledné orientaci zde pohodlně uděláte jak rodinný nákup, tak pořídíte i rychlou svačinu do školy či do práce. Vybrat si můžete z více než 25 000 položek. Díky prestižnímu ocenění Národní cena kvality České republiky, které obchodní řetězec Albert získal již potřetí, si můžete být jisti kvalitou nabízeného zboží. Takto oceněné společnosti musí trvale splňovat nebo dokonce překračovat očekávání a především pak projevovat každodenní úsilí zkvalitnit nabídku výrobků a služeb pro koncové zákazníky.",
+					"Category": "Potraviny",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "07:00-22:00",
+						"Tuesday": "07:00-22:00",
+						"Wednesday": "07:00-22:00",
+						"Thursday": "07:00-22:00",
+						"Friday": "07:00-22:00",
+						"Saturday": "07:00-22:00",
+						"Sunday": "07:00-22:00"
+						}
 				}
+				
 			]
       },
       {
