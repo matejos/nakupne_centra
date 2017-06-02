@@ -25,7 +25,6 @@ namespace nakupne_centra
             this.InitializeComponent();
             Window.Current.SizeChanged += Current_SizeChanged;
             this.Loaded += Page_Loaded;
-            StoresListView.SelectionChanged += StoresListView_SelectionChanged;
             SystemNavigationManager.GetForCurrentView().BackRequested += StoresList_BackRequested;
             OpeningHoursPanel.Visibility = Visibility.Collapsed;
             StorePosition.Visibility = Visibility.Collapsed;
@@ -88,6 +87,16 @@ namespace nakupne_centra
 
         private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            StoreListView_SelectionChangedOrItemClicked(sender);
+        }
+
+        private void StoresListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            StoreListView_SelectionChangedOrItemClicked(sender);
+        }
+
+        private void StoreListView_SelectionChangedOrItemClicked(object sender)
+        {
             OpeningHoursPanel.Visibility = Visibility.Visible;
             StorePosition.Visibility = Visibility.Visible;
             if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "ListView")
@@ -112,7 +121,17 @@ namespace nakupne_centra
 
         private void CategoryStoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
+            CategoryStoreListView_SelectionChangedOrItemClicked(sender);
+        }
+
+        private void CategoryStoresListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CategoryStoreListView_SelectionChangedOrItemClicked(sender);
+        }
+
+        private void CategoryStoreListView_SelectionChangedOrItemClicked(object sender)
+        {
+            if ((sender as ListView).SelectedItem != null)
             {
                 var _Children = AllChildren(StoresByCategoryListView);
                 IEnumerable<ListView> lists = _Children.OfType<ListView>()
@@ -121,7 +140,7 @@ namespace nakupne_centra
                 foreach (var list in lists)
                     list.SelectedItem = null;
             }
-            StoresListView_SelectionChanged(sender, e);
+            StoreListView_SelectionChangedOrItemClicked(sender);
         }
 
         public List<Control> AllChildren(DependencyObject parent)

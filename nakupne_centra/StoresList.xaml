@@ -52,7 +52,7 @@
         <DataTemplate x:Key="CategoryItemTemplate">
             <local:ExpandPanel HeaderContent="{Binding Key}">
                 <local:ExpandPanel.Content>
-                    <ListView x:Name="CategoryStoresList" Loaded="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="CategoryStoresListView_SelectionChanged"/>
+                    <ListView x:Name="CategoryStoresList" Loaded="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" IsItemClickEnabled="True" SelectionChanged="CategoryStoresListView_SelectionChanged" ItemClick="CategoryStoresListView_ItemClick"/>
                 </local:ExpandPanel.Content>
             </local:ExpandPanel>
         </DataTemplate>
@@ -86,7 +86,7 @@
                     <Button x:Name="SortByTypeButton" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SortByTypeButton_Click">
                         <TextBlock x:Uid="ByType"/>
                     </Button>
-                    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
+                    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}" IsItemClickEnabled="True" SelectionChanged="StoresListView_SelectionChanged" ItemClick="StoresListView_ItemClick">
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
