@@ -66,8 +66,8 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <StackPanel Grid.Row="0" >
-                            <TextBlock Text="{Binding StoreName}" Margin="0,10,0,0" Style="{StaticResource HeaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
-                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
+                            <TextBlock Text="{Binding StoreName}" Margin="0,10,0,0" Style="{StaticResource HeaderStyle}" />
+                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}"/>
                         </StackPanel>
                         <Image Grid.Row="1" x:Name="Map" Margin="0,10,0,0" MaxHeight="500" VerticalAlignment="Top" HorizontalAlignment="Center" Source="{Binding Map}"/>
                         <Polygon Grid.Row="1" Margin="0,10,0,0" Fill="#AA33cc33" VerticalAlignment="Top" HorizontalAlignment="Center" Points="0,0,30,0,0,70" Visibility="{Binding SelectedItem, ElementName=StoresListView, Converter={StaticResource NullToVisibilityConverter}}"/>
