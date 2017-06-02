@@ -92,7 +92,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button Grid.Row="0" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button Grid.Row="0" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="MapButtonClick">
                     <StackPanel>
                         <SymbolIcon Symbol="Map"/>
                         <TextBlock x:Uid="Map"/>
@@ -106,7 +106,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid x:Name="RootGrid">
+    <Grid  x:Name="RootGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>

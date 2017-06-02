@@ -51,5 +51,12 @@ namespace nakupne_centra
             CentreStoreSearch css = new CentreStoreSearch(centre, "", null, true);
             this.Frame.Navigate(typeof(StoresList), css);
         }
+
+
+        private void MapButtonClick(object sender, RoutedEventArgs e)
+        {
+            var centre = (sender as FrameworkElement).DataContext as Centre;
+            this.Frame.Navigate(typeof(MapPage), centre);
+        }
     }
 }

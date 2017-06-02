@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="nakupne_centra.ViewModel.MapPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:nakupne_centra.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource SearchBarHeight}"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" />
+
+        <ScrollViewer  Name="MapScrollViewer" Grid.Row="1" MinZoomFactor="0.3" MaxZoomFactor="1.5" ZoomMode="Enabled" DoubleTapped="scrollViewer_DoubleTapped" 
+                       HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
+
+            <Viewbox Grid.Row="1">
+                <Grid>
+                    <!--<Image Name="Imm_Visualizzata"   Source="Data/Vankovka/floor0.png" />-->
+                    <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}"/>
+                    <Image x:Name="StorePosition" Margin="100,0,0,0" Width="48" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
+                </Grid>
+            </Viewbox>
+
+            <!--<Image Name="Imm_Visualizzata"   Source="Data/Vankovka/floor0.png" />
+             PointerWheelChanged="Image_PointerWheelChanged_1" -->
+        </ScrollViewer>
+            
+            
+    </Grid>
+</Page>

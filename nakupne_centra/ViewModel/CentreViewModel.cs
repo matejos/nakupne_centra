@@ -14,6 +14,7 @@ namespace nakupne_centra.ViewModel
             LogoRect = Centre.LogoRect;
             LogoSquare = Centre.LogoSquare;
             LogoColor = Centre.LogoColor;
+            Map = Centre.Floor0;
         }
 
         private Centre _centre;
@@ -62,6 +63,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _logoRect; }
             set { _logoRect = value; NotifyPropertyChanged("LogoRect"); }
+        }
+
+        private ImageSource _map;
+
+        public ImageSource Map
+        {
+            get { return _map; }
+            set { _map = value; NotifyPropertyChanged("Map"); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
