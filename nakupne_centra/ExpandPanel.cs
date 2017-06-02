@@ -49,7 +49,7 @@ namespace nakupne_centra
         public bool IsExpanded
         {
             get { return (bool)GetValue(IsExpandedProperty); }
-            set { SetValue(IsExpandedProperty, value); SaveExpandState(value); }
+            set { SetValue(IsExpandedProperty, value); }
         }
 
         public CornerRadius CornerRadius
@@ -108,7 +108,13 @@ namespace nakupne_centra
 
         private void ClickExpander(object sender, RoutedEventArgs e)
         {
-            IsExpanded = !IsExpanded;
+            ToggleExpand(!IsExpanded);
+            SaveExpandState(IsExpanded);
+        }
+
+        public void ToggleExpand(bool expand)
+        {
+            IsExpanded = expand;
             toggleExpander.IsChecked = IsExpanded;
             changeVisualState(_useTransitions);
         }
@@ -118,13 +124,17 @@ namespace nakupne_centra
             (App.Current as App).CategoryExpanded[HeaderContent] = value;
         }
 
-        private void ReturnExpandState()
+        public void ReturnExpandState()
         {
             if ((App.Current as App).CategoryExpanded.ContainsKey(HeaderContent))
             {
                 if ((App.Current as App).CategoryExpanded[HeaderContent])
                 {
-                    ClickExpander(null, null);
+                    ToggleExpand(true);
+                }
+                else
+                {
+                    ToggleExpand(false);
                 }
             }
             else

@@ -5,13 +5,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace nakupne_centra
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class CentrePage : Page
     {
         private CentreViewModel viewModel;
@@ -37,6 +32,7 @@ namespace nakupne_centra
         {
             viewModel = new CentreViewModel(e.Parameter as Centre);
             DataContext = viewModel;
+            (App.Current as App).CategoryExpanded = new System.Collections.Generic.Dictionary<string, bool>();
         }
 
         private void ButtonStores_Click(object sender, RoutedEventArgs e)

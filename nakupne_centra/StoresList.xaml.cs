@@ -1,6 +1,7 @@
 ﻿using nakupne_centra.DataModel;
 using nakupne_centra.ViewModel;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
@@ -8,17 +9,13 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace nakupne_centra
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class StoresList : Page
     {
         private StoresListViewModel viewModel;
         private bool focusSearchBar;
+        private ObservableCollection<ExpandPanel> panels = new ObservableCollection<ExpandPanel>();
 
         public StoresList()
         {
@@ -194,7 +191,22 @@ namespace nakupne_centra
 
         private void PanelLoaded(object sender, RoutedEventArgs e)
         {
-            ((sender as ListView).Parent as ExpandPanel).PanelLoaded();
+            ExpandPanel panel = (sender as ListView).Parent as ExpandPanel;
+            panel.PanelLoaded();
+            panels.Add(panel);
+            if (SearchBox.Text != "")
+                panel.ToggleExpand(true);
+        }
+
+        private void SearchBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            foreach (ExpandPanel panel in panels)
+            {
+                if (sender.Text != "")
+                    panel.ToggleExpand(true);
+                else
+                    panel.ReturnExpandState();
+            }
         }
     }
 }

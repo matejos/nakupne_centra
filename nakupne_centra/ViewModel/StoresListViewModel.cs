@@ -136,6 +136,7 @@ namespace nakupne_centra.ViewModel
             }
 
             FilteredCategories = newFilteredCategories;
+            
 
             if (FilteredStores.Except(newFilteredStores).Count() == 0 && newFilteredStores.Except(FilteredStores).Count() == 0)
                 return FilteredStores.Count;
@@ -144,10 +145,6 @@ namespace nakupne_centra.ViewModel
             return FilteredStores.Count;
         }
 
-        private bool MatchesFilter(string name, string filter)
-        {
-            return true;
-        }
 
         private void RefreshSelectedStore()
         {
