@@ -108,6 +108,7 @@ namespace nakupne_centra.ViewModel
 
         public int RefreshFilteredData()
         {
+            StoreName = StoreCategory = "";
             var filter = NameFilter.ToLower();
             IEnumerable<Store> fs;
             if (NameFilter == "")
