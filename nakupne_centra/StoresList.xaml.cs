@@ -2,11 +2,13 @@
 using nakupne_centra.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 namespace nakupne_centra
@@ -206,6 +208,26 @@ namespace nakupne_centra
                     panel.ToggleExpand(true);
                 else
                     panel.ReturnExpandState();
+            }
+        }
+
+        private void Map_Loaded(object sender, RoutedEventArgs e)
+        {
+            viewModel.MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height;
+        }
+
+        private void Map_ImageOpened(object sender, RoutedEventArgs e)
+        {
+            Image img = sender as Image;
+            if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0)
+            {
+                DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height = (img.Source as BitmapImage).PixelHeight;
+                viewModel.MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height;
+            }
+            else if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1)
+            {
+                DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1Height = (img.Source as BitmapImage).PixelHeight;
+                viewModel.MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1Height;
             }
         }
     }

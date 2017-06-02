@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using Windows.UI.Xaml.Media;
 
@@ -75,6 +76,14 @@ namespace nakupne_centra.ViewModel
             set { _map = value; NotifyPropertyChanged("Map"); }
         }
 
+        private double _mapHeight;
+
+        public double MapHeight
+        {
+            get { return _mapHeight; }
+            set { _mapHeight = value; NotifyPropertyChanged("MapHeight"); }
+        }
+
         private string _name;
 
         public string Name
@@ -105,6 +114,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _storeCategory; }
             set { _storeCategory = value; NotifyPropertyChanged("StoreCategory"); }
+        }
+
+        private string _storePosition;
+
+        public string StorePosition
+        {
+            get { return _storePosition; }
+            set { _storePosition = value; NotifyPropertyChanged("StorePosition"); }
         }
 
         private Hours _hours;
@@ -153,15 +170,18 @@ namespace nakupne_centra.ViewModel
                 StoreName = SelectedStore.Name;
                 StoreDesc = SelectedStore.Description;
                 StoreCategory = SelectedStore.Category;
+                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
                 Hours = SelectedStore.StoreHours;
                 string storeFloor = SelectedStore.Floor;
                 if (storeFloor.Equals("0"))
                 {
                     Map = Centre.Floor0;
+                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor0Height;
                 }
                 else
                 {
                     Map = Centre.Floor1;
+                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor1Height;
                 }
             }
             else

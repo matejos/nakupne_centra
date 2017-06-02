@@ -1,5 +1,6 @@
 ﻿using nakupne_centra.ViewModel;
 using System.Collections.ObjectModel;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
 namespace nakupne_centra.DataModel
@@ -28,5 +29,7 @@ namespace nakupne_centra.DataModel
         public ObservableCollection<Store> Stores { get; set; }
         public StoresListViewModel viewModel { get; set; }
         public string LogoColor { get; set; }
+        public double Floor0Height { get; set; }
+        public double Floor1Height { get; set; }
     }
 }

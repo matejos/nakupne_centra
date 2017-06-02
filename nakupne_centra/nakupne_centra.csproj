@@ -102,6 +102,7 @@
       <DependentUpon>CentrePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\EmptyToVisibilityConverter.cs" />
+    <Compile Include="Converters\CoordinatesConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="DataModel\Centre.cs" />
     <Compile Include="DataModel\CentreStoreSearch.cs" />

@@ -2,18 +2,23 @@
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using Windows.Data.Json;
 using Windows.Storage;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace nakupne_centra.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public MainViewModel()
+        public MainViewModel(Grid rootGrid)
         {
+            _rootGrid = rootGrid;
             LoadData();
         }
+
+        private Grid _rootGrid;
 
         private ObservableCollection<Centre> _filteredCentres;
 
@@ -82,7 +87,7 @@ namespace nakupne_centra.ViewModel
                                                            new BitmapImage(new Uri(dataFolder + "floor1.png")),
                                                            centreHours,
                                                            centreObject["LogoColor"].GetString());
-
+                    Debug.WriteLine(centre.Name + " is " + new BitmapImage(new Uri(dataFolder + "floor0.png")).DecodePixelHeight);
                     ObservableCollection<Store> stores = new ObservableCollection<Store>();
                     foreach (JsonValue storeJson in centreObject["Stores"].GetArray())
                     {
@@ -95,7 +100,9 @@ namespace nakupne_centra.ViewModel
                             storeObject["Description"].GetString(),
                             storeObject["Category"].GetString(),
                             storeObject["Floor"].GetString(),
-                            storeHours
+                            storeHours,
+                            //storeObject["PositionX"].GetNumber(), storeObject["PositionY"].GetNumber()
+                            800,100
                             ));
                     }
 

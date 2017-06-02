@@ -41,7 +41,7 @@ namespace nakupne_centra
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new MainViewModel();
+            viewModel = new MainViewModel(RootGrid);
             DataContext = viewModel;
         }
 
