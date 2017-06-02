@@ -56,10 +56,10 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Button x:Name="SortByAlphabetButton" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SortByAlphabetButton_Click">
                         <TextBlock x:Uid="Alphabetical"/>
                     </Button>
-                    <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Button x:Name="SortByTypeButton" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="SortByTypeButton_Click">
                         <TextBlock x:Uid="ByType"/>
                     </Button>
                     <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
@@ -128,6 +128,18 @@
                 <VisualState x:Name="DetailView">
                     <VisualState.Setters>
                         <Setter Target="MainSplitView.IsPaneOpen" Value="False" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="SortingTypeStates">
+                <VisualState x:Name="ByAlphabet">
+                    <VisualState.Setters>
+                        <Setter Target="StoresListView.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="ByType">
+                    <VisualState.Setters>
+                        <Setter Target="StoresListView.Visibility" Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

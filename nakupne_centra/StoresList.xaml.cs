@@ -24,6 +24,8 @@ namespace nakupne_centra
             this.Loaded += Page_Loaded;
             StoresListView.SelectionChanged += StoresListView_SelectionChanged;
             SystemNavigationManager.GetForCurrentView().BackRequested += StoresList_BackRequested;
+            if ((App.Current as App).PreferSortingByType)
+                SortByTypeButton_Click(null, null);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -124,6 +126,18 @@ namespace nakupne_centra
 
         private void centresStoreSearch_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
         {
+        }
+
+        private void SortByAlphabetButton_Click(object sender, RoutedEventArgs e)
+        {
+            VisualStateManager.GoToState(this, "ByAlphabet", false);
+            (App.Current as App).PreferSortingByType = false;
+        }
+
+        private void SortByTypeButton_Click(object sender, RoutedEventArgs e)
+        {
+            VisualStateManager.GoToState(this, "ByType", false);
+            (App.Current as App).PreferSortingByType = true;
         }
     }
 }
