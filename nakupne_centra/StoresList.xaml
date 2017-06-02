@@ -61,11 +61,9 @@
                 </Grid.RowDefinitions>-->
 
                 <local:ExpandPanel HeaderContent="{Binding Key}">
-                    <local:ExpandPanel.Content>
-                        <StackPanel>
-                            <ListView ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="StoresListView_SelectionChanged"/>
-                        </StackPanel>
-                    </local:ExpandPanel.Content>
+                <local:ExpandPanel.Content>
+                    <ListView x:Name="CategoryStoresList" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="CategoryStoresListView_SelectionChanged"/>
+                </local:ExpandPanel.Content>
                 </local:ExpandPanel>
 
                 <!--<Border Grid.Column="0" Margin="10,0">

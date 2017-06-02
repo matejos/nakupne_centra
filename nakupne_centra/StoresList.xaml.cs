@@ -1,8 +1,11 @@
 ﻿using nakupne_centra.DataModel;
 using nakupne_centra.ViewModel;
+using System.Collections.Generic;
+using System.Linq;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -107,6 +110,34 @@ namespace nakupne_centra
             }
             if ((sender as ListView).SelectedItem != null)
                 viewModel.SelectedStore = (sender as ListView).SelectedItem as Store;
+        }
+
+        private void CategoryStoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                var _Children = AllChildren(StoresByCategoryListView);
+                IEnumerable<ListView> lists = _Children.OfType<ListView>()
+                    .Where(x => x.Name.Equals("CategoryStoresList") && x != sender);
+
+                // test & set color
+                foreach (var list in lists)
+                    list.SelectedItem = null;
+            }
+            StoresListView_SelectionChanged(sender, e);
+        }
+
+        public List<Control> AllChildren(DependencyObject parent)
+        {
+            var _List = new List<Control>();
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var _Child = VisualTreeHelper.GetChild(parent, i);
+                if (_Child is Control)
+                    _List.Add(_Child as Control);
+                _List.AddRange(AllChildren(_Child));
+            }
+            return _List;
         }
 
         private void StoresList_BackRequested(object sender, BackRequestedEventArgs e)
