@@ -113,7 +113,8 @@ namespace nakupne_centra
         {
             if (WidthDisplayStates.CurrentState.Name == "DetailView")
             {
-                StoresListView.SelectedItem = null;
+                //StoresListView.SelectedItem = null;
+                EnsureViewStateActive("ListView", WidthDisplayStates);
                 MainSplitView.OpenPaneLength = Window.Current.Bounds.Width;
                 e.Handled = true;
             }

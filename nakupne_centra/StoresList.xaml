@@ -50,7 +50,7 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="CategoryItemTemplate">
-            <Grid>
+            <!--<Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="25"/>
@@ -58,9 +58,17 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"/>
                     <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+                </Grid.RowDefinitions>-->
 
-                <Border Grid.Column="0" Margin="10,0">
+                <local:ExpandPanel HeaderContent="{Binding Key}">
+                    <local:ExpandPanel.Content>
+                        <StackPanel>
+                            <ListView ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="StoresListView_SelectionChanged"/>
+                        </StackPanel>
+                    </local:ExpandPanel.Content>
+                </local:ExpandPanel>
+
+                <!--<Border Grid.Column="0" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
                         <TextBlock Text="{Binding Key}" Style="{StaticResource CentreNameStyle}" />
                     </Viewbox>
@@ -71,7 +79,7 @@
                 <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0">
                     <ListView ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="StoresListView_SelectionChanged"/>
                 </StackPanel>
-            </Grid>
+            </Grid>-->
         </DataTemplate>
     </Page.Resources>
     
@@ -110,7 +118,7 @@
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
-                    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresByCategoryListView" ItemTemplate="{StaticResource CategoryItemTemplate}" ItemsSource="{Binding FilteredCategories}">
+                    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresByCategoryListView" ItemTemplate="{StaticResource CategoryItemTemplate}" ItemsSource="{Binding FilteredCategories}" SelectionMode="None">
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
