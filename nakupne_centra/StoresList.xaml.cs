@@ -24,8 +24,12 @@ namespace nakupne_centra
             this.Loaded += Page_Loaded;
             StoresListView.SelectionChanged += StoresListView_SelectionChanged;
             SystemNavigationManager.GetForCurrentView().BackRequested += StoresList_BackRequested;
+            OpeningHoursPanel.Visibility = Visibility.Collapsed;
+            StorePosition.Visibility = Visibility.Collapsed;
             if ((App.Current as App).PreferSortingByType)
                 SortByTypeButton_Click(null, null);
+            else
+                SortByAlphabetButton_Click(null, null);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -85,23 +89,24 @@ namespace nakupne_centra
 
         private void StoresListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            OpeningHoursPanel.Visibility = Visibility.Visible;
+            StorePosition.Visibility = Visibility.Visible;
             if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "ListView")
             {
-                if (StoresListView.SelectedItem != null)
+                if ((sender as ListView).SelectedItem != null)
                 {
-                    
                     VisualStateManager.GoToState(this, "DetailView", false);
                 }
             }
             else if (WidthDisplayStates.CurrentState != null && WidthDisplayStates.CurrentState.Name == "DetailView")
             {
-                if (StoresListView.SelectedItem == null)
+                if ((sender as ListView).SelectedItem == null)
                 {
                     VisualStateManager.GoToState(this, "ListView", false);
                 }
             }
-            if (StoresListView.SelectedItem != null)
-                viewModel.SelectedStore = StoresListView.SelectedItem as Store;
+            if ((sender as ListView).SelectedItem != null)
+                viewModel.SelectedStore = (sender as ListView).SelectedItem as Store;
         }
 
         private void StoresList_BackRequested(object sender, BackRequestedEventArgs e)

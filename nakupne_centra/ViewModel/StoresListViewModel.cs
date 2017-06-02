@@ -16,6 +16,7 @@ namespace nakupne_centra.ViewModel
             Stores = centre.Stores;
             FilteredStores = Stores;
             Map = Centre.Floor0;
+            NameFilter = "";
         }
 
         private Centre _centre;
@@ -40,6 +41,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _filteredStores; }
             set { _filteredStores = value; NotifyPropertyChanged("FilteredStores"); }
+        }
+
+        private Dictionary<string, ObservableCollection<Store>> _filteredCategories;
+
+        public Dictionary<string, ObservableCollection<Store>> FilteredCategories
+        {
+            get { return _filteredCategories; }
+            set { _filteredCategories = value; NotifyPropertyChanged("FilteredCategories"); }
         }
 
         private string _nameFilter;
@@ -108,27 +117,30 @@ namespace nakupne_centra.ViewModel
 
         public int RefreshFilteredData()
         {
-            StoreName = StoreCategory = "";
             var filter = NameFilter.ToLower();
-            IEnumerable<Store> fs;
-            if (NameFilter == "")
+            ObservableCollection<Store> newFilteredStores;
+            Dictionary<string, ObservableCollection<Store>> newFilteredCategories = new Dictionary<string, ObservableCollection<Store>>();
+
+            newFilteredStores = new ObservableCollection<Store>();
+            foreach (Store store in Stores)
             {
-                fs = Stores;
+                if (StoreFilter.Match(store.Name, filter))
+                {
+                    newFilteredStores.Add(store);
+                    if (!newFilteredCategories.ContainsKey(store.Category))
+                    {
+                        newFilteredCategories.Add(store.Category, new ObservableCollection<Store>());
+                    }
+                    newFilteredCategories[store.Category].Add(store);
+                }
             }
-            else
-            {
-                fs = from fobjs in Stores
-                     where StoreFilter.Match(fobjs.Name, filter)
-                     select fobjs;
-            }
-            
-            ObservableCollection<Store> newFilteredStores = new ObservableCollection<Store>(fs);
+
+            FilteredCategories = newFilteredCategories;
 
             if (FilteredStores.Except(newFilteredStores).Count() == 0 && newFilteredStores.Except(FilteredStores).Count() == 0)
                 return FilteredStores.Count;
 
             FilteredStores = newFilteredStores;
-            
             return FilteredStores.Count;
         }
 
