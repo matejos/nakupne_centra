@@ -20,7 +20,7 @@
 
                 <StackPanel Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreAddressStyle}"/>
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}"/>
                     </Viewbox>
                 </StackPanel>
             </Grid>
@@ -42,7 +42,7 @@
 
                 <Border Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource CentreNameStyle}" />
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}" />
                     </Viewbox>
                 </Border>
                 

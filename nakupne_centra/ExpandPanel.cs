@@ -9,11 +9,8 @@ using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 
-// The Templated Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234235
-
 namespace nakupne_centra
 {
-    [Bindable]
     public sealed class ExpandPanel : ContentControl
     {
         public ExpandPanel()

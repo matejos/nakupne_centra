@@ -13,7 +13,7 @@ namespace nakupne_centra.ViewModel
         {
             Centre = centre;
             Name = Centre.Name;
-            Stores = centre.Stores;
+            Stores = new ObservableCollection<Store>(from i in centre.Stores orderby i.Name select i); ;
             FilteredStores = Stores;
             Map = Centre.Floor0;
             NameFilter = "";
