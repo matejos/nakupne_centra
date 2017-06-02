@@ -47,13 +47,29 @@
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
         <SplitView x:Name="MainSplitView" Grid.Row="2" IsPaneOpen="True" DisplayMode="Inline">
             <SplitView.Pane>
-                <ListView x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                </ListView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TextBlock x:Uid="Alphabetical"/>
+                    </Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TextBlock x:Uid="ByType"/>
+                    </Button>
+                    <ListView Grid.Row="1" Grid.ColumnSpan="2" x:Name="StoresListView" ItemTemplate="{StaticResource StoresItemTemplate}" ItemsSource="{Binding FilteredStores}">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                </Grid>
             </SplitView.Pane>
             <Grid>
                 

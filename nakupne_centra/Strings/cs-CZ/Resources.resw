@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Alphabetical.Text" xml:space="preserve">
+    <value>Abecedně</value>
+  </data>
+  <data name="ByType.Text" xml:space="preserve">
+    <value>Dle sortimentu</value>
+  </data>
   <data name="Friday.Text" xml:space="preserve">
     <value>Pátek</value>
   </data>
