@@ -21,6 +21,11 @@ namespace nakupne_centra
             this.DefaultStyleKey = typeof(ExpandPanel);
         }
 
+        public void PanelLoaded()
+        {
+            ReturnExpandState();
+        }
+
         private bool _useTransitions = true;
         private VisualState _collapsedState;
         private Windows.UI.Xaml.Controls.Primitives.ToggleButton toggleExpander;
@@ -47,7 +52,7 @@ namespace nakupne_centra
         public bool IsExpanded
         {
             get { return (bool)GetValue(IsExpandedProperty); }
-            set { SetValue(IsExpandedProperty, value); }
+            set { SetValue(IsExpandedProperty, value); SaveExpandState(value); }
         }
 
         public CornerRadius CornerRadius
@@ -87,12 +92,7 @@ namespace nakupne_centra
                 GetTemplateChild("ExpandCollapseButton");
             if (toggleExpander != null)
             {
-                toggleExpander.Click += (object sender, RoutedEventArgs e) =>
-                {
-                    IsExpanded = !IsExpanded;
-                    toggleExpander.IsChecked = IsExpanded;
-                    changeVisualState(_useTransitions);
-                };
+                toggleExpander.Click += ClickExpander;
             }
             contentElement = (FrameworkElement)GetTemplateChild("Content");
             if (contentElement != null)
@@ -102,11 +102,38 @@ namespace nakupne_centra
                 {
                     _collapsedState.Storyboard.Completed += (object sender, object e) =>
                     {
-                        contentElement.Visibility = Visibility.Collapsed;
+                        contentElement.Visibility = IsExpanded ? Visibility.Visible : Visibility.Collapsed;
                     };
                 }
             }
             changeVisualState(false);
+        }
+
+        private void ClickExpander(object sender, RoutedEventArgs e)
+        {
+            IsExpanded = !IsExpanded;
+            toggleExpander.IsChecked = IsExpanded;
+            changeVisualState(_useTransitions);
+        }
+
+        private void SaveExpandState(bool value)
+        {
+            (App.Current as App).CategoryExpanded[HeaderContent] = value;
+        }
+
+        private void ReturnExpandState()
+        {
+            if ((App.Current as App).CategoryExpanded.ContainsKey(HeaderContent))
+            {
+                if ((App.Current as App).CategoryExpanded[HeaderContent])
+                {
+                    ClickExpander(null, null);
+                }
+            }
+            else
+            {
+                (App.Current as App).CategoryExpanded.Add(HeaderContent, false);
+            }
         }
     }
 }

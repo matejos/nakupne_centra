@@ -50,34 +50,11 @@
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="CategoryItemTemplate">
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="25"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>-->
-
-                <local:ExpandPanel HeaderContent="{Binding Key}">
+            <local:ExpandPanel HeaderContent="{Binding Key}">
                 <local:ExpandPanel.Content>
-                    <ListView x:Name="CategoryStoresList" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="CategoryStoresListView_SelectionChanged"/>
+                    <ListView x:Name="CategoryStoresList" Loaded="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="CategoryStoresListView_SelectionChanged"/>
                 </local:ExpandPanel.Content>
-                </local:ExpandPanel>
-
-                <!--<Border Grid.Column="0" Margin="10,0">
-                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding Key}" Style="{StaticResource CentreNameStyle}" />
-                    </Viewbox>
-                </Border>
-
-                <FontIcon Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE0E5;" FontSize="20"/>
-
-                <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,0">
-                    <ListView ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" SelectionChanged="StoresListView_SelectionChanged"/>
-                </StackPanel>
-            </Grid>-->
+            </local:ExpandPanel>
         </DataTemplate>
     </Page.Resources>
     
@@ -171,7 +148,7 @@
             <VisualStateGroup x:Name="WidthDisplayStates">
                 <VisualState x:Name="FullView">
                     <VisualState.Setters>
-                        <Setter Target="MainSplitView.OpenPaneLength" Value="320" />
+                        <Setter Target="MainSplitView.OpenPaneLength" Value="360" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="ListView">

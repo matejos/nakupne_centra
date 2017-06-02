@@ -176,5 +176,10 @@ namespace nakupne_centra
             VisualStateManager.GoToState(this, "ByType", false);
             (App.Current as App).PreferSortingByType = true;
         }
+
+        private void PanelLoaded(object sender, RoutedEventArgs e)
+        {
+            ((sender as ListView).Parent as ExpandPanel).PanelLoaded();
+        }
     }
 }

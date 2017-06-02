@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Core;
@@ -14,6 +15,7 @@ namespace nakupne_centra
     sealed partial class App : Application
     {
         public bool PreferSortingByType = false;
+        public Dictionary<string, bool> CategoryExpanded = new Dictionary<string, bool>();
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
