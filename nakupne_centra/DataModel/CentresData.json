@@ -579,7 +579,6 @@
 				},
 				
 				
-				
 				{
 					"Name": "Albert Hypermarket",
 					"Description": "Hypermarket Albert v obchodním centru Galerie Vaňkovka nabízí na své ploše 4000 m² opravdu vše pod jednou střechou. Díky přehledné orientaci zde pohodlně uděláte jak rodinný nákup, tak pořídíte i rychlou svačinu do školy či do práce. Vybrat si můžete z více než 25 000 položek. Díky prestižnímu ocenění Národní cena kvality České republiky, které obchodní řetězec Albert získal již potřetí, si můžete být jisti kvalitou nabízeného zboží. Takto oceněné společnosti musí trvale splňovat nebo dokonce překračovat očekávání a především pak projevovat každodenní úsilí zkvalitnit nabídku výrobků a služeb pro koncové zákazníky.",
@@ -595,8 +594,1703 @@
 						"Saturday": "07:00-22:00",
 						"Sunday": "07:00-22:00"
 						}
-				}
+				},
+				{
+					"Name": "arko",
+					"Description": "arko je specializovaná prodejna, která nabízí ručně zhotovené luxusní pralinky s nejvyšší kvalitou a to buď vážené z pralinkového pultu nebo balené již v dárkových krabičkách. Dále nabízí čerstvé jemné máslové a křehké pečivo, čokolády s původem, čerstvě praženou kávu z vlastní pražírny, sladkosti z ušlechtilého marcipánu a jemného nugátu a mnoho dalších delikates vhodných pro každou příležitost v dárkovém balení.\n\n Vstupte do světa arko, arko dělá radost.",
+					"Category": "Potraviny",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Karlova pekárna",
+					"Description": "Vás srdečně zve do naší prodejny pekařských a cukrářských výrobků.\n\n - denně čerstvé zákusky a koláčky dle tradičních domácích receptur\n - široký výběr čerstvého pečiva vlastní ruční výroby\n - pochoutky studené kuchyně\n - bagety, chlebíčky, mini chlebíčky, saláty, rautové mísy\n - mini zákusky a dorty katalogové i speciální na zakázku\n - výtečnou italskou kávu Piacetto a kávové speciality\n\n Přijímáme objednávky na dorty, chlebíčky a rautové mísy.",
+					"Category": "Potraviny",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "07:30-21:00",
+						"Tuesday": "07:30-21:00",
+						"Wednesday": "07:30-21:00",
+						"Thursday": "07:30-21:00",
+						"Friday": "07:30-21:00",
+						"Saturday": "07:30-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "MY FOOD",
+					"Description": "Ochutnejte svět z jednoho místa.\n\n MY FOOD je jediná síť prodejen s kompletním sortimentem kvalitních a originálních potravin a jídel z celého světa, která inspiruje k novým gastrozážitkům. \n\n Pro lidi, kterým není jedno, co vkládají do úst..\n … a nebojí se objevovat, ochutnávat a nechat se inspirovat.\n \n Najdete nás také...\n My FOOD Market: Zvonařka 5, Brno\n My FOOD Snack & Market: Holandská 5, Brno\n My FOOD e-SHOP: www.myfoodmarket.cz",
+					"Category": "Potraviny",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "08:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tchibo",
+					"Description": "Objevte jedinečný svět Tchibo\n\n Navštivte obchod Tchibo a nakupujte v příjemné atmosféře provoněné kávou. Nabízíme vám jak kompletní kávové občerstvení s možností posezení, tak i širokou škálu čerstvých zrnkových káv z různých částí světa. Zároveň můžete každý týden vybírat z nové kolekce výrobků spotřebního zboží značky Tchibo, které představujeme v duchu motta „Každý týden nový svět“. Témata kolekcí se v průběhu roku střídají a postupně zahrnují oblasti od vybavení domácnosti a kuchyně přes módu, sport, elektroniku, hračky, šperky až po zahradu.\n\n Kompletní nabídku hledejte v našem obchodě nebo na www.tchibo.cz.\n\n Co Vás v obchodě Tchibo ček?á\n - šálek profesionálně připravené lahodné kávy,\n - čerstvá pražená káva z nejlepších pěstebních oblastí (zrnková i mletá),\n - široká nabídka spotřebního zboží, která je každý týden nová,\n - příjemné posezení a milý personál.",
+					"Category": "Potraviny",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
 				
+				
+				{
+					"Name": "Baťa",
+					"Description": "Společnost Baťa provozuje v České republice desítky prodejen a její logo najdete, kromě Česka, Slovenska a dalších zemí Evropy, na každém kontinentu. Značka Baťa, která vznikla už v roce 1894 ve Zlíně, je známá na všech kontinentech a za více než stoletou existenci si vydobyla své pevné místo.\n\n Každý měsíc najdete u Bati novou kolekci, která představuje ty nejnovější trendy sezóny. Kromě nejnovějších módních trendů můžete vybírat z opravdu široké škály klasických a nadčasových modelů a sortimentu sportovní, volnočasové nebo společenské obuvi.\n\n V prodejnách na Vás čeká více než tisíc módních kousků obuvi a také spousta stylových kabelek a doplňků. Pokud v nejbližší prodejně Baťa nenajdete hledaný sortiment, podívejte se na bata.cz.\n\n Poznejte zcela nový rozměr nakupování u Bati!",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Carpisa",
+					"Description": "Italská značka Carpisa oslavila v roce 2011 desáté výročí expanze a na Evropském trhu je unikátem v oblasti kabelek, módních doplňků a batožiny. Italský design, trendovost a dostupná cena učinili ze značky Carpisa vyhledávané místo pro nákupy a stálý nárůst a návrat starých zákazníků to jen potvrzuje. V samotné Itálii má značka Carpisa více než 500 obchodů, v zahraničí sa pomalu dostává na metu 100 obchodů. Obchody této značky mohou zákazníci najít v najdůležitějších městech módy jako jsou Miláno, Londýn, Atény, Madrid, Dubai a mnoho dalších.\n Potěšující zprávou je, že všechny tyto trendové kousky najde zákazník i v našem obchodě v Galerii Vaňkovka.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "CCC",
+					"Description": "Každý z nás denně míří k nějakému cíli. Každý jde svou vlastní cestou…v padnoucích botách. Podívejte se na novou kolekci LÉTO 2017 a vyberte svou cestu k cíli a bez překážek. Co jsme si pro Vás připravili? Barevnou různorodost, střihy, které probouzejí Vaši představivost, nejstylovější modely - to vše najdete v CCC. \n\n Můžete si vybrat boty podle nálady, charakteru nebo pro nějakou speciální příležitost - pomůžeme Vám vybrat ty nejlepší. Bez ohledu na to, zda preferujete elegantní styl nebo sportovní, v naši nabídce najdete vše, co hledáte. Obuv značky Lasocki z přírodní kůže nebo sportovní obuv Sprandi, tvoří velkou část naší široké nabídky.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Crocs",
+					"Description": "Fenomenální obuvnická firma, která v roce 2002 přivedla na svět barevný děrovaný “dřevák”. Od té doby se rozvinula v jednu z nejoblíbenějších a nejrozmanitějších obuvnických značek: Balerínky, sandálky, holínky, sněhule - to všechno s velkou přidanou hodnotou, kterou je ultimátní pohodlí materiálu Croslite a barvy, barvy, barvy.\n\n Za úspěchem fenoménu stojí jednoduchý koncept – praktická a super lehká bota, která neklouže, je skladná a obojživelná. A hlavně, neuvěřitelně pohodlná. Tyto vlastnosti se staly poznávacím znamením bot Crocs a důvodem, proč dobyly svět i srdce lidí.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "DEICHMANN",
+					"Description": "DEICHMANN nabízí módní dámskou, pánskou a dětskou obuv a doplňky pro všechny věkové kategorie v dobré kvalitě a za trvale nízké ceny. Díky tomu je největším evropským maloobchodním prodejcem obuvi s více než stoletou tradicí.\n\n Mezi nejznámější značky dámské obuvi v prodejnách DEICHMANN patří Graceland, 5th Avenue, Catwalk a Ariane. Muži mohou vybírat mezi výrobky značky Memphis One, Gallus či AM Shoes a pro děti jsou určeny modely např. od Bobbi Shoes, Bären-Schuhe, Agaxy a Elefanten. Portfolio uzavírají sportovní značky Victory, Adidas, Nike, Puma či Fila.\n\n Nezbytnou součástí nabízeného sortimentu jsou doplňky v podobě elegantních i sportovních kabelek, peněženek, šátků a dalších malých nezbytností. Samozřejmostí jsou prostředky pro péči o obuv. Paletu nabízených výrobků potom uzavírají dárkové karty.\n\n Na čem společnosti DEICHMANN opravdu záleží, je kvalitní zákaznický servis. Společnost DEICHMANN byla založena v roce 1913 v německém Essenu rodinou Deichmann, v jejímž stoprocentním vlastnictví se i nadále nachází. Na českém trhu působí DEICHMANN od roku 2003 a má zde více než sto kamenných prodejen, online shop a desetitisíce spokojených zákazníků.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "DOMIbags",
+					"Description": "Jsme česká firma s dlouholetou tradicí na trhu. Prezentujeme se prodejem kožené galanterie české i zahraniční výroby a cestovním programem značky Samsonite a firemní značky Bright.\n\n V síti našich prodejen nabízíme široký výběr kabelek, aktovek, peněženek, pásků, deštníků, společenských psaníček a dalších módních doplňků.\n\n Pokud upřednostňujete zboží prestižních značek jako je Gilda Tonelli, Bright, Samsonite, Innue, Laura Biagiotti, Pierre Cardin, H.DUE.O, Benetton, Sisley, U.S.Pollo, tak si u nás určitě vyberete.\n\n Disponujeme také nejširším výběrem komplexní katalogové nabídky značky SAMSONITE, která je neodmyslitelně spojena nejen s cestováním, ale i s reprezentativními a velmi účelovými výrobky určených pro business. Více informací o naší společnosti se dozvíte na webových stránkách www.domibags.cz. Nakupovat můžete také z pohodlí Vašeho domova prostřednictvím našeho e-shopu.\n\n Těšíme se na Vaši návštěvu a doufáme, že i vy si oblíbíte nákupy u naší společnosti a stanete se dalším spokojeným zákazníkem.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "ECCO",
+					"Description": "Značka ECCO je po celém světě známá díky svým botám a kabelkám z pravé kůže, které jsou navíc ručně šité. Kvalitní materiály ve spojení s nejmodernějšími technologiemi zaručují maximální pohodlí a funkčnost obuvi. Společnost ECCO byla založena v roce 1963 v Dánsku a je jedním z několika velkých producentů obuvi, kteří vlastní a řídí každou část výrobního procesu. Firmu stále vlastní rodina zakladatele a pracuje pro ni 18,500 zaměstnanců. Čím dál více se značka ECCO soustředí na design, aby byly její výrobky skvělé nejen na nošení, ale i na pohled.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "GEOX",
+					"Description": "GEOX – boty, které dýchají.\n Italská patentovaná dámská, pánská, dětská obuv a oděvy.\n\n Patent Geox: revoluce ve světě obuvi \n\n Použití gumových podešví, se kterými se začalo asi před 50-ti lety znamenalo obrovský technologický posun, který změnil život milionů lidí ve světě. Díky podrážkám z gumy je obuv voděodolná a chodidla jsou v suchu a teple, především v zimních měsících. Gumové podrážky ale mají jednu nevýhodu: nenechají chodidlo dýchat. Je to omezení, které nelze brát na lehkou váhu, když si uvědomíme, že právě na chodidlech je největší koncentrace potních žláz. Geox vyřešil tento problém jednoduchým, ale revolučním systémem, uznaným mezinárodním patentem.\n\n Od roku 1992 je patentovou obuví, která dýchá. Podešev je perforovaná přesně v místech, kde se nachází většina potních žláz na chodidle, avšak revoluční technologie v podobě aktivní membrány zabraňuje pronikat vodě dovnitř. Perforovaná podešev obsahuje speciální membránu s mikropóry, které dovolují proudění vzduchu a zároveň i molekulám páry. Obuv Geox je výhoda pro zákazníka. Bota se zdravým mikroklimatem¬. Chodidlo dýchá a nepřináší nepříjemný zápach a další problémy. Pot ve formě sražené páry může pronikat ven podešví. Aktivní membrána ale nedovolí projít vodě dovnitř a vytváří pocit sucha.\n\n Prodejna Geox je součástí společnosti PREMIUM FASHION BRANDS. Ta komplexně zastřešuje 21 prodejen v Praze, 6 v Bratislavě a 2 v Brně jedním unikátním zákaznickým programem PFB, nejrozsáhlejším v Česko-Slovensku.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "GUESS Accessories",
+					"Description": "Známý pro svůj evropský styling, prvotřídní image a okouzlující kolekce, GUESS je jednou z nejznámějších světových módních značek.\n\n Kolekce obuvi a kabelek GUESS nabízí perfektní výběr pro každou příležitost.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "HUMANIC",
+					"Description": "Prodejny HUMANIC Vám nabízí módní a kvalitní obuv. V HUMANICu sledujeme aktuální trendy a přinášíme Vám nejnovější kolekce ze světových metropolí módy. Materiály, tvary, vzory a barvy bot či doplňků HUMANIC jsou vždy IN! Móda je pro HUMANIC vášní, našim zákazníkům přinášíme pravidelnou inspiraci a máme radost z každého nového páru bot.\n\n Využijte praktickou službu HUMANIC Store Pick-up, která Vám umožňuje rezervovat obuv nebo kabelky online na stránkách humanic.net. Zboží si následně vyzvednete na zvolené prodejně.\n\n HUMANIC – kultura obuvi od roku 1872\n Základem mimořádného postavení společnosti HUMANIC ve světě obuvi jsou zkušenosti, které jsme získali během více než stoleté tradice ve výrobě obuvi.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Office Shoes",
+					"Description": "",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Salamander",
+					"Description": "Salamander, to je především kvalitní a luxusní obuv. Kromě vlastní značky nabízí ve svých prodejnách široký sortiment značkové obuvi, kabelek a doplňků od předních světových výrobců. V šíři této nabídky nemá Salamander v Čechách ani na Slovensku konkurenci!\n Filozofie značky Salamander říká, že obuv je ten nejhezčí způsob, jak se vyjádřit. Cílem značky je poskytnout zákazníkovi při nákupu takovou volbu, s níž bude dlouhodobě spokojen. Proto se ve svých prodejnách vždy snaží o to, aby kombinace módy, služeb a kvality přinesla zákazníkovi jen ten nejlepší poměr výkon/cena.\n\n Také holdujete krásné obuvi? Chcete nakupovat výhodněji? Staňte se členem Salamander Clubu.\n Výběr z aktuální kolekce obuvi a kabelek najdete na:\n www.salamanderclub.cz | www.salamander.cz",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Sizeer",
+					"Description": "Navštivte novou prodejnu Sizeer v obchodním centru Galerie Vankovka!\n \n Free Your Time with Sizeer - multibrandová prodejna, která nabízí sportsstyle a streetwear boty a oblečení nejlepších značek, jako je Nike Sportswear, Lacoste, Converse, Vans, Adidas, New Balance, New Era, Reebok, Puma a Timberland. Tyto a další značky najdete na jednom místě - Sizeer.\n \n Sizeer je značka neomezených možností, která chce oslovit všechny aktivní a zábavu milující lidi. Bez ohledu na to, co děláte - chodíte na výlety, lezete po horách, běháte, nebo prostě máte rádi městský život -Sizeer je energický a nabízí Vám zboží pro volný čas.\n\n Neztrácejte čas běháním po jiných obchodech a příjďte do Sizeer. Nejlepší a největší výběr je vždy v Sizeer. Come over !",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Street Shoes",
+					"Description": "Dámská, pánská a dětská obuv.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "STROLL",
+					"Description": "Společnost STROLL OBUV a.s. vlastní 5 maloobchodních prodejen na uzemí České republiky.\n\n Spokojenost zákazníků je důležitým předpokladem naší společnosti a toho se snažíme dosáhnout nabídkou kvalitní obuvi, kterou distribuujeme za rozumné ceny a s neustálou aktualizací. Specializujeme se převážně na koženou společenskou, vycházkovou dámskou a pánskou obuv.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tamaris",
+					"Description": "Obuv německé značky Tamaris je vždy in. Splňuje módní nároky dnešních žen, které jsou více než kdy dříve ovlivňovány různými lifestylovými trendy. Tamaris jim nabízí něco, co ostatní značky opomíjí - kvalitu za příznivou cenu kombinovanou s moderním designem, duchem dnešní doby a nejnovějšími módními trendy.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Wojas",
+					"Description": "Boty označené značkou Wojas jsou tradičně vyráběny z kůže.\n\n Staráme se o každý detail: o atraktivní vzhled, kvalitu použitých materiálů, precizní provedení a především o pohodlí Vašich chodidel. V botách Wojas můžete jít do práce, na nákup, na výlet a na premiéru do opery.",
+					"Category": "Obuv a kožené zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "dm drogerie mark s.r.o.",
+					"Description": "V dm naleznete široký sortiment výrobků péče o tělo, vlasy a pleť, dekorativní kosmetiku, kosmetiku pro muže, biopotraviny, přírodní kosmetiku, krmivo pro domácí mazlíčky, produkty péče o dítě a dětskou výživu.\n \n Je zde možnost zpracování fotografií a široká nabídka fotodárků. Nabízíme i velký výběr vysoce kvalitních produktů dm značek, které jsou k dostání za příznivé ceny.\n\n dm má pro své zákazníky navíc atraktivní věrnostní programy dm active beauty svět výhod a dm babybonus.",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "08:00-21:00",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Douglas",
+					"Description": "V parfumerii Douglas najdete nejen největší výběr zkrášlujících a kosmetických přípravků, ale i odpovídající ambiente, excelentní zákaznický servis a kompetentní poradenství, které z úplně normálního nákupu udělají neobyčejný zážitek .",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Fokus optik",
+					"Description": "irma FOKUS optik a.s. je největší řetězec provozoven oční optiky v České republice.\n FOKUS optik je dovozcem dioptrických obrub a slunečních brýlí jednoho z největších světových výrobců italské firmy Luxottica, mezi jejíž produkty patří světoznámé značky Ray Ban, DKNY, Dolce & Gabbana, Versace, Bvlgari, Prada, Vogue, Polo, Ralph Lauren, Ferragamo a dalších značek.\n\n Ve FOKUS optik můžete zakoupit široký sortiment zboží, jako je: dalekohled, barometr, lupa, kontaktní čočky, roztoky a další optické pomůcky, které jsou nezbytnou výbavou k ochraně a čištění dioptrických pomůcek.\n\n V provozovnách FOKUS optik nabízíme kompletní optické služby, včetně měření zraku a aplikace kontaktních čoček.\n Rádi vám zhotovíme brýle na lékařský předpis i bez předpisu.\n Provozovnu FOKUS optik najdete v přízemí Galerie Vaňkovka\n\n\n Věrnostní program Fokus Optik Klub\n Nově Fokus optik nabízí věrnostní program Fokus Optik Klub, v jehož rámci zákazníci sbírají body za každý nákup (1 Kč = 1 bod). Za každých 3000 bodů je možné vygenerovat poukázku v hodnotě 100 Kč. Každý měsíc mají členové klubu možnost nakupovat za speciální klubové ceny, které platí na vybraný sortiment a služby. Navíc jsou pro členy klubu celoročně určeny speciální výhody:\n ● čištění brýlí zdarma\n ● vyšetření zraku zdarma\n ● aplikace kontaktních čoček s 20% slevou\n ● pravidelný newsletter o akcích a mimořádných nabídkách\n ● online přístup k Vašemu kontu a online generování poukázek\n ● dárky k vybranému sortimentu",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "L'OCCITANE",
+					"Description": "Značku L'OCCITANE založil Olivier Baussan v Haute-Provence v roce 1976. Od svého vzniku má L'OCCITANE silné vazby s tímto regionem a hlavně s přírodou. Složení a vůně produktů se silně inspirují životním stylem ve Středomoří tak, aby svým zákazníkům přinášely pocity relaxace a potěšení. Složení produktů je z velké části přírodní dle zásad fytoterapie a aromaterapie. Při vývoji výrobků se L'OCCITANE snaží umělé látky nahrazovat těmi na přírodní bázi všude, kde je to možné. Například využívá rostlinné oleje místo petrochemických, protože přírodní snadněji pronikají do struktur pleti.\n\n Značka L'OCCITANE se navíc rozhodla dodržovat přísné zásady s cílem postupně snižovat dopady své výroby na životní prostředí. V rámci eco-designu si L'OCCITANE vybírá materiály, které méně zatěžují přírodu nebo pocházejí z již recyklovaných zdrojů. ",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Lékárna Dr.Max",
+					"Description": "Výdej léků na lékařský předpis, volně prodejná léčiva, dermokosmetika (URIAGE, VICHY, AVENE, BIODERMA a další), potravinové doplňky, dětská výživa, potraviny pro redukci hmotnosti, ...",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "MANUFAKTURA",
+					"Description": "MANUFAKTURA je unikátní 100% český koncept značkových prodejen s vlastní originální kosmetikou a doplňky pro jedinečné domácí lázně. Proč vlastně domácí lázně..? Žijeme v uspěchané době plné stresu, napětí a shonu. Příjemný rituál domácích lázní se zapálenou svíčkou, vonnou lázní, osvěžující sprchou, masáží, šálkem čaje či jiným hýčkáním napomůže odpoutat se od denních problémů, dosáhnout fyzické a psychické úlevy a na chvilku si zkrátka odpočinout. Originální a vysoce kvalitní receptury výrobků využívají příznivých účinků tradičních českých přírodních ingrediencí - českého piva a chmelových výtažků, karlovarské vřídelní soli, vína a výtažků z révy vinné, meruněk, švestek a jiného ovoce a bylin typických pro naši krajinu. Atraktivní doplňky pro domácí lázně - čaje, svíčky, masážní pomůcky, porcelán atd. jsou vyráběny na zakázku ve spolupráci s tradičními, kvalitními českými výrobci, které pro svou spolupráci Manufaktura vždy upřednostňuje",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Marinnaud",
+					"Description": "Prodej značkové luxusní kosmetiky a péče o pleť. Naši školení odborníci Vám rádi poradí při výběru té správné péče pro Vás a seznámí Vás s aktuálními akcemi na prodejně.\n\n Navštivte také náš e-shop na http://eshop.marionnaud.cz.",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "PROFIMED",
+					"Description": "PROFIMED -specialista v péči o zuby a tělo\n Odborníky oceňovaný koncept sítě specializovaných prodejen profesionální péče o zuby. Mezizubní a zubní kartáčky renomovaných značek.\n Široká nabídka kvalitních pomůcek a zubní kosmetiky renomovaných světových výrobců, pro dospělé i děti, uzpůsobená i velmi individuálním nárokům. Elektrické přístroje, specializované nástroje, indikace péče o chrup a zdravé zubní mlsání. To vše je vhodně doplněno i o nadstavbový sortiment exkluzivních značek péče o tělo, jako je LeeStafford(vlasové péče), Tweezerman(kosmetické nástroje profesionálů), Institute Karitéa další. Poradenství pro nejlepší individuální výběr a správně prováděnou péči poskytují odborně školený tým.",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Vitaland",
+					"Description": "Vitamíny, přípravky pro štíhlou linii, sportovní výživa",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Yves Rocher",
+					"Description": "Rostlinná kosmetika Yves Rocher využívá regenerační sílu a životadárnou energii rostlin ve prospěch Vaší krásy! Přijďte si vybrat z více jak 700 výrobků Rostlinné kosmetiky, které zahrnují péči o obličej, o tělo, parfémy pro ženy i muže, líčení i opalovací přípravky.\n \n Francouzská kosmetická společnost Yves Rocher vznikla v roce 1959 v Bretani a dnes jsou její obchody ve více než 80 zemích světa. Všechny kosmetické produkty jsou vyrobeny z rostlin, které si firma sama pěstuje, přičemž dodržuje přísné bezpečnostní i ekologické standardy. Výrobky Rostlinné kosmetiky ani jejich složky nejsou testovány na zvířatech a neobsahují látky živočišného původu. Výrobky jsou dermatologicky a oftalmologicky testovány.\n \n Dárky a slevy s Věrnostní kartou: Založte si bezplatně v obchodě Yves Rocher Věrnostní kartu a získejte mnoho výhod. Pravidelně Vám bude poštou zasílán leták s nabídkou slev a dárků. Za každý nákup získáte navíc na svou kartu věrnostní body a po nasbírání jejich dostatečného počtu si budete moci vybrat výrobek v určené hodnotě zdarma.\n \n Aktuální nabídka: Podrobnosti o akčních nabídkách najdete na našich internetových stránkách www.yves-rocher.cz.",
+					"Category": "Drogerie, kosmetika a zdraví",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "A3 SPORT",
+					"Description": "A3 SPORT je největší prodejce sportovního zboží značek Adidas, Nike, Puma a Reebok v České republice.\n S důrazem na nejširší nabídku produktů a nejnižší ceny si udržuje pevnou pozici na trhu.\n\n Vyvážený poměr vybavení pro aktivní sportovce společně s modely sportovní módy a řadou atraktivních výprodejů vytváří ideální nákupní prostředí pro všechny věkové kategorie. Kolekce exkluzivních modelů obuvi Vám zajistí nejnovější módní trendy z celého světa, které seženete pouze na našich prodejnách nebo v e-shopu www.a3sport.cz.\n\n V prodejně A3 SPORT najdete značky : Adidas, Nike, Puma, Reebok, Merrell, Salomon, Converse, Crocs, New Balance a další.\n Další informace a aktuální nabídka na www.a3sport.cz",
+					"Category": "Sportovní zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Hervis",
+					"Description": "Hervis Sports nabízí svým zákazníkům široký výběr sportovního oblečení, obuvi a vybavení pro nejrozšířenější sporty jako je běh, fitness, cyklistika, outdoor, lyžování a další.\n V Hervisu zakoupíte produkty nejen světových, ale i vlastních značek jako je Benger, Cygnus, Kilimanjaro, X-Fact a další, které jsou přehledně uspořádány podle jednotlivých sportovních odvětví v tematických nebo značkových rámech.\n\n S výběrem produktů stejně jako se servisem Vám pomohou naši proškolení zaměstnanci. Pro členy Hervis Sportsclubu jsou navíc připravené speciální nabídky a odměny za nákup.\n\n Prodejny Hervis Sports jsou také on-line! Zákazníci mohou nakupovat prostřednictvím tabletů a chytrých telefonů, a vybírat tak z rozšířeného portfolia zboží a značek, které nejsou v síti prodejen v České republice dostupné.\n\n Těšíme se na Vaši návštěvu!",
+					"Category": "Sportovní zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "O´Neill",
+					"Description": "V současnosti patří O´Neill k nejznámějším světovým surfovým a snowboardingovým značkám na světě.\n Lifestyle kolekce snoubí zkušenosti získané vývojem dokonalých technických produktů pro extrémní sporty s elegancí a praktičností pro každodenní použití. Nejen na poli sportovního vybavení, ale i lifestylovéch kolekcích O´Neill udává směr a trendy.\n Produkty používají, vyvíjejí a testují nejlepší surfaři, snowboardisté, freeski lyžaři, wakeboardisté, windsurfaři či kiteboardisté.\n V O´Neill teamu startují mimo jiných legenda snowboardového freeridu Jeremy Jones, nadějný freestylista Seb Toutant, hvězda surfingu Jordy Smith, vítězka U-rampy ve freeskiingu Virginie Faivre či světový šampion v Kiteboardingu Kevin Langeree.\n O´Neill je pořadatelem prestižních sportovních akcí. Snowbardový závod O´Neill Evolution, každoročně pořádaný ve švýcarském Davosu, patří do nejvyšší tzv. šestihvězdičkové kategorie prestižní TTR série.\n Série pěti nejextrémnějších surfových závodů probíhajících každoročně po celém světě (Tasmánie, Skotsko, Jižní Afrika, Kanada a Kalifornie), nesoucí název Cold Water Classic, patří mezi vrcholné surfové akce nejen značky O´Neill, která ji pořádá, ale rovněž mezi nejlépe hodnocené surfové závody vůbec. Místo konání jednotlivých závodů není jako obvykle v hustě zalidněných plážích, ale na pobřeží s nejbouřlivějším a nejstudenějším mořem a samozřejmě obřími vlnami.\n\n O značce O´Neill\n\n O'Neill, původně surfová a lifestylová značka byla založena v roce 1952, kdy mladý nadšenec jménem Jack O´Neill vložil svou nekonečnou vášeň pro surfing, do vývoje oblečení, které umožní přemoci mořské živly. Jako první na světě vynalezl neoprenovou vestu a tím našel cestu, jak prodloužit své surfařské zážitky v chladném moři jižní Kalifornie. Zanedlouho poté otevřel v garáži svého domu v Santa Cruz v Kalifornii svůj první obchod.\n\n Přestože se od těchto skromných začátků mnoho věcí změnilo, Jackovu původní vizi - produkci funkčních a inovativních výrobků pro boardové aktivity- nalezneme ve všem, co tato firma dělá. Základní vize značky O´Neill – neustálá inovace produktů, střihů a technologií jde ruku v ruce s vývojem samotných akčních sportů. Touha po inovacích posouvá O´Neill neustále kupředu. Vývoj prvního surfařského neoprenového obleku, vynalezení řemínku pro uchycení surfu (tzv. board leash), uvedení prvních bezešvých boardových šortek na světě či průkopnické spojení elektroniky se sportovním oblečením (O´Neill H-Division) je toho živým důkazem.\n \n Dnes je O´Neill značkou s celosvětovou působností. S ohledem na bohatou padesátiletou historii a odkazem na surfovou a snowboardovou kulturu se bude O´Neill vždy snažit posilovat svou pozici jedné z vedoucích boardových značek na světě.\n\n Centrála značky O´Neill sídlí ve Warmondu v Holandsku. Od roku 2007 je součástí holdingu Logo International, B.V.\n Oficiálním distributorem pro Českou republiku je společnost Romariz, s.r.o., se sídlem v Praze.",
+					"Category": "Sportovní zboží",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Rock Point",
+					"Description": "Rock Point – outdoor expert\n V Rock Pointu naleznete široký výběr funkčního oblečení a vybavení pro outdoorové aktivity. V teplejších měsících je obchod zaměřen na oblečení a vybavení pro horolezectví, trekking, kempování, ale i oblečení pro cyklistiku, běh či in-liny. V zimních měsících je zde kompletní nabídka oblečení pro sjezdové, skialpové i běžecké lyžování. Najdete zde špičkové produkty s membránou Goretex nebo Climatic s parametry vždy odpovídajícími předpokládanému místu použití. Na Vaši návštěvu se těší tým odborně proškolených prodavačů.\n \n V tomto obchodě se navíc nachází rozšířená nabídka produktů Keen - najdete zde boty trekkingové, turistické, do města, sandály určené do vody, kolekci batohů a tašek KEEN a další zajímavé zboží.\n \n Prodávané značky: Mountain Hardwear, The North Face, Keen, Hannah, Smartwool, Icebreaker, Ternua, Osprey, Garmont, Zamberlan, Boreal, Tatonka a další.",
+					"Category": "Sportovní zboží",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "Bubbleology",
+					"Description": "Londýnská značka Bubbleology představuje bubble tea – čaj na moderní způsob. Přijďte si namíchat ovocný či krémový nápoj, který osvěží nebo zahřeje. Ze dna kelímku můžete vysávat speciálním brčkem praskající kuličky plné šťávy nebo želé či tapioku.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Chiquita fruit bar",
+					"Description": "Chiquita fruit bar je unikátní koncept, nabízející zákazníkům zdravé ovocné občerstvení. Vše je dokonale čerstvé a přírodní: ovocné šťávy vymačkané přímo na objednávku, mléčné koktejly, nápoje Smoothies, celé nebo krájené ovoce, ovocné a zeleninové saláty a jiné zdravé pochoutky. Veškeré produkty v nabídce obsahují výhradně pravé ovoce výběrové kvality. Jsou bez přidaného cukru, umělých konzervantů, aromat a barviv.\n Všechny nápoje zavíčkováváme ve stroji, tím pádem si můžete nápoj pohodlně odnést do práce, školy, nebo třeba do vlaku.\n\n Společnost Chiquita testovala tento koncept Chiquita fruit baru v několika německých městech. Po úspěšném startu tyto prodejny rychle přibývají jak v Německu, tak i v dalších zemích Evropy. Najdete nás i v Dubai a Kuwaitu\n\n První obchod v ČR jsme pro Vás otevřeli v Brně a to právě v OC Galerie Vaňkovka. Kiosek je navržen tak, aby zákazník přesně viděl celou přípravu nápoje a co do nápoje dáváme. Také zde můžete vidět přípravu salátů, mléčné rýže a mnoho dalšího.\n\n Každé ráno od 7:30 do 11:00 máme připravení zdravé snídaně, které vám zlepší den a hlavně Vás povzbudí.\n\n Pro každého zákazníka máme připravenou bonusovou kartu, na které může získat každý 10 nápoj ZDARMA.\n\n Těšíme se na vaši návštěvu a věříme, že si u nás pochutnáte.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "07:30-21:00",
+						"Tuesday": "07:30-21:00",
+						"Wednesday": "07:30-21:00",
+						"Thursday": "07:30-21:00",
+						"Friday": "07:30-21:00",
+						"Saturday": "07:30-21:00",
+						"Sunday": "07:30-21:00"
+						}
+				},
+				{
+					"Name": "Coradia",
+					"Description": "",
+					"Category": "Stánky v pasáži",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Crystal Bijou",
+					"Description": "Crystal Bijou je novou značkou společnosti OnStyle, která na českém trhu působí již několik let. Jak sám název napovídá, nabízíme širokou škálu šperků z bezniklové bižuterie, chirurgické oceli a také stříbra. Vždy se snažíme navázat na aktuální módní trendy, ale především podtrhnout krásu ženy. Na své si u nás přijdou i pánové.\n\n Zboží, které jinde nenajdete:\n - náhrdelníky se jménem z chirurgické oceli\n - náhrdelníky a náramky z chirurgické oceli s gravírováním dle přání zákazníka\n - originální silikonové hodinky značky OnStyle",
+					"Category": "Stánky v pasáži",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Dobré mobily",
+					"Description": "Prodej mobilních telefonů, tabletů, příslušenství k mobilům a tabletům, nezáruční servis mobilů a tabletů, výkup mobilních telefonů a tabletů, poradenství v oblasti mobilní komunikace.\n\n Prodej značek Nokia, Samsung, Apple, HTC, ZTE, Sony Ericsson, LG, Sony, Motorola, Blackberry, Sonim, Aligator, Huawei, Alcatel, A-solar, Canyon, Parrot, Telone, Bugatti, Invisible shield, Blaupunkt, Celly, Recal....atd",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Equa bank",
+					"Description": "Equa bank a. s. vstoupila na český trh v roce 2011. V současné době má přes 100 000 klientů a provozuje 34 obchodních míst po celé České republice. Equa bank nabízí jednoduché, srozumitelné a transparentní služby osobního i firemního bankovnictví, k nimž patří běžné a spořicí účty s možností vedení zdarma, více měnové bezkontaktní platební karty, hypotéky, spotřebitelské půjčky, pojištění, termínované vklady a podnikatelské úvěry. Během třech let na trhu získala Equa bank řadu prestižních ocenění. V soutěži Hospodářských novin Nejlepší banka 2014 získala ocenění Klientsky nejpřívětivější banka. Ve finanční soutěži Zlatá koruna 2014 získala Equa bank hned 5 ocenění. Na nejvyšší stupeň vystoupala v Ceně veřejnosti, a to s produktem Běžný účet Equa bank. V kategorii Úvěry získala 1. místo za svůj produkt RePůjčka - Vracíme poplatky, v kategorii Hypotéky získala 1. pozici za Refinancování hypotéky - Vracíme poplatky. S tímto produktem uspěla zároveň v kategorii Novinka roku, když získala stříbrnou korunu, 2. místo obsadila také v kategorii Platební karty s Bezkontaktní kartou Equa bank. V anketě Zlatý Měšec 2014 se Equa bank stala 2. nejlepší bankou na trhu a podle prestižních časopisů World Finance a Global Banking & Finance Review je nejlepší retailovou bankou v ČR.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Fruitisimo",
+					"Description": "Milujeme ovoce!\n\n Jednoho dne jsme vyrostli z pití krabičáků. Jo, ty sladké hříchy mládí... Vzpomínáte si?\n Najednou jsme objevili, že existuje i svět mimo krabicové džusy. Vydali jsme se po ovocné stopě, kterou jsme v nich našli, a objevili jsme fresh džusy. Úplně jsme se do nich zbláznili. V hlavě nám bouchla vitamínová bomba. A my jsme se rozhodli tohle dobro šířit dál a jedeme v tom na 100%. Tak vzniklo Fruitisimo.\n\n A protože láska kopečky přenáší, zamilovali jsme se podruhé - do zmrzliny, která se stala královnou našeho srdce. Je pěkně hustá! A přesně za to ji milujeme. Kvůli ní jsme konec konců založili první továrnu na zmrzlinu u nás, která zaměstnává spoustu poctivých řemeslníků. Řídíme se heslem: Království za dobrou zmrzlinu! Opravdová chuť je totiž nad zlato.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Oxalis",
+					"Description": "Oxalis je nejen prodejce a velkoobchod sypaných čajů a plantážních káv, ale také výrobce vlastních receptur, designů příslušenství a je úspěšným exportérem. Výběr čaje by měl být požitkem pro Vaše smysly, a tak tomu v naší prodejně i je. Široká nabídka lahodných čajů a káv Vás osvěží i pohladí na duši. Zároveň můžete objevit rozsáhlý sortiment designového příslušenství s těmito nápoji související. Těšíme se na Vaši návštěvu.\n\n Prodejní stánek OXALIS čaj & káva je umístěn v přízemí nákupního centra Galerie Vaňkovka mezi obchody Triumph a Quick Silver.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Raiffeisenbank",
+					"Description": "Raiffeisenbank poskytuje v České republice široké spektrum bankovních služeb soukromé i firemní klientele. Klienty obsluhuje v síti více než 120 poboček a klientských center, poskytuje rovněž služby specializovaných hypotečních center, osobních, firemních a podnikatelských poradců.\n\n Na českém trhu působí již dvaadvacet let. Od banky se dvěma pobočkami a 39 zaměstnanci se v průběhu času rozvinula v pátou největší tuzemskou banku s aktivy převyšujícími 240 miliard korun. Raiffeisenbank se primárně zaměřuje na movitější a náročnější klientelu, která má zájem o vysokou kvalitu služeb, aktivní správu svých financí a profesionální poradenství.\n\n Nabídku kvalitních služeb banky potvrzuje celá řada získaných domácích i mezinárodních ocenění. V září 2015 Raiffeisenbank uspěla v sedmém ročníku cen Hospodářských novin Nejlepší banka a stala se Klientsky nejpřívětivější bankou roku 2015. V této kategorii se hodnotí šíře poskytovaných produktů a služeb, poplatková struktura, výše sazeb, dostupnost banky a samozřejmě kvalita její komunikace s klienty. Velmi dobře si Raiffeisenbank vedla i v hlavní kategorii soutěže Nejlepší banka, kde obsadila třetí místo.\n\n Vedle obchodních aktivit se banka angažuje v souladu se 140letou tradicí jména Raiffeisen rovněž v řadě veřejně prospěšných aktivit, zahrnujících např. oblast kultury, vzdělávání či charitativní projekty.\n\n Majoritním akcionářem banky je rakouská finanční instituce Raiffeisen Bank International AG (RBI). RBI zajišťuje služby firemním a investičním klientům v Rakousku a dále obsluhuje klienty v řadě zemí střední a východní Evropy. Od roku 2005 jsou akcie skupiny kótovány na vídeňské burze.\n\n Tato pobočka je bezhotovostní a nabízí prodej pouze vybraných produktů, zejména běžných účtu pro fyzické osoby a fyzické osoby - podnikatele, kreditní karty a spotřebitelského financování.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Svět oříšků",
+					"Description": "Rádi bychom Vám představili firmu, která se od počátku své existence zabývá obchodní činností.\n Naší prioritou je spokojenost zákazníků. Tato filozofie nás zavazuje k neustálému zvyšování kvality námi nabízených produktů a poskytovaných služeb tak, abychom byli schopni v co největší míře uspokojovat potřeby našich zákazníků.\n\n Hledáte ořechy od výhradního dovozce?\n Hledáte něco dobrého a přitom zdravého? Ideální volbou jsou ořechy. Každý ví, že při práci nebo zábavě jsou ořechy prostě nejlepší. Ořechy jsou zdrojem nenasycených mastných kyselin, které jsou pro člověka nezbytné. Lékaři doporučují konzumovat menší množství ořechů každý den.\n \n Specializovaný internetový obchod www.Svět-oříšků.cz je od roku 2000 předním prodejcem ořechů a oříšků na internetu.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Top Time",
+					"Description": "Naše prodejny najdete převážně v obchodních centrech a charakterizují je červenobílé nápisy TopTime. V celé ČR je rozmístěno 30 našich prodejen, kde si můžete vybrat ze širokého sortimentu hodinek a šperků různých značek. V nabídce máme světové a uznávané značky jako je Adidas, Daniel Klein, Diesel, DKNY, Festina, Puma a další. Na e-shopu je možnost osobního odběru na prodejnách ZDARMA.",
+					"Category": "Stánky v pasáži",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "UPC",
+					"Description": "UPC Vám domů přináší svět zážitků a zábavy. Přijďte se k nám zeptat na stabilní a rychlý internet, širokou nabídku televizních programů a výhodné telefonní volání. Představíme Vám tu nejvýhodnější nabídku.",
+					"Category": "Stánky v pasáži",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "Butlers",
+					"Description": "Pokud existuje jedno místo, kde by mělo být vše perfektní, pak je to váš domov, kde si můžete vychutnat svůj volný čas – s rodinou, s přáteli nebo jen o samotě, kde můžete být sami sebou, obklopeni věcmi, které máte nejvíce rádi.\n\n A kde se vaší kreativitě nekladou žádné meze: v myšlení, v práci, výzdobě, vybavení, vaření…. právě pro vás je tu společnost Butlers.\n\n Skvělé nápady. Dárky pro kamarády. Rady pro kuchařské nadšence. Inspirace pro individualisty. Nádherné věci vyrobené pro váš domov. A to vše v dobré kvalitě za nejlepší cenu.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Comfor",
+					"Description": "Prodej a servis notebooků, výpočetní a digitální techniky a příslušenství. Jste pro nás důležitým zákazníkem, ať už se rozhodnete pro koupi počítače, potřebujete odbornou pomoc nebo jen dokoupit náplně pro Vaši fototiskárnu.\n\n Naším cílem je Vaše spokojenost - vždy a na prvním místě. Myslíme na vaši spokojenost - kvalitu nabízeného zboží a služeb stavíme na 1. místo a výběru produktů nabízených v prodejnách COMFOR proto věnujeme zvláštní pozornost.\n\n\n ,,Těšíme se na vaši návštěvu“",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "DATART",
+					"Description": "Společnost DATART INTERNATIONAL, a.s. je na našem trhu již více než 20 let. Svým zákazníkům nabízí mimo neustále aktualizovaného sortimentu i stejné ceny v prodejnách jako na internetu, záruku nejnižší ceny, dopravu zdarma, základní instalaci výrobku zdarma a mnoho dalších služeb, které zpříjemní nejen nákup, ale samotné užívání zakoupeného zboží.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Geco Tabák",
+					"Description": "Noviny, časopisy a tabákové výrobky.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "iSTYLE Apple Premium Reseller",
+					"Description": "Společnost iSTYLE je na českém trhu největším specializovaným prodejcem výrobků s logem Apple a všeho příslušenství k těmto produktům. Byla založena v srpnu 2006 a první prodejnu otevřela na podzim v Praze v Revoluční ulici. Jednalo se o druhou prodejnu Apple Premium Reseller v Praze. V následujících letech došlo k růstu prodejen až na současných 9, a to v Praze, Brně a Ostravě.\n\n Ve střední Evropě provozuje iSTYLE více než 20 prodejen. Status Apple Premium Reseller zaručuje zákazníkům vysoký standard poskytovaných služeb i profesionalitu zaměstnanců, které jsou společností Apple pravidelně kontrolovány.\n Kromě kamenných prodejen je v iSTYLE obchodní oddělení B2B/EDU, které má certifikaci Apple Solution Expert - Education a zabývá se prodejem významným zákazníkům, vzdělávacím a neziskovým organizacím a v neposlední řadě internetový obchod, který se stará o její prezentaci a prodej na webu. Zázemí poskytuje oddělení Logistiky a Financí. Celkem ve společnosti působí cca 70 zaměstnanců.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Knihy Dobrovský",
+					"Description": "Na naší prodejně KNIHY DOBROVSKÝ, která se nachází v brněnské Galerii Vaňkovka, najdete široký výběr nejen knižního, ale i neknižního sortimentu. Vybrat si zde můžete z rozsáhlé nabídky beletrie, detektivek, ženských románů, historie, esoteriky a také naučné literatury. Najdete u nás rovněž celou řadu učebnic a také bohatý výběr cizojazyčné literatury.\n\n V naší pobočce myslíme i na ty nejmenší. Můžete si u nás vybrat z velkého množství publikací pro děti a mládež všech věkových kategorií. Kromě knih nabízíme rovněž široký výběr stolních her, dárkových předmětů a dekorací.\n\n Pro Váš příjemný nákup a pohodlnější výběr knih je na naší prodejně k dispozici i útulné posezení.\n\n Platba kartami Visa, Visa Electron, Mastercard, Maestro, JCB Cards, Diners Club International a American Express je u nás samozřejmostí. Akceptujeme rovněž karty Sphere Card, po jejichž předložení obdržíte 10% slevy. Přijímáme i karty Sphere Card VIP, jejímž držitelům poskytujeme slevy ve výši 15%. Těm, kteří mají karty ISIC, IYTC a ITIC, nabízíme zajímavé 10% slevy.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Květiny Vonekl",
+					"Description": "Květiny a květinové služby:\n\n - řezané květiny, hrnkové květiny, doplňkový a dekorativní sortiment ke květinám, vánoční a velikonoční ozdoby, dárkové kytice a aranžmá, květinářské doplňky – obaly na květináče, dárková keramika, hnojiva, floristické potřeby\n\n - květinové služby – květiny do kanceláří a interiéru, svatební floristika, smuteční floristika, květinový servis dle domluvy\n - květiny na doručení na www.kvetinyvonekl.cz",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Nanu Nana",
+					"Description": "Dárkové zboží, dekorace pro domácnost",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "O2",
+					"Description": "O2 Experience Centre - nejširší nabídka telefonů k vyzkoušení, technologické novinky, zóna Chytrá domácnost, příjemné prostředí ve výjimečném designu, WiFi zdarma.\n\n O2 Guru vám poradí s nastavením služeb a vašich zařízení.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Papeterie Kup",
+					"Description": "Kancelářské, umělecké a psací potřeby",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Pompo",
+					"Description": "POMPO je největší sítí hračkářských prodejen v České republice. Naleznete u nás opravdu vše – hračky pro miminka, děti předškolního i školního věku i náročnější společenské hry a hlavolamy pro celou rodinu. V POMPO také naleznete širokou nabídku hraček, školních potřeb, her i dárků světových i tuzemských značek. A pozor, nezapomeňte se zapojit do našeho věrnostního programu POMPO VIP!",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Potten & Pannen",
+					"Description": "Potten & Pannen cook shop v brněnské Galerii Vaňkovka je druhou realizací franchisového konceptu Potten & Pannen – Staněk v České republice.\n\n Sortimentem jsou kuchyňské a domácí potřeby předních světových značek, jejichž kvalita je prověřena časem a generacemi spokojených zákazníků, prezentované v originálně pojatém interiéru podle návrhu Ing.Arch. Petra Václavka.\n\n Základ nabídky tvoří solingenské nože ZWILLING J.A. HENCKELS, špičkové francouzské nádobí MAUVIEL 1830, legendární americké roboty KITCHENAID, mlýnky na koření PEUGEOT, značkový německý porcelán Thomas, švýcarské kapslové kávovary CREMESSO, tradiční burgundská keramika EMILE HENRY nebo katalytické lampy pro čištění vzduchu LAMPE BERGER.\n\n Obchodované značky: Bamix, Bodum, Brita, Cremesso, Emile Henry, For Life, GreenPan, Chef´n, Kilner, KitchenAid, Kusmi Tea Paris, Lampe Berger, Lékué, Mauviel 1830, Opinel, Peugeot, Rösle, Sigg, Staub, Thomas rosenthal group, VacuVin / IIC, Villeroy & Boch, Wesco, Yankee Candle, Zwilling J.A. Henckels.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "SCANquilt",
+					"Description": "Ve značkových prodejnách SCANquilt naleznete širokou nabídku více jak 600 vzorů a barev povlečení na mnoha různých materiálech - od klasické kvalitní bavlny, krepu a flanelu, až po nežehlivé satény z dlouhovlákné česané bavlny a ložní soupravy ze sametového mikrovlákna.\n\n Výběr z 20 typů přikrývek a polštářů uspokojí zákazníky hledající jak komfortní a hřejivé, tak i letní lehké přikrývky. Všechny typy obsahují velmi kvalitní nealergickou výplň z polyesterových prostorově tvarovaných dutých vláken.\n\n Celý sortiment doplňuje široká škála prostěradel v provedení jersey Lycra, froté, satén, mnoho variant prostírání a ubrusů, bambusové a bavlněné ručníky, dekorační polštářky, přehozy a plédy.\n Odborný personál Vám ochotně poradí a umožní klidný nákup v příjemném prostředí prodejny.\n\n Věříme, že se nám podaří naplnit Vaše představy o vkusném a útulném domově.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Sparkys",
+					"Description": "Sortimentem obchodu jsou hračky a dárky pro všechny věkové kategorie.\n\n Sparkys, to není pouze široký sortiment inovativních a zábavných hraček a dárků, ale zároveň skvělá cena, kvalita a spolehlivost. Abychom vyšli zákazníkům co nejvíce vstříc, vybíráme několikrát do roka ty nejzajímavější a nejoblíbenější hračky a nabízíme Vám je ve speciálních akcích za výjimečné ceny.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "T-mobile",
+					"Description": "Prodej produktů a služeb T-mobile CZ a.s., prodej mobilních telefonů a příslušenství",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tabák Valmont",
+					"Description": "Tabák Valmont je síť specializovaných prodejen tabáku a tabákového zboží, dýmek, kuřáckých doplňků, novin, časopisů a dárkových předmětů. Úzce se specializuje na prodej prémiových doutníků a značkového alkoholu. Prodejna je vybavena terminálem Sazka",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "07:00-22:00",
+						"Tuesday": "07:00-22:00",
+						"Wednesday": "07:00-22:00",
+						"Thursday": "07:00-22:00",
+						"Friday": "07:00-22:00",
+						"Saturday": "07:00-22:00",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Tescoma",
+					"Description": "",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Vodafone",
+					"Description": "Přijďte si vybrat nový mobil nebo výhodný tarif do prodejny Vodafonu. Vstřícný personál vám velmi rád poradí, která služba je pro vás ta pravá. U Vodafonu se nemusíte upisovat na roky, abyste získali výhodné ceny. Skvělé nabídky můžete využívat hned a bez závazků!\n\n Těšíme se na vás!\n\n Váš Vodafone",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Zvěrokruh",
+					"Description": "Milujeme zvířata a vybíráme to nejlepší pro ně i pro vás.\n\n Prodejna Zvěrokruhu v Galerii Vaňkovka je rájem pro zvířata i jejich majitele. Nabízíme kvalitní sortiment českých i světových značek. Najdete u nás rozmanitou nabídku chovatelských potřeb, kvalitní krmiva, nejrůznější druhy hraček a doplňků. Vašeho zvířecího miláčka u nás nejen nakrmíte, zabavíte, ale i obléknete. \n Nezapomněli jsme ani na živá zvířata – vybrat si můžete z nabídky králíků, morčat, křečků a dalších malých domácích mazlíčků, které si v prodejně můžete zakoupit a odnést domů. S výběrem zboží i živých zvířat rádi poradíme!\n\n Naši prodavači nejsou jen milovníky zvířat. Jsou to především odborníci, kteří rozumí potřebám domácích zvířat i jejich pánů. Taková práce se zkrátka nedá dělat jinak než srdcem.",
+					"Category": "Spotřební zboží, knihy, dárky",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "5 á sec. - čistírna",
+					"Description": "5aSec je už více než 40 let vedoucí značkou na trhu v oblasti čištění oděvů , ochrany a údržby textilií. V každém koutě světa je značka 5aSec spojována se službami nejvyšší kvality, rychlostí jejich poskytování a různými cenovými úrovněmi, které jsou dostupné všem.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Air Bank",
+					"Description": "Chceme být první bankou, kterou můžete mít rádi\n\n Air Bank jsme postavili, abychom ukázali, že i banka může být jiná, než jak ji znáte. Může mít jednoduché služby, kterým hned rozumíte, nabídne vám jen to, co opravdu potřebujete. Jestli si říkáte, že takovou banku byste rádi viděli, tak se určitě zastavte.\n\n Můžete si u nás dát kafe a přitom si popovídat o tom, že peníze na běžném účtu úročíme stejně vysokým úrokem jako na spořicím.\n\n Jestli se Vaše myšlenky točí kolem půjčky, hodí se vědět, že ta naše Vás odmění za to, že ji splácíte včas.\n\n Navíc u nás žádné absurdní poplatky neplatíte. A když s našimi službami nebude spokojeni, také za ně platit nemusíte.\n\n Nenechávejte návštěvu na Yindy, stojí vás to zbytečné peníze.\n\n Rádi Vás uvidíme\n\n Lívia Krejčířová a tým pobočky Air Bank",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Automyčka Express",
+					"Description": "Automyčka Express je největší síť autokosmetických center pro nejkvalitnější ruční mytí a čištění automobilů. Najdete nás velmi snadno v nákupních centrech. Automyčka Express je inovativní společnost, zaměřená na vysokou úroveň poskytovaných služeb se 100% podílem ruční práce. Jsme certifikováni dle norem EU - ISO 9001 a ISO 14001. Ke každému automobilu přistupujeme individuálně a s maximální profesionalitou. Orientační doba kompletního ručního vyčištění automobilu je 60 min.\n\n Automyčka Express je plně ekologický provoz, včetně vlastní moderní čistírny odpadních vod. \n Automyčka Express má 14 poboček v nákupních centrech v Praze, Brně, Ostravě a Plzni.\n\n Automyčku Express najdete na parkovišti v 1.NP.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "Česká spořitelna",
+					"Description": "Nabízíme širokou škálu bankovních služeb, pro zákazníky je k dispozici bankomat České spořitelny.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:30-20:00",
+						"Tuesday": "08:30-20:00",
+						"Wednesday": "08:30-20:00",
+						"Thursday": "08:30-20:00",
+						"Friday": "08:30-20:00",
+						"Saturday": "09:00-18:00",
+						"Sunday": "10:00-18:00"
+						}
+				},
+				{
+					"Name": "EXIM tours",
+					"Description": "EXIM tours – jsme největší cestovní kanceláří na českém trhu a připravujeme pro vás dovolenou vašich snů v nejoblíbenějších destinacích: Egypt, Tunisko, Turecko, Maroko, Řecké ostrovy, Itálie, Malta, Španělsko, Baleárské ostrovy či Bulharsko. Pořádáme i dálkové lety za exotikou: Kuba, Dominikánská republika, Isla Margarita (Venezuela), Kapverdské ostrovy, Mexiko, USA, Maroko, Keňa, Zanzibar a poslední novinka – Senegal. Vydejte se s námi na zájezdy do celého světa, na eurovíkendy či okružní plavby, nachystáme pro vás individuální nabídky a zajistíme letenky.\n Cestovní kancelář EXIM tours a.s. je součástí středoevropské skupiny EXIM HOLDING. Díky vysokým objemům klientů celé středoevropské skupiny pro vás dokážeme připravit vysoce konkurenční ceny a zajistit vynikající poměr ceny a kvality služeb.\n EXIM HOLDING a.s. je nyní součástí německého turistického gigantu DER Touristik. Tímto strategickým partnerstvím přinášíme na trh České republiky zcela nové možnosti v cestování, nové destinace, novou kvalitu a rozmanitost služeb. Velkou výhodou pro vás jsou přímé lety do cílových destinací.\n\n Naše výhody pro vás\n • nejlepší poměr ceny a kvality služeb\n • jsme silná společnost s mezinárodním zázemím\n • nabízíme vám jistotu, finanční stabilitu a garantujeme cenu\n • jsme pojištěni proti úpadku\n • spokojenost klientů je pro nás prvotním cílem\n • naše služby jsou vysoce hodnoceny nejen klienty, ale i obchodními partnery\n • máme profesionální přístup a bohaté portfolio pro rodiny s dětmi, páry, individuální cestovatele, sportovce i seniory\n\n Přitažlivé slevové programy a akce\n • slevy za včasný nákup – first minute, dítě zcela zdarma, nízké zálohy, bonus za rychlé rozhodnutí\n • slevy pro novomanžele\n • slevy pro seniory\n • slevy na skupinové zájezdy a kongresovou turistiku\n • zákaznické karty – věrnostní slevy, finanční bonusy, nadstandardní služby, výhody u partnerů CK\n\n Kvalitní ubytování a stravování\n • nabízíme pouze spolehlivé a prověřené kapacity, kontrolujeme kvalitu\n • zaručujeme vysokou úroveň a širokou nabídku služeb\n • máme v nabídce velký výběr vícehvězdičkových hotelů s programem all inclusive\n • náš tým školených a zkušených delegátů se o vás postará a k dispozici vám je i pohotovostní non stop linka",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "iLove Servis",
+					"Description": "Jsme expresní servis značek Apple, Samsung, LG, Sony, Huawei, HTC a Xiaomi. Naším prvořadým cílem je vyřízení servisního přípravu v co nejkratším čase, zaměřujeme se na co nejvyšší kvalitu provedené opravy. Jako jedni z mála v České republice umíme u zařízení s prasklým displejem vyměnit pouze samotné přední sklo, při zachování displeje, což přináší 50% úsporu nákladu. Po Praze nabízíme již dvě pobočky, kde provádíme expresní opravy. Po celé ČR jsme pak vybudovali síť sběrných míst, kde je bezplatný svoz zdarma s garancí opravy, ve většině případů do tří dní.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Informační stánek",
+					"Description": "",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Kadeřnictví Cut & Color",
+					"Description": "Nápadné barvy, extravagantní střihy a nevšední vzhled, to vše naleznete v Kadeřnictví Cut & Color. Naše služby poskytujeme bez objednání, 7 dní v týdnu.\n Zakoupit u nás můžete profesionální vlasové produkty světových značek.",
+					"Category": "Služby",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Kadeřnictví KLIER",
+					"Description": "Navštivte Kadeřnictví KLIER a svěřte své vlasy do rukou odborníků, kteří se Vám budou věnovat s náležitou pozorností. Své služby poskytujeme 7 dní v týdnu, bez objednání.\n V Kadeřnictví KLIER můžete zakoupit profesionální vlasové produkty světových značek.\n\n Regenerace vlasů po létě? Víme, jak je zachránit!\n\n Jsou vaše vlasy po létě unavené? Dopřejte jim správnou péči.\n Ostré slunce v kombinaci se slanou či chlorovanou vodou v bazénu dají vlasům v létě pořádně zabrat. Vlasy mohou být suché, roztřepené, ztratí svůj lesk a začnou se lámat. Jak je vrátit zpět do kondice prozradí Soňa Kozelková z největší sítě kadeřnických salonů KLIER.\n\n KLIER je největší síť kadeřnických salonů. Pobočky najdete v nákupních centrech téměř všech větších měst, služby jsou dostupné na počkání - objednávat se nemusíte. Pokud vaše vlasy po létě potřebují akutní regeneraci, svěřte je do rukou odborníka. Kadeřník vám dá vlasy pomocí regenerační kúry rychle do pořádku.\n\n Jak do vlasů znovu vdechnout život? \n Přímé sluneční paprsky se na vlasech v létě mohou pořádně podepsat. Vlasy jsou bez potřebné péče křehké se sklonem k lámavosti. Co tedy potřebují? Soňa Kozelková radí, jak o vlasy po létě pečovat: „Klíčovou roli hraje dvojí péče. Je dobré se po létě jednak svěřit do rukou odborníka, který vlasy zastříhne. Nelekněte se, když bude zásah pomocí nůžek o něco větší, než jste zvyklá. Tím je odlehčí a vlasy se rychle vzpamatují a dorostou. Druhým krokem je profesionální regenerační kúra. Vlasům vrátí vlhkost a potřebnou výživu.“\n\n Hloubková regenerace v rukou odborníka\n Pokud chcete vlasům poskytnout opravdu kvalitní péči, svěřte se do rukou odborníka. V kadeřnickém salonu KLIER můžete bez objednání vyzkoušet dva nejoblíbenější druhy regenerace. Které to jsou a kolik stojí?\n\n Regenerační obřad Kérastase \n Má mnoho kombinací a díky tomu dokážeme rychle zregenerovat každý typ vlasů přímo klientce na míru. Úplnou proměnu vlasů vidí klientka okamžitě. Cena se pohybuje kolem 500 Kč a poskytujeme ji na vybraných salonech.\n\n Okamžitá regenerace s přípravky Powerdose od L´Oréal\n Intenzivní hloubková kúra, která okamžitě zacelí vlasové vlákno a navrací vlasům hydrataci, pevnost a lesk. Cena záleží na celkové délce vlasů, pohybuje se v rozmezí od 160 do 320 Kč.\n\n Neméně důležitá je domácí péče\n Vlasům je potřeba věnovat příslušnou péči také doma. Pokud je to možné, vyhněte se na nějakou dobu tepelné úpravě vlasů. „Doporučuji alespoň na krátké období nechat vlasy přirozeně uschnout bez pomocí fénu, případně použít studený vzduch a foukat v dostatečné vzdálenosti od vlasů. Na žehličku a kulmu by měly dámy na nějakou dobu zcela zapomenout,“ říká Soňa Kozelková.\n\n Dobré je také poradit se s kadeřníkem ohledně výživy vlasů pro domácí péči. Vhodné jsou přípravky s příměsí olejů všeho druhu, které vlasům vrátí lesk. Například kúra s obsahem arganového oleje dovede hotové zázraky.\n\n Tipy KLIER: Přípravky pro domácí péči\n\n Šampon s arganovým olejem Schwarzkopf OIL Miracle\n Jemný šampon s arganovým olejem pro normální až silné vlasy. Vyživuje, přináší vlasům intenzivní lesk a nezatěžuje je. Díky technologii micro-oil infusion s arganovým olejem zanechává vlasy hebké a lesklé.\n K dostání v salonech KLIER, cena 259 Kč.\n\n Výživná péče Schwarzkopf BC Oil Miracle Finishing Treatment\n Kúra pro konečnou úpravu vlasů s obsahem arganového oleje. Intenzivní olejová konzistence poskytuje úžasnou kontrolu stylingu a uhlazení dokonce i silným a odolným typům vlasů. Navíc dodává výjimečný lesk. Aplikace je možná do mokrých i suchých vlasů.\n K dostání v salonech KLIER, cena 469 Kč.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Mister Minit - opravna obuvi, výroba klíčů",
+					"Description": "Oprava obuvi, výroba klíčů, autoklíče, crypto klíče, zabezpečovací technika-zámky-vložky, broušení, rytecké práce, výměna baterií a řemínků, prodej péče o obuv a doplňkového sortimentu. Nabízíme služby na počkání nebo během vašeho nákupu.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Ostrůvek s houpadly pro děti",
+					"Description": "",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Sberbank",
+					"Description": "Sberbank CZ je banka se širokým spektrem produktů a služeb v oblasti drobného i podnikového bankovnictví.\n Pro zákazníky je k dispozici bankomat Sberbank dostupný po celou otevírací dobu Galerie Vaňkovky. \n\n Klienti Sberbank mohou využít infoterminál pro pohodlný tisk výpisů z účtu také po celou otevírací dobu obchodního centra.\n Kontakt na hotline 800 133 444.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:30-20:00",
+						"Tuesday": "08:30-20:00",
+						"Wednesday": "08:30-20:00",
+						"Thursday": "08:30-20:00",
+						"Friday": "08:30-20:00",
+						"Saturday": "09:00-20:00",
+						"Sunday": "10:00-19:00"
+						}
+				},
+				{
+					"Name": "Směnárna Kirkuk",
+					"Description": "Směnárna peněz.",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Správa parkoviště",
+					"Description": "",
+					"Category": "Služby",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "07:00-21:30",
+						"Tuesday": "07:00-21:30",
+						"Wednesday": "07:00-21:30",
+						"Thursday": "07:00-21:30",
+						"Friday": "07:00-21:30",
+						"Saturday": "07:00-17:30",
+						"Sunday": "zavřeno"
+						}
+				},
+				{
+					"Name": "Student Agency",
+					"Description": "- internetová kavárna\n - prodej vnitrostátních a mezinárodních jízdenek\n - online rezervace letenek\n Tel. 841 101 101 - informace o autobusových spojích",
+					"Category": "Služby",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "Allure",
+					"Description": "Šperky stříbrné, zlaté i z chirurgické oceli.",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Prodej bižuterie a stříbra pro denní i večerní příležitost, např. značky Senso Di Donna.",
+					"Description": "Prodej bižuterie a stříbra pro denní i večerní příležitost, např. značky Senso Di Donna.",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "I am",
+					"Description": "I am nabízí elegantní módní doplňky pro každou příležitost.",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Klenoty Aurum",
+					"Description": "Šperky ze zlata, stříbra, ušlechtilých kovů, značkové hodinky.\n\n Popis prodejny\n\n Zářivý šperk či hodinky patří k nejkrásnějším a nejhodnotnějším dárkům a naším cílem je poskytovat zákazníkům kvalitní produkty a služby v oblasti jejich prodeje a servisu.\n Klenoty Aurum představují největší síť značkových obchodů se šperky a hodinkami v České republice s širokým sortimentem zlatých, stříbrných, briliantových šperků, hodinek a značkových šperků.\n Ať už zavítáte do našich prodejen koupit dárek pro své lásky, nejbližší, přátele, či si jen přijdete udělat radost, přejeme si, abyste odcházeli spokojeni a rádi se do našich prodejen vraceli.\n\n Prodávané značky\n\n Adidas, Emporio Armani, DKNY, Diesel, Fossil, Skagen, Michael Kors, Marc by Marc Jacobs, Scuderia Ferrari, Tommy Hilfiger, Juicy Couture, Lacoste, Hugo Boss, Movado, Louis Erard, Gucci, Louis Erard",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Klenoty Wedding",
+					"Description": "Otevřeli jsme pro vás exkluzivní svatební butik, jedinečný koncept, Klenoty Wedding v OC Vaňkovka v Brně.\n\n Výběr Vašich osudových šperků nebyl nikdy jednodušší.\n\n Jedná se o náš první specializovaný svatební butik, otevřený 7 dní v týdnu, se širokou nabídkou zásnubních a snubních prstenů.\n\n Chystáte se žádat o ruku nebo rovnou už svatbu? Svěřte se do našich rukou:)",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Pandora",
+					"Description": "Šperky PANDORA, vyrobené z originálních materiálů, jsou symbolem kvality a nezaměnitelného dánského designu. Vycházejí z myšlenky jedinečnosti každého člověka a touhy naplnit jeho nejtajnější přání. Nabízí možnost kombinovat jednotlivé prvky klenotů a vytvářet tak unikátní šperky PANDORA, které jsou odrazem osobního stylu. Stávají se připomínkou těch nejvýznamnějších a nezapomenutelných událostí života. Jsou osobním deníkem lásky, přátelství, štěstí a momentů, které nosíme ve svém srdci.\n Šperky PANDORA Vám umožní listovat ve Vašich vzpomínkách, vyprávět Váš příběh a prožívat nezapomenutelné okamžiky stále znovu.\n Váš příběh, Váš design.",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Storm",
+					"Description": "Ojedinělý design. Invence. Přesnost. Osobitost. To je vše, co potřebujete vědět o jedné z nejprogresivnějších britských značek, která svými výjimečnými hodinkami, šperky a módními doplňky navždy změnila tvář světové módní scény.\n\n Nyní máte v prodejně Storm možnosti využít servisního střediska, ve kterém si můžete nechat vyměnit baterie, strojky, zkrátit řemínky nebo využít dalších rychlých služeb určených pro všechny značky hodinek za příznivou cenu, v pohodlí, rychle a kvalitně.\n\n STORM udává tón, boří hranice, mění pravidla. www.stormwatches.cz",
+					"Category": "Hodiny, klenoty, bižuterie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				
+				
+				{
+					"Name": "Bageterie Boulevard",
+					"Description": "Bageterie Boulevard je moderní, dynamicky se rozvíjející koncept restaurací rychlého občerstvení s francouzským šarmem. Naší specialitou jsou křupavé bagety plněné originálními, a především kvalitními surovinami, vždy na místě upečené a čerstvě připravené na vaše přání.\n\n Těšit se můžete i na speciální sezonní menu, které pro BB připravují nejvyhlášenější šéfkuchaři a obměňuje se každé tři měsíce. Najdete u nás ale i poctivé a originální polévky, sofistikované dezerty, sladké pečivo, jogurty a svěží zeleninové i ovocné saláty nebo speciální bohaté snídaňové menu. Báječné jídlo můžete zapít domácím ice tea, ovocným smoothie nebo třeba horkým zázvorovým čajem.\n\n Bageterie Boulevard je restaurace pro zaneprázdněného městského člověka, který přestože pospíchá, nehodlá dělat kompromisy. Pro člověka, který si chce vychutnat vyvážený, kvalitní a zdravý produkt v inspirativním prostředí.\n\n Jsme držiteli prestižního ocenění Superbrands pro rok 2014.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "07:00-21:00",
+						"Tuesday": "07:00-21:00",
+						"Wednesday": "07:00-21:00",
+						"Thursday": "07:00-21:00",
+						"Friday": "07:00-21:00",
+						"Saturday": "07:00-21:00",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Bok",
+					"Description": "Kombinace jídel ze čtyř zemí Asie z Vietnamu, Thajska, Číny a Japonska. Pojďte poznávat atmosféru moderních restaurací v Tokyu, Saigonu, Bangkoku a Hongkongu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Café Magnifique",
+					"Description": "Café Magnifique je stylová kavárna s obsluhou, ve které Vám nabízíme velké množství studených i teplých kávových specialit, které Vám připravíme i do kelímku s sebou. Alko i nealko nápoje, panini sendviče, dezerty a zmrzlinové poháry. Kavárna je rozdělena na kuřáckou i nekuřáckou část a je klimatizována. Vždy usměvavý a vstřícný personál, servírující vynikající produkty z naší nabídky se Vám pokusí zpříjemnit čas strávený při pracovních schůzkách nebo při relaxaci s přáteli u šálku lahodné kávy.\n Naší zásadou je, že káva či ostatní produkty z naší nabídky musí být vždy perfektní, a pokud to tak není, řekněte nám to a my to okamžitě napravíme.",
+					"Category": "Gastronomie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "Caffe Zatti – Julius Meinl",
+					"Description": "Caffe Zatti – Julius Meinl, je kavárna s příjemnou, rychlou obsluhou a pohodlným posezením přímo v „centru dění“ Galerie Vaňkovka. Připravíme Vám zde kávové speciality z vynikající kávy JULIUS MEINL CREMCAFFE, alkoholické i nealko nápoje. Kavárna Caffe Zatti – Julius Meinl je ideální místo pro odpočinek a načerpání nové energie.\n Naší zásadou je, že káva či ostatní produkty z naší nabídky musí být vždy perfektní, a pokud to tak není, řekněte nám to a my to okamžitě napravíme.\n\n Připravíme pro naše zákazníky teplé i studené Latte macchiato a ledovou kávu se zmrzlinou. Máme příjemnou a vstřícnou obsluhu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "08:00-21:00",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Cocos",
+					"Description": "V naší restauraci COCOS asian cuisin ochutnáte jídla, které pochází ze zemí Asie, přípravu vašeho jídla můžete sledovat sami.\n\n Restaurace COCOS asian cuisin je kuchyně, kde si můžete sami kombinovat jídlo podle své chuti, v našem samoobslužném bufetu:\n\n 1. Zaplatíte u pokladny poplatek\n\n 2. Na talíř si nabíráte z našeho samoobslužného bufetu libovolně dle vaší chuti\n\n 3. Přejeme dobrou chuť\n\n Příjemné a fungující prostředí, kde Vám bude nejen chutnat, ale budete se i příjemně cítit v běžném každodenním shonu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Gela Ti Amo",
+					"Description": "Jediná pravá italská kavárna a zmrzlinárna v Brně s dlouholetou tradicí a působností po celé Evropě. Je proslulá svou jedinečnou zmrzlinou a kávou. Přijďte nás navštívit s rodinou či přáteli a ochutnejte některou z našich italských specialit.Vyberte si z velké nabídky zmrzlinových pohárů, slaných či sladkých palačinek, waflí, toastů nebo sandwichů.",
+					"Category": "Gastronomie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "08:00-21:00",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "KFC",
+					"Description": "Restaurace KFC nabízí vynikající produkty, báječnou atmosféru a zároveň rychlou a vysoce profesionální  obsluhu.\n Naší specialitou je vždy čerstvé kuře připravované dle tajné receptury plukovníka Sanderse. Těšíme se na Vaši návštěvu! Více na www.kfc.cz.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:30",
+						"Tuesday": "08:00-21:30",
+						"Wednesday": "08:00-21:30",
+						"Thursday": "08:00-21:30",
+						"Friday": "08:00-21:30",
+						"Saturday": "08:30-21:30",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "McDonald´s",
+					"Description": "Ochutnejte některé z našich menu a udělejte radost dětem hračkou z Happy mealu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "07:00-21:30",
+						"Tuesday": "07:00-21:30",
+						"Wednesday": "07:00-21:30",
+						"Thursday": "07:00-21:30",
+						"Friday": "07:00-21:30",
+						"Saturday": "07:00-21:30",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Nordsee",
+					"Description": "V severoněmeckém Bremerhavenu byla roku 1896 založena pod jménem Německá rybářská společnost NORDSEE. V této době společnost vlastnila sedm rybářských lodí na parní pohon, které zásobovaly regionální i národní trh prvotřídními čerstvými rybami. Ve stejném roce NORDSEE otevírá první prodejnu pro koncové zákazníky v Brémách, mnoho dalších mělo brzy následovat. Od té doby se NORDSEE stalo v Německu synonymem prodeje ryb. V roce 1965 NORDSEE otevřelo první rybí restauraci. V 80. letech k restauracím přibyly také obchody se snacky.\n\n Zákazníci si tak mohli začít pochutnávat na čerstvých a zdravých rybích specialitách, rychle a dostupně. S vášní a nadšením pro ryby denně připravujeme pestrou škálu pokrmů a přicházíme stále s novými nápady. Sledujeme moderní trendy ve stravování, abychom uspokojili Vaše individuální potřeby.\n\n Přijďte se přesvědčit, jak dobře chutnají ryby v našich restauracích.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Potrefená husa",
+					"Description": "V červenci roku 2006 jsme pro Vás otevřeli značkovou restauraci Beer Point v Galerii Vaňkovka. Koncept Beer Point patří mezi koncepty značkových restaurací pivovaru Staropramen, které patří mezi nejznámější a nejúspěšnější gastronomické koncepty v České republice. Klíčovým gastronomickým řetězcem pivovaru Staropramen bezesporu je Potrefená Husa. I proto se v listopadu 2006 koncepty Potrefená Husa, Beer Point a Sportovka sjednotili pod značku nejúspěšnější a to Potrefená Husa. Od listopadu 2006 doplnila tedy restaurace Potrefená Husa širokou škálu exkluzivních značek presentovaných v Galerii Vaňkovka. Restauraci naleznete v romantické a klidové části obchodního centra Galerie Vaňkovka, u vchodu z ulice Dornych (východ mezi Datartem a rychlými občerstveními). Velkou výhodou restaurace je její umístění, které i v rušném a pulsujícím centru nabízí návštěvníkům klid a pohodu v nádherném prostředí historické zástavby. K tomu všemu už jako malé plus pro Vaši oblíbenou restauraci je projekční plátno a velký počet LCD televizí, které Vám po celý den přinášejí  sportovní klání a zajímavosti, tak že se nenudíte ani když má Váš partner velké zpoždění. Samozřejmostí je volné připojení k internetu, které můžete využít stejně jako na našich ostatních provozech.  V letních měsících je ovšem nepřekonatelným zážitkem posezení na velké letní zahrádce, která si Vás získá svou nádhernou a okouzlující atmosférou a dopřeje Vám v plné síle  vychutnání si svého lahodného pivního moku, osvěžujících koktejlů, ledových káv, zeleninových salátů nebo výborných domácích dezertů.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "10:00-24:00",
+						"Tuesday": "10:00-24:00",
+						"Wednesday": "10:00-24:00",
+						"Thursday": "10:00-24:00",
+						"Friday": "10:00-24:00",
+						"Saturday": "10:00-24:00",
+						"Sunday": "11:00-22:00"
+						}
+				},
+				{
+					"Name": "Šmak - česká kuchyně",
+					"Description": "Nabízíme tradiční českou kuchyni s rozmanitými druhy příloh. Na své si přijdou i vaši nejmenší. V průběhu roku připravujeme několik akcí, typické pro každou roční dobu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Starbucks",
+					"Description": "Starbucks v České republice působí od ledna 2008, v současné době má 19 kaváren v Praze, 2 v Brně a 2 v Ostravě.\n\n Již od svého založení v roce 1971 Starbucks pečlivě vybírá, praží a ve svých kavárnách nabízí ta nejkvalitnější kávová zrna Arabica, rozdělená do tří kategorií dle stupně pražení - Blonde, Medium a Dark Roast. Filozofie společnosti je založena na profesionálním přístupu a dokonalosti poskytovaných služeb garantujících všem zákazníkům jedinečný požitek s každým šálkem kávy Starbucks. Kavárny Starbucks vytváří tzv. třetí místo mezi domovem a prací. Starbucks poskytuje nejen legendární kávu a služby, ale rovněž se zaměřuje na komunitní činnost v oblastech, kde působí a kde má své kavárny. Měsícem komunitních akcí je každý rok, již tradičně, duben. V kavárnách se pravidelně pořádají např. křty knih a autorská čtení, ale i semináře o kávě čaji, které jsou zdarma veřejnosti přístupné.",
+					"Category": "Gastronomie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "08:00-21:00",
+						"Tuesday": "08:00-21:00",
+						"Wednesday": "08:00-21:00",
+						"Thursday": "08:00-21:00",
+						"Friday": "08:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "Subway",
+					"Description": "Restaurace SUBWAY® působí na trhu již 50 let s více než 44 790 restauracemi ve 112 zemích světa. Naleznete zde skvělou nabídku zdravých, chutných a čerstvých sendvičů, salátů a wrapů, které se připravují přímo před Vašima očima.\n\n Proč zvolit restauraci SUBWAY:\n - pečou denně 5 druhů pečiva přímo na restauraci\n - můžete si vybrat celkem z 15 variant masových nebo vegetariánských náplní\n - sendviče obsahují spoustu čerstvé zeleniny, dle vlastního výběru\n - každý sendvič si můžete ochutit výběrem z 8 dresinků\n - sendviče jsou zapečené se sýrem a jedná se tedy o plnohodnotný teplý oběd\n\n Nejoblíbenější sendvič Subway v ČR je Kuře Teriyaki. Už jste ochutnali?",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "08:00-21:30",
+						"Tuesday": "08:00-21:30",
+						"Wednesday": "08:00-21:30",
+						"Thursday": "08:00-21:30",
+						"Friday": "08:00-21:30",
+						"Saturday": "08:00-21:30",
+						"Sunday": "08:00-21:00"
+						}
+				},
+				{
+					"Name": "Top lunch",
+					"Description": "Restaurace Top Lunch je první kuchyně s jídlem na váhu, kde si vyberete podle své chuti a bez zbytečného čekání. Jsme již druhou otevřenou pobočkou v České republice. Každý den u nás naleznete něco nového. Jídlo je připravované vždy na páře, s minimem soli, zdravě a vždy čerstvě. U nás si přijdou na své i alergici, sportovci, malí i velcí jedlíci.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Tripoli Restaurant",
+					"Description": "Restaurace a pizzerie Tripoli Restaurant zahájila svůj provoz stejně tak jako Galerie Vaňkovka v březnu roku 2005. A stejně tak jako Galerie Vaňkovka, tak i Vaše oblíbená restaurace od prvního dne přivítala mnoho návštěvníků. Díky prostředí a atmosféře, která zde panuje se Tripoli Restaurant stal brzy poutním místem galerie. Kde jinde si chcete dát schůzku, než na místě, kde Vás nikdo nepřehlédne a kde i Vy budete skutečně v centru dění... i v případě, že budete muset na někoho čekat, u nás nebudete nikdy sami. Náš personál Vám splní téměř každé přání. A věřte, že máte z čeho vybírat. Samozřejmostí je klimatizace, rozdělení na kuřáckou a nekuřáckou část. Pro naše hosty je možnost bezplatného připojení na internet. Platbu Vašeho účtu je možno provést v hotovosti, stravenkami nebo platební kartou.\n\n Tel.: +420 775 075 061",
+					"Category": "Gastronomie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "08:00-22:00",
+						"Tuesday": "08:00-22:00",
+						"Wednesday": "08:00-22:00",
+						"Thursday": "08:00-22:00",
+						"Friday": "08:00-22:00",
+						"Saturday": "08:00-22:00",
+						"Sunday": "09:00-21:00"
+						}
+				},
+				{
+					"Name": "Ugova salaterie",
+					"Description": "Objevte novou UGO Salaterii v OC Galerie Vaňkovka a dopřejte si čerstvé ovocné a zeleninové šťávy, široký výběr snídaní, denní nabídku domácích polévek, saláty ze stálého i sezónního menu nebo chutné svačinky z naší vitríny. Vyzkoušejte také originální zmrzlinu vyráběnou z čerstvého ovoce.\n\n V UGU upřednostňujeme místní pěstitele, které známe a kteří dodávají kvalitní suroviny. Jen ty totiž vydají tu nejkvalitnější šťávu. Velmi rádi se pouštíme do nejrůznějších novinek, rozšiřujeme sortiment a chceme vám přinášet zážitek nejen z dobrého jídla, ale i z promyšleného prostoru.\n\n čerstvé ovocné a zeleninové šťávy\n teplá jídla\n saláty\n polévky\n\n UGO Salaterie pro vás denně připravují čerstvé domácí polévky a pestré saláty vyrobené pouze z kvalitních surovin. Používáme zajímavé a netradiční ingredience i kombinace surovin a chutí.\n Nabídku navíc přizpůsobujeme aktuální sezóně, abychom vám zaručili ta nejčerstvější jídla s obsahem živin, které tělo v té době nejvíce potřebuje.\n Na menu najdete:\n\n ● Vyladěné saláty, jejichž nabídka se navíc několikrát ročně obměňuje, aby se vám nepřejedly a byly ze surovin, které jsou právě v sezóně.\n\n ● Teplá jídla, která zasytí, ale přitom po nich nebudete odpoledne usínat v práci za monitorem.\n\n ● Od vývaru až po vařené syté polévky, jejichž nabídka se každý den obměňuje a které v pohodě nahradí lehký oběd.\n\n ● Svačinky a lehké obědy s sebou v podobě nápaditých wrapů, sytých luštěninových salátků v krabičkách, chia pudinky s ovocem a tvarohovo-jogurtové krémy.\n\n ● Širokou nabídku čerstvých na objednávku připravovaných šťáv a smoothies, které neobsahují nic jiného než ovoce. Ani stopa vody, ani stopa cukru, 100% chuť ovoce a zeleniny podle vaší chuti.",
+					"Category": "Gastronomie",
+					"Floor": "1",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				},
+				{
+					"Name": "Yobar",
+					"Description": "Koncept provozoven moderních mléčných barů s nosným produktem vysoce chlazeného jogurtu. Moderní samoobslužný mléčný bar poskytující zdravý způsob stravování bez nutnosti kompromisu.\n\n Náš FROZEN YOGURT je kvalitní český jogurt ze skutečného mléka (kysaný mléčný výrobek získaný kysáním mléka jogurtovou kulturou, doplněnou o probiotickou kulturu) podávaný ve vysoce chlazené podobě, který se vyrábí podchlazením čerstvého jogurtu a prošleháním, to vše ve stroji na výrobu Frozen Yogurtu\n\n Frozen Yogurt představuje zdravou snídani, svačinu, oběd nebo večeři, jakož i zdravou alternativu k různým dezertům či jiným potravinám kategorie rychlého občerstvení. Volba Frozen Yogurtu je volbou čerstvosti, chutnosti a poskytuje lahodné občerstvení všem věkovým skupinám bez nutnosti kompromisu.",
+					"Category": "Gastronomie",
+					"Floor": "0",
+					"Hours": 
+						{
+						"Monday": "09:00-21:00",
+						"Tuesday": "09:00-21:00",
+						"Wednesday": "09:00-21:00",
+						"Thursday": "09:00-21:00",
+						"Friday": "09:00-21:00",
+						"Saturday": "09:00-21:00",
+						"Sunday": "10:00-20:00"
+						}
+				}
 			]
       },
       {
