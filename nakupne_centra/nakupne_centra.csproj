@@ -132,6 +132,7 @@
     <Content Include="Data\Olympia\floor1.png" />
     <Content Include="Data\Olympia\logoRect.png" />
     <Content Include="Data\Olympia\logoSquare.png" />
+    <Content Include="Data\Pin.png" />
     <Content Include="Data\Vankovka\floor0.png" />
     <Content Include="Data\Vankovka\floor1.png" />
     <Content Include="Data\Vankovka\logoRect.png" />

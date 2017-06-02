@@ -9,6 +9,7 @@
     <Application.Resources>
         <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
         <converters:EmptyToVisibilityConverter x:Key="EmptyToVisibilityConverter"/>
+        <BitmapImage x:Key="MapPinIcon" UriSource="ms-appx:///Data/Pin.png"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
         <Style x:Key="ListViewItemBackground" TargetType="Border">
