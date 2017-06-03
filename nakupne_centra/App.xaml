@@ -68,7 +68,7 @@
         <Style x:Key="CategoryBooksGiftsToysStyle" TargetType="Border">
             <Setter Property="Background" Value="Lime"/>
         </Style>
-        <Style x:Key="CategoryBoothsStyle" TargetType="Border">
+        <Style x:Key="CategoryElectronicsStyle" TargetType="Border">
             <Setter Property="Background" Value="Cyan"/>
         </Style>
         <Style x:Key="CategoryJewelleryStyle" TargetType="Border">
@@ -86,6 +86,8 @@
         <Style x:Key="CategoryServicesStyle" TargetType="Border">
             <Setter Property="Background" Value="Peru"/>
         </Style>
-        
+        <Style x:Key="CategoryHomeStyle" TargetType="Border">
+            <Setter Property="Background" Value="Azure"/>
+        </Style>
     </Application.Resources>
 </Application>
