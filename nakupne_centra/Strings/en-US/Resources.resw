@@ -156,6 +156,9 @@
   <data name="CategorySport" xml:space="preserve">
     <value>Sport</value>
   </data>
+  <data name="FloorSlider.Header" xml:space="preserve">
+    <value>Floor</value>
+  </data>
   <data name="Friday.Text" xml:space="preserve">
     <value>Friday</value>
   </data>
