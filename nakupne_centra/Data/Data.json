@@ -3,6 +3,8 @@
       {
         "Name": "Galerie Vaňkovka",
         "Address": "Ve Vaňkovce 1, 602 00 Brno",
+		"MinFloor": 0,
+		"MaxFloor": 1,
         "DataFolder": "ms-appx:///Data/Vankovka/",
         "LogoColor": "#FFE7EA",
         "Hours": 
@@ -2298,6 +2300,8 @@
       {
         "Name": "Futurum",
         "Address": "Vídeňská 100, 619 00 Brno",
+		"MinFloor": 0,
+		"MaxFloor": 1,
         "DataFolder": "ms-appx:///Data/Futurum/",
         "LogoColor": "#CBE6FF",
         "Hours": 

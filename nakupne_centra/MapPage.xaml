@@ -15,16 +15,16 @@
 
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" />
 
-        <ScrollViewer  Name="MapScrollViewer" Grid.Row="1" MinZoomFactor="0.3" MaxZoomFactor="1.5" ZoomMode="Enabled" DoubleTapped="ScrollViewer_DoubleTapped" 
+        <ScrollViewer  x:Name="MapScrollViewer" Grid.Row="1" MinZoomFactor="0.3" MaxZoomFactor="1.5" ZoomMode="Enabled" DoubleTapped="ScrollViewer_DoubleTapped" 
                        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
-            <Viewbox Grid.Row="1">
+            <Viewbox>
                 <Grid>
-                    <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}"/>
+                    <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map0}"/>
                     <Image x:Name="StorePosition" Margin="100,0,0,0" Width="48" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
                 </Grid>
             </Viewbox>
         </ScrollViewer>
-            
-            
+
+        <Slider x:Name="FloorSlider" Grid.Row="1" Margin="20,5,0,0" Header="Patro" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
     </Grid>
 </Page>

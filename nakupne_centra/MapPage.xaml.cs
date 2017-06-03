@@ -6,6 +6,7 @@ using Windows.UI.Xaml.Navigation;
 using nakupne_centra.DataModel;
 using Windows.Foundation;
 using Windows.UI.Core;
+using Windows.UI.Xaml.Controls.Primitives;
 
 
 
@@ -19,19 +20,32 @@ namespace nakupne_centra.ViewModel
     /// </summary>
     public sealed partial class MapPage : Page
     {
-        private CentreViewModel viewModel;
+        private MapViewModel viewModel;
 
         public MapPage()
         {
             this.InitializeComponent();
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new CentreViewModel(e.Parameter as Centre);
+            viewModel = new MapViewModel(e.Parameter as Centre);
             DataContext = viewModel;
             (App.Current as App).CategoryExpanded = new System.Collections.Generic.Dictionary<string, bool>();
+
+            
+
+            if (viewModel.Floors == 1)
+            {
+                FloorSlider.Visibility = Visibility.Collapsed;
+            } else
+            {
+                FloorSlider.Visibility = Visibility.Visible;
+                FloorSlider.Maximum = viewModel.MaxFloor;
+                FloorSlider.Minimum = viewModel.MinFloor;
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -64,6 +78,21 @@ namespace nakupne_centra.ViewModel
                 });
             }
             , period);
+        }
+
+        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            Slider slider = sender as Slider;
+            if (slider != null)
+            {
+                if (slider.Value == 0)
+                {
+                    Map.Source = viewModel.Map0;
+                } else
+                {
+                    Map.Source = viewModel.Map1;
+                }
+            }
         }
 
         public void OnBackRequested(object sender, BackRequestedEventArgs e)

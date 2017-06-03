@@ -7,10 +7,12 @@ namespace nakupne_centra.DataModel
 {
     public class Centre
     {
-        public Centre(string name, string address, ImageSource logoSquare, ImageSource logoRect, ImageSource floor0, ImageSource floor1, Hours hours, string logoColor)
+        public Centre(string name, string address, int MinFloor, int MaxFloor, ImageSource logoSquare, ImageSource logoRect, ImageSource floor0, ImageSource floor1, Hours hours, string logoColor)
         {
             this.Name = name;
             this.Address = address;
+            this.MinFloor = MinFloor;
+            this.MaxFloor = MaxFloor;
             this.LogoSquare = logoSquare;
             this.LogoRect = logoRect;
             this.Floor0 = floor0;
@@ -31,5 +33,7 @@ namespace nakupne_centra.DataModel
         public string LogoColor { get; set; }
         public double Floor0Height { get; set; }
         public double Floor1Height { get; set; }
+        public int MinFloor { get; set; }
+        public int MaxFloor { get; set; }
     }
 }

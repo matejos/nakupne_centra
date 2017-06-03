@@ -123,6 +123,7 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\MapViewModel.cs" />
     <Compile Include="ViewModel\StoresListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

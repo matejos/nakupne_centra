@@ -81,6 +81,8 @@ namespace nakupne_centra.ViewModel
 
                     Centre centre = new Centre(centreObject["Name"].GetString(),
                                                            centreObject["Address"].GetString(),
+                                                           Convert.ToInt32(centreObject["MinFloor"].GetNumber()),
+                                                           Convert.ToInt32(centreObject["MaxFloor"].GetNumber()),
                                                            new BitmapImage(new Uri(dataFolder + "logoSquare.png")),
                                                            new BitmapImage(new Uri(dataFolder + "logoRect.png")),
                                                            new BitmapImage(new Uri(dataFolder + "floor0.png")),
