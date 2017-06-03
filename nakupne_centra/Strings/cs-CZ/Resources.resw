@@ -156,11 +156,14 @@
   <data name="CategorySport" xml:space="preserve">
     <value>Sportovní zboží</value>
   </data>
-  <data name="FloorSlider.Header" xml:space="preserve">
+  <data name="FloorSlider.Text" xml:space="preserve">
     <value>Patro</value>
   </data>
   <data name="Friday.Text" xml:space="preserve">
     <value>Pátek</value>
+  </data>
+  <data name="Locate.Text" xml:space="preserve">
+    <value>Lokace</value>
   </data>
   <data name="MainPageHeader.Text" xml:space="preserve">
     <value>Nákupní centra</value>
