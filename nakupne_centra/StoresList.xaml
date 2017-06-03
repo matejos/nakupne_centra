@@ -12,17 +12,23 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
                 <Button Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="ButtonClickNavigate">
                     <FontIcon HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE816;" FontSize="20"/>
                 </Button>
 
-                <StackPanel Grid.Column="1" Margin="10,0">
-                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}"/>
+                <Border Grid.Column="1" Margin="10,0">
+                    <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     </Viewbox>
-                </StackPanel>
+                </Border>
+
+                <FontIcon Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE0E3;" FontSize="20"/>
             </Grid>
         </DataTemplate>
         <DataTemplate x:Key="StoresItemTemplate">
@@ -42,7 +48,7 @@
 
                 <Border Grid.Column="1" Margin="10,0">
                     <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}" />
+                        <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     </Viewbox>
                 </Border>
                 
@@ -52,7 +58,13 @@
         <DataTemplate x:Key="CategoryItemTemplate">
             <local:ExpandPanel HeaderContent="{Binding Key}">
                 <local:ExpandPanel.Content>
-                    <ListView x:Name="CategoryStoresList" DataContextChanged="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" IsItemClickEnabled="True" SelectionChanged="CategoryStoresListView_SelectionChanged" ItemClick="CategoryStoresListView_ItemClick"/>
+                    <ListView x:Name="CategoryStoresList" DataContextChanged="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" IsItemClickEnabled="True" SelectionChanged="CategoryStoresListView_SelectionChanged" ItemClick="CategoryStoresListView_ItemClick">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
                 </local:ExpandPanel.Content>
             </local:ExpandPanel>
         </DataTemplate>
@@ -100,7 +112,7 @@
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
-                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Uid="NoResultsFound" Style="{StaticResource NoResultsFoundStyle}" TextWrapping="WrapWholeWords" Visibility="{Binding FilteredStores, Converter={StaticResource EmptyCollectionToVisibilityConverter}}"/>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Uid="NoResultsFound" Style="{StaticResource NoResultsFoundStyle}" TextAlignment="Center" TextWrapping="WrapWholeWords" Visibility="{Binding FilteredStores, Converter={StaticResource EmptyCollectionToVisibilityConverter}}"/>
                 </Grid>
             </SplitView.Pane>
             <Grid>
@@ -117,8 +129,8 @@
                             <ColumnDefinition Width="90"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Row="0" Margin="0,10,0,0">
-                            <TextBlock Text="{Binding StoreName}" Style="{StaticResource HeaderStyle}" TextWrapping="WrapWholeWords"/>
-                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}" TextWrapping="WrapWholeWords"/>
+                            <TextBlock Text="{Binding StoreName}" Style="{StaticResource HeaderStyle}" TextWrapping="WrapWholeWords" TextAlignment="Center" />
+                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}" TextWrapping="WrapWholeWords" TextAlignment="Center" />
                         </StackPanel>
                         <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{Binding SelectedStore, Converter={StaticResource NullToVisibilityConverter}}" Click="ButtonClickNavigateSelectedStore">
                             <StackPanel>
@@ -132,7 +144,7 @@
                                 <Image x:Name="StorePosition" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
                             </Grid>
                         </Viewbox>
-                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="Wrap"/>
+                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="Wrap" TextAlignment="Justify" />
                         <StackPanel x:Name="OpeningHoursPanel" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
                             <StackPanel Margin="10">
                                 <TextBlock x:Uid="Monday" Style="{StaticResource HoursDayStyle}"/>
