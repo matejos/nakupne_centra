@@ -28,7 +28,6 @@ namespace nakupne_centra.ViewModel
         {
             this.InitializeComponent();
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -51,17 +50,7 @@ namespace nakupne_centra.ViewModel
             }
             if (viewModel.SelectedStore != null)
             {
-                TimeSpan period = TimeSpan.FromMilliseconds(200);
-
-                Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
-                {
-                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                    {
-                        MapScrollViewer.ChangeView(viewModel.SelectedStore.PositionX / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2,
-                                  viewModel.SelectedStore.PositionY / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7, null, false);
-                    });
-                }
-                , period);
+                ZoomSelectedStore();
             }
         }
 
