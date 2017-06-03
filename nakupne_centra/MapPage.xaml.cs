@@ -66,7 +66,7 @@ namespace nakupne_centra.ViewModel
             if (sv == null) return;
             Point p = e.GetPosition(sv);
 
-            TimeSpan period = TimeSpan.FromMilliseconds(10);
+            TimeSpan period = TimeSpan.FromMilliseconds(200);
 
             Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
             {
@@ -75,12 +75,12 @@ namespace nakupne_centra.ViewModel
                     if (sv.ZoomFactor <= 1)
                     {
                         sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Width / 2,
-                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Height * 0.7, (float)1.5);
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Height * 0.7, (float)1.5, false);
                     }
                     else
                     {
                         sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Width / 2,
-                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Height * 0.7, (float)0.5);
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Height * 0.7, (float)0.5, false);
                     }
                 });
             }
