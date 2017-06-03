@@ -168,6 +168,9 @@
   <data name="Monday.Text" xml:space="preserve">
     <value>Monday</value>
   </data>
+  <data name="NoResultsFound.Text" xml:space="preserve">
+    <value>No results found.</value>
+  </data>
   <data name="OpeningHours.Text" xml:space="preserve">
     <value>Opening hours</value>
   </data>

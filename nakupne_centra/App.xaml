@@ -8,11 +8,17 @@
     RequestedTheme="Light">
     <Application.Resources>
         <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
-        <converters:EmptyToVisibilityConverter x:Key="EmptyToVisibilityConverter"/>
+        <converters:EmptyStringToVisibilityConverter x:Key="EmptyStringToVisibilityConverter"/>
+        <converters:EmptyCollectionToVisibilityConverter x:Key="EmptyCollectionToVisibilityConverter"/>
         <converters:CoordinatesConverter x:Key="CoordinatesConverter"/>
         <BitmapImage x:Key="MapPinIcon" UriSource="ms-appx:///Data/Pin.png"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
+        <Style x:Key="NoResultsFoundStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
         <Style x:Key="ListViewItemBackground" TargetType="Border">
             <Setter Property="Background" Value="Transparent"/>
         </Style>

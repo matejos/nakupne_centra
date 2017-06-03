@@ -38,7 +38,8 @@ namespace nakupne_centra.ViewModel
 
         public void RefreshFilteredData()
         {
-            FilteredCentres = new ObservableCollection<Centre>();
+            ObservableCollection<Centre>  newFilteredCentres = new ObservableCollection<Centre>();
+
             if (NameFilter == "")
             {
                 FilteredCentres = DataStorage.Centres;
@@ -50,9 +51,10 @@ namespace nakupne_centra.ViewModel
                 int stores = centre.viewModel.RefreshFilteredData();
                 if (stores > 0)
                 {
-                    FilteredCentres.Add(centre);
+                    newFilteredCentres.Add(centre);
                 }
             }
+            FilteredCentres = newFilteredCentres;
         }
 
         private async void LoadData()

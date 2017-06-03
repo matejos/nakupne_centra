@@ -100,6 +100,7 @@
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Uid="NoResultsFound" Style="{StaticResource NoResultsFoundStyle}" Visibility="{Binding FilteredStores, Converter={StaticResource EmptyCollectionToVisibilityConverter}}"/>
                 </Grid>
             </SplitView.Pane>
             <Grid>
