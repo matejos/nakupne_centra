@@ -14,7 +14,7 @@ namespace nakupne_centra.Converters
                 double y = Double.Parse(coords[1]);
                 return (x - 20) + "," + (y - 64) + ",0,0";
             }
-            return "";
+            return "0";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)
