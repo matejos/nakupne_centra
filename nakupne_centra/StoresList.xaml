@@ -100,7 +100,7 @@
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
-                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Uid="NoResultsFound" Style="{StaticResource NoResultsFoundStyle}" Visibility="{Binding FilteredStores, Converter={StaticResource EmptyCollectionToVisibilityConverter}}"/>
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Uid="NoResultsFound" Style="{StaticResource NoResultsFoundStyle}" TextWrapping="WrapWholeWords" Visibility="{Binding FilteredStores, Converter={StaticResource EmptyCollectionToVisibilityConverter}}"/>
                 </Grid>
             </SplitView.Pane>
             <Grid>
@@ -122,7 +122,7 @@
                                 <Image x:Name="StorePosition" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
                             </Grid>
                         </Viewbox>
-                        <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="WrapWholeWords"/>
+                        <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="Wrap"/>
                         <StackPanel x:Name="OpeningHoursPanel" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
                             <StackPanel Margin="10">
                                 <TextBlock x:Uid="Monday" Style="{StaticResource HoursDayStyle}"/>

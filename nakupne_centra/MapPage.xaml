@@ -26,6 +26,6 @@
             </Viewbox>
         </ScrollViewer>
 
-        <Slider x:Name="FloorSlider" Grid.Row="1" Margin="20,5,0,0" Header="Patro" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
+        <Slider x:Name="FloorSlider" Grid.Row="1" Margin="20,5,0,0" x:Uid="FloorSlider" Header="Patro" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
     </Grid>
 </Page>

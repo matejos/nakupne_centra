@@ -156,6 +156,9 @@
   <data name="CategorySport" xml:space="preserve">
     <value>Sportovní zboží</value>
   </data>
+  <data name="FloorSlider.Header" xml:space="preserve">
+    <value>Patro</value>
+  </data>
   <data name="Friday.Text" xml:space="preserve">
     <value>Pátek</value>
   </data>
@@ -167,6 +170,9 @@
   </data>
   <data name="Monday.Text" xml:space="preserve">
     <value>Pondělí</value>
+  </data>
+  <data name="NoResultsFound.Text" xml:space="preserve">
+    <value>Nenalezeny žádné výsledky.</value>
   </data>
   <data name="OpeningHours.Text" xml:space="preserve">
     <value>Otevírací hodiny</value>
