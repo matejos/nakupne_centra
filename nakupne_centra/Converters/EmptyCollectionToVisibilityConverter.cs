@@ -10,8 +10,6 @@ namespace nakupne_centra.Converters
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            Debug.WriteLine(value != null);
-            Debug.WriteLine((value as ICollection).Count > 0);
             return (value != null && (value as ICollection).Count > 0) ? Windows.UI.Xaml.Visibility.Collapsed : Windows.UI.Xaml.Visibility.Visible;
         }
 

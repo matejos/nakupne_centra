@@ -8,6 +8,7 @@ using Windows.Foundation;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Diagnostics;
 
 
 
@@ -46,31 +47,21 @@ namespace nakupne_centra.ViewModel
             {
                 FloorSlider.Visibility = Visibility.Visible;
                 FloorSlider.Maximum = viewModel.MaxFloor;
-                FloorSlider.Minimum = viewModel.MinFloor;
+                FloorSlider.Minimum = viewModel.MinFloor;   
+            }
+            if (viewModel.SelectedStore != null)
+            {
+                TimeSpan period = TimeSpan.FromMilliseconds(200);
 
-                if (viewModel.SelectedStore != null)
+                Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
                 {
-                    switch (viewModel.SelectedStore.Floor)
+                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                     {
-                        case "0":
-                            FloorSlider.Value = 0;
-                            break;
-                        case "1":
-                            FloorSlider.Value = 1;
-                            break;
-                    };
-                    TimeSpan period = TimeSpan.FromMilliseconds(200);
-
-                    Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
-                    {
-                        await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                        {
-                            MapScrollViewer.ChangeView(viewModel.SelectedStore.PositionX / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2,
-                                      viewModel.SelectedStore.PositionY / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7, null, false);
-                        });
-                    }
-                    , period);
+                        MapScrollViewer.ChangeView(viewModel.SelectedStore.PositionX / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2,
+                                  viewModel.SelectedStore.PositionY / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7, null, false);
+                    });
                 }
+                , period);
             }
         }
 
@@ -108,53 +99,7 @@ namespace nakupne_centra.ViewModel
 
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-            Slider slider = sender as Slider;
-            if (slider != null)
-            {
-                double X = MapScrollViewer.HorizontalOffset;
-                double Y = MapScrollViewer.VerticalOffset;
-                if (slider.Value == 0)
-                {
-                    Map.Source = viewModel.Map0;
-                    if (viewModel.SelectedStore != null)
-                    {
-                        switch (viewModel.SelectedStore.Floor)
-                        {
-                            case "1":
-                                StorePosition.Visibility = Visibility.Collapsed;
-                                break;
-                            default:
-                                StorePosition.Visibility = Visibility.Visible;
-                                break;
-                        };
-                    }
-                } else
-                {
-                    Map.Source = viewModel.Map1;
-                    if (viewModel.SelectedStore != null)
-                    {
-                        switch (viewModel.SelectedStore.Floor)
-                        {
-                            case "0":
-                                StorePosition.Visibility = Visibility.Collapsed;
-                                break;
-                            default:
-                                StorePosition.Visibility = Visibility.Visible;
-                                break;
-                        };
-                    }
-                }
-                TimeSpan period = TimeSpan.FromMilliseconds(200);
-
-                Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
-                {
-                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-                    {
-                        MapScrollViewer.ChangeView(X, Y, null, true);
-                    });
-                }
-                , period);
-            }
+            
         }
 
         public void OnBackRequested(object sender, BackRequestedEventArgs e)
@@ -183,9 +128,28 @@ namespace nakupne_centra.ViewModel
 
         private void SearchBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
-            sender.Text = (args.SelectedItem as Store).Name;
-            viewModel.SelectedStore = (args.SelectedItem as Store);
-            viewModel.RefreshSelectedStore();
+            Store selectedStore = args.SelectedItem as Store;
+            sender.Text = selectedStore.Name;
+            viewModel.SelectedStore = selectedStore;
+            ZoomSelectedStore();
+        }
+
+        private void ZoomSelectedStore()
+        {
+            double X = viewModel.SelectedStore.PositionX * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2;
+            double Y = viewModel.SelectedStore.PositionY * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7;
+            
+            TimeSpan period = TimeSpan.FromMilliseconds(200);
+
+            Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
+            {
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+                    MapScrollViewer.ChangeView(X, Y, null, false);
+                });
+            }
+            , period);
+            Debug.WriteLine("Zoomed on " + viewModel.SelectedStore.Name + " on " + X + "," + Y + " with zoomfactor " + MapScrollViewer.ZoomFactor);
         }
     }
 }

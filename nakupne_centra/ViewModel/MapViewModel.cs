@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
 namespace nakupne_centra.ViewModel
@@ -11,6 +12,7 @@ namespace nakupne_centra.ViewModel
         public MapViewModel(Centre centre, Store store)
         {
             Centre = centre;
+            Map = Centre.Floor0;
             Stores = new ObservableCollection<Store>(from i in centre.Stores orderby i.Name select i);
             Name = Centre.Name;
             SelectedStore = store;
@@ -19,10 +21,7 @@ namespace nakupne_centra.ViewModel
             MaxFloor = Centre.MaxFloor;
             Floors = Centre.MaxFloor - Centre.MinFloor + 1;
 
-            Map0 = Centre.Floor0;
-            Map1 = Centre.Floor1;
-
-            RefreshSelectedStore();
+            
             FilteredStores = Stores;
             NameFilter = "";
         }
@@ -59,6 +58,14 @@ namespace nakupne_centra.ViewModel
             set { _storePosition = value; NotifyPropertyChanged("StorePosition"); }
         }
 
+        private bool _storePositionVisibility;
+
+        public bool StorePositionVisibility
+        {
+            get { return _storePositionVisibility; }
+            set { _storePositionVisibility = value; NotifyPropertyChanged("StorePositionVisibility"); }
+        }
+
         private Store _selectedStore;
 
         public Store SelectedStore
@@ -93,20 +100,12 @@ namespace nakupne_centra.ViewModel
         }
 
 
-        private ImageSource _map0;
+        private ImageSource _map;
 
-        public ImageSource Map0
+        public ImageSource Map
         {
-            get { return _map0; }
-            set { _map0 = value; NotifyPropertyChanged("Map"); }
-        }
-
-        private ImageSource _map1;
-
-        public ImageSource Map1
-        {
-            get { return _map1; }
-            set { _map1 = value; NotifyPropertyChanged("Map"); }
+            get { return _map; }
+            set { _map = value; NotifyPropertyChanged("Map"); }
         }
 
         private ObservableCollection<Store> _filteredStores;
@@ -123,6 +122,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _nameFilter; }
             set { _nameFilter = value; NotifyPropertyChanged("NameFilter"); RefreshFilteredData(); }
+        }
+
+        private int _floorSliderValue;
+
+        public int FloorSliderValue
+        {
+            get { return _floorSliderValue; }
+            set { _floorSliderValue = value; NotifyPropertyChanged("FloorSliderValue"); ChangeFloor(); }
         }
 
         public void RefreshFilteredData()
@@ -151,36 +158,49 @@ namespace nakupne_centra.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
 
-        public void RefreshSelectedStore()
+        void RefreshSelectedStore()
         {
-            //TODO
-            //zmeni poschodie a presunie ikonku miesta na poziciu obchodu
             if (SelectedStore != null)
             {
-                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
-            }
-            
-
-            /*if (SelectedStore != null)
-            {
-                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
-                Hours = SelectedStore.StoreHours;
-                string storeFloor = SelectedStore.Floor;
-                if (storeFloor.Equals("0"))
+                switch (SelectedStore.Floor)
                 {
-                    Map = Centre.Floor0;
-                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor0Height;
-                }
-                else
-                {
-                    Map = Centre.Floor1;
-                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor1Height;
-                }
+                    case "0":
+                        FloorSliderValue = 0;
+                        break;
+                    case "1":
+                        FloorSliderValue = 1;
+                        break;
+                };
+                StorePositionVisibility = true;
+                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
             }
             else
             {
+                StorePositionVisibility = false;
+            }
+        }
+
+        void ChangeFloor()
+        {
+            if (FloorSliderValue == 0)
+            {
                 Map = Centre.Floor0;
-            }*/
+            }
+            else if (FloorSliderValue == 1)
+            {
+                Map = Centre.Floor1;
+            }
+            if (SelectedStore != null)
+            {
+                if (SelectedStore.Floor.Contains(FloorSliderValue.ToString()))
+                {
+                        StorePositionVisibility = true;
+                }
+                else
+                {
+                    StorePositionVisibility = false;
+                }
+            }
         }
     }
 }
