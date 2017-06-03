@@ -236,7 +236,9 @@ namespace nakupne_centra
 
         private void ButtonClickNavigate(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MapPage), viewModel.Centre);
+            var store = (sender as FrameworkElement).DataContext as Store;
+            MapCentreStore css = new MapCentreStore(viewModel.Centre, store);
+            this.Frame.Navigate(typeof(MapPage), css);
         }
     }
 }

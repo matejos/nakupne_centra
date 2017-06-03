@@ -6,10 +6,11 @@ namespace nakupne_centra.ViewModel
 {
     public class MapViewModel : INotifyPropertyChanged
     {
-        public MapViewModel(Centre centre)
+        public MapViewModel(Centre centre, Store store)
         {
             Centre = centre;
             Name = Centre.Name;
+            SelectedStore = store;
 
             MinFloor = Centre.MinFloor;
             MaxFloor = Centre.MaxFloor;
@@ -17,6 +18,8 @@ namespace nakupne_centra.ViewModel
 
             Map0 = Centre.Floor0;
             Map1 = Centre.Floor1;
+
+            RefreshSelectedStore();
         }
 
         private Centre _centre;
@@ -35,6 +38,21 @@ namespace nakupne_centra.ViewModel
             set { _name = value; NotifyPropertyChanged("Name"); }
         }
 
+        private string _storePosition;
+
+        public string StorePosition
+        {
+            get { return _storePosition; }
+            set { _storePosition = value; NotifyPropertyChanged("StorePosition"); }
+        }
+
+        private Store _selectedStore;
+
+        public Store SelectedStore
+        {
+            get { return _selectedStore; }
+            set { _selectedStore = value; NotifyPropertyChanged("SelectedStore"); RefreshSelectedStore(); }
+        }
 
         private int _floors;
 
@@ -49,7 +67,7 @@ namespace nakupne_centra.ViewModel
         public int MinFloor
         {
             get { return _minFloor; }
-            set { _minFloor = value; NotifyPropertyChanged("Floors"); }
+            set { _minFloor = value; NotifyPropertyChanged("MinFloor"); }
         }
 
 
@@ -58,7 +76,7 @@ namespace nakupne_centra.ViewModel
         public int MaxFloor
         {
             get { return _maxFloor; }
-            set { _maxFloor = value; NotifyPropertyChanged("Floors"); }
+            set { _maxFloor = value; NotifyPropertyChanged("MaxFloor"); }
         }
 
 
@@ -84,6 +102,38 @@ namespace nakupne_centra.ViewModel
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+
+        private void RefreshSelectedStore()
+        {
+            //TODO
+            //zmeni poschodie a presunie ikonku miesta na poziciu obchodu
+            if (SelectedStore != null)
+            {
+                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
+            }
+            
+
+            /*if (SelectedStore != null)
+            {
+                StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
+                Hours = SelectedStore.StoreHours;
+                string storeFloor = SelectedStore.Floor;
+                if (storeFloor.Equals("0"))
+                {
+                    Map = Centre.Floor0;
+                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor0Height;
+                }
+                else
+                {
+                    Map = Centre.Floor1;
+                    MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor1Height;
+                }
+            }
+            else
+            {
+                Map = Centre.Floor0;
+            }*/
         }
     }
 }

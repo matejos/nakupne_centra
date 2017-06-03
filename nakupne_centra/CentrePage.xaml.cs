@@ -54,7 +54,8 @@ namespace nakupne_centra
 
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MapPage), viewModel.Centre);
+            MapCentreStore css = new MapCentreStore(viewModel.Centre, null);
+            this.Frame.Navigate(typeof(MapPage), css);
         }
     }
 }

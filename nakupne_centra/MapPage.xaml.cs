@@ -7,6 +7,7 @@ using nakupne_centra.DataModel;
 using Windows.Foundation;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Media.Imaging;
 
 
 
@@ -31,11 +32,12 @@ namespace nakupne_centra.ViewModel
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new MapViewModel(e.Parameter as Centre);
+            MapCentreStore css = e.Parameter as MapCentreStore;
+            viewModel = new MapViewModel(css.Centre, css.Store);
             DataContext = viewModel;
-            (App.Current as App).CategoryExpanded = new System.Collections.Generic.Dictionary<string, bool>();
 
-            
+
+            MapScrollViewer.ChangeView(null, null, (float)0.4);
 
             if (viewModel.Floors == 1)
             {
@@ -45,6 +47,11 @@ namespace nakupne_centra.ViewModel
                 FloorSlider.Visibility = Visibility.Visible;
                 FloorSlider.Maximum = viewModel.MaxFloor;
                 FloorSlider.Minimum = viewModel.MinFloor;
+
+                if (viewModel.SelectedStore != null)
+                {
+                    FloorSlider.Value = Int32.Parse(viewModel.SelectedStore.Floor);
+                }
             }
         }
 
@@ -103,6 +110,19 @@ namespace nakupne_centra.ViewModel
             {
                 e.Handled = true;
                 rootFrame.GoBack();
+            }
+        }
+
+        private void Map_ImageOpened(object sender, RoutedEventArgs e)
+        {
+            Image img = sender as Image;
+            if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0)
+            {
+                DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height = (img.Source as BitmapImage).PixelHeight;
+            }
+            else if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1)
+            {
+                DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1Height = (img.Source as BitmapImage).PixelHeight;
             }
         }
     }

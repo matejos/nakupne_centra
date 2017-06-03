@@ -56,7 +56,8 @@ namespace nakupne_centra
         private void MapButtonClick(object sender, RoutedEventArgs e)
         {
             var centre = (sender as FrameworkElement).DataContext as Centre;
-            this.Frame.Navigate(typeof(MapPage), centre);
+            MapCentreStore css = new MapCentreStore(centre, null);
+            this.Frame.Navigate(typeof(MapPage), css);
         }
     }
 }
