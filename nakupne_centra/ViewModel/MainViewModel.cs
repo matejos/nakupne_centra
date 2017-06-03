@@ -102,8 +102,7 @@ namespace nakupne_centra.ViewModel
                             storeObject["Category"].GetString(),
                             storeObject["Floor"].GetString(),
                             storeHours,
-                            //storeObject["PositionX"].GetNumber(), storeObject["PositionY"].GetNumber()
-                            920,340
+                            storeObject["PositionX"].GetNumber(), storeObject["PositionY"].GetNumber()
                             ));
                     }
 

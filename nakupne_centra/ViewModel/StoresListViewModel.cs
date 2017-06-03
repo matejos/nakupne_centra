@@ -181,7 +181,7 @@ namespace nakupne_centra.ViewModel
                     Map = Centre.Floor0;
                     MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor0Height;
                 }
-                else
+                else if (storeFloor.Equals("1"))
                 {
                     Map = Centre.Floor1;
                     MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(Centre)].Floor1Height;
