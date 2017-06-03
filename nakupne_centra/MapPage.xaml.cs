@@ -33,7 +33,7 @@ namespace nakupne_centra.ViewModel
             (App.Current as App).CategoryExpanded = new System.Collections.Generic.Dictionary<string, bool>();
         }
 
-        private async void scrollViewer_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        private void ScrollViewer_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
             var sv = sender as ScrollViewer;
             if (sv == null) return;
@@ -45,30 +45,19 @@ namespace nakupne_centra.ViewModel
             {
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
-                if (sv.ZoomFactor <= 1)
-                {
-                    var k = sv.ChangeView(p.X + sv.HorizontalOffset * 2, p.Y + sv.VerticalOffset * 2, 2);
+                    if (sv.ZoomFactor <= 1)
+                    {
+                        sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Width / 2,
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Height * 0.7, (float)1.5);
                     }
                     else
                     {
-                        sv.ChangeView(sv.HorizontalOffset / 2 - p.X, sv.VerticalOffset / 2 - p.Y, 1);
+                        sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Width / 2,
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Height * 0.7, (float)0.5);
                     }
                 });
             }
             , period);
         }
-
-        /*private void Image_PointerWheelChanged_1(object sender, PointerRoutedEventArgs e)
-        {
-            double newvalue = e.GetCurrentPoint(sender as UIElement).Properties.MouseWheelDelta;
-            if (newvalue > 0)
-            {
-                MapScrollViewer.ZoomToFactor(MapScrollViewer.ZoomFactor*(float)1.2);
-            }
-            if (newvalue < 0)
-            {
-                MapScrollViewer.ZoomToFactor(MapScrollViewer.ZoomFactor / (float)1.2);
-            }
-        }*/
     }
 }
