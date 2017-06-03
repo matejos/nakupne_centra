@@ -123,6 +123,36 @@
   <data name="ByType.Text" xml:space="preserve">
     <value>By type</value>
   </data>
+  <data name="CategoryBeauty" xml:space="preserve">
+    <value>Health and Beauty</value>
+  </data>
+  <data name="CategoryBooksGiftsToys" xml:space="preserve">
+    <value>Books, Gifts and Toys</value>
+  </data>
+  <data name="CategoryBooths" xml:space="preserve">
+    <value>Booths</value>
+  </data>
+  <data name="CategoryFashion" xml:space="preserve">
+    <value>Fashion</value>
+  </data>
+  <data name="CategoryFootwear" xml:space="preserve">
+    <value>Footwear and Leather</value>
+  </data>
+  <data name="CategoryGastronomy" xml:space="preserve">
+    <value>Gastronomy</value>
+  </data>
+  <data name="CategoryGroceries" xml:space="preserve">
+    <value>Groceries</value>
+  </data>
+  <data name="CategoryJewellery" xml:space="preserve">
+    <value>Watches and Jewellery</value>
+  </data>
+  <data name="CategoryServices" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="CategorySport" xml:space="preserve">
+    <value>Sport</value>
+  </data>
   <data name="Friday.Text" xml:space="preserve">
     <value>Friday</value>
   </data>

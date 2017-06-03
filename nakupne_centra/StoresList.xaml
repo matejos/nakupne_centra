@@ -52,7 +52,7 @@
         <DataTemplate x:Key="CategoryItemTemplate">
             <local:ExpandPanel HeaderContent="{Binding Key}">
                 <local:ExpandPanel.Content>
-                    <ListView x:Name="CategoryStoresList" Loaded="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" IsItemClickEnabled="True" SelectionChanged="CategoryStoresListView_SelectionChanged" ItemClick="CategoryStoresListView_ItemClick"/>
+                    <ListView x:Name="CategoryStoresList" DataContextChanged="PanelLoaded" ItemsSource="{Binding Value}" ItemTemplate="{StaticResource CategoryStoresTemplate}" IsItemClickEnabled="True" SelectionChanged="CategoryStoresListView_SelectionChanged" ItemClick="CategoryStoresListView_ItemClick"/>
                 </local:ExpandPanel.Content>
             </local:ExpandPanel>
         </DataTemplate>

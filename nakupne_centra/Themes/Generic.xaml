@@ -40,19 +40,20 @@
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
-                                <Grid Margin="3">
+                                <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
                                     <ContentPresenter Grid.Column="0" VerticalAlignment="Center" Content="{TemplateBinding HeaderContent}" FontSize="24"/>
-                                    <ToggleButton Grid.Column="1" RenderTransformOrigin="0.5,0.5" x:Name="ExpandCollapseButton">
+                                    <Border Grid.Column="1" x:Name="ButtonBorder">
+                                    <ToggleButton  RenderTransformOrigin="0.5,0.5" x:Name="ExpandCollapseButton" Background="Yellow">
                                         <ToggleButton.Template>
                                             <ControlTemplate>
-                                                <Grid>
-                                                    <Ellipse Width="50" Height="50" Fill="{ThemeResource ToggleSwitchCurtainBackgroundThemeBrush}"/>
-                                                    <Path RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                Data="M2,3L9,10 16,3" Stroke="{ThemeResource ToggleButtonCheckedForegroundThemeBrush}" StrokeThickness="4"/>
+                                                    <Grid>
+                                                        <Ellipse Width="50" Height="50" Fill="Transparent"/>
+                                                        <Path RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Data="M2,3L9,10 16,3" Stroke="Black" StrokeThickness="4"/>
                                                 </Grid>
                                             </ControlTemplate>
                                         </ToggleButton.Template>
@@ -60,6 +61,7 @@
                                             <RotateTransform x:Name="RotateButtonTransform"/>
                                         </ToggleButton.RenderTransform>
                                     </ToggleButton>
+                                    </Border>
                                 </Grid>
                                 <ContentPresenter Grid.Row="1" Margin="5" Content="{TemplateBinding Content}" x:Name="Content">
                                     <ContentPresenter.RenderTransform>

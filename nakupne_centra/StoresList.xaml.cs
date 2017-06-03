@@ -191,8 +191,11 @@ namespace nakupne_centra
             (App.Current as App).PreferSortingByType = true;
         }
 
-        private void PanelLoaded(object sender, RoutedEventArgs e)
+        private void PanelLoaded(FrameworkElement sender, DataContextChangedEventArgs e)
         {
+            if (e.NewValue == null)
+                return;
+            string cat = ((KeyValuePair<string, ObservableCollection<Store>>)(e.NewValue)).Key;
             ExpandPanel panel = (sender as ListView).Parent as ExpandPanel;
             panel.PanelLoaded();
             panels.Add(panel);
