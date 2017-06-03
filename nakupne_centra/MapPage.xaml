@@ -25,13 +25,12 @@
                        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
             <Viewbox>
                 <Grid>
-                    <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map0}" ImageOpened="Map_ImageOpened"/>
-                    <Image x:Name="StorePosition" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"
-                           Visibility="{Binding SelectedStore, Converter={StaticResource NullToVisibilityConverter}}"/>
+                    <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}" ImageOpened="Map_ImageOpened"/>
+                    <Image x:Name="StorePosition" Visibility="{Binding StorePositionVisibility}" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
                 </Grid>
             </Viewbox>
         </ScrollViewer>
 
-        <Slider x:Name="FloorSlider" Grid.Row="1" Margin="20,5,0,0" x:Uid="FloorSlider" Header="Patro" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
+        <Slider x:Name="FloorSlider" Value="{Binding FloorSliderValue, Mode=TwoWay}" Grid.Row="1" Margin="20,5,0,0" x:Uid="FloorSlider" Header="Patro" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
     </Grid>
 </Page>
