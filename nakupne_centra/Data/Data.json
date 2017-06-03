@@ -7,6 +7,7 @@
 		"MaxFloor": 1,
         "DataFolder": "ms-appx:///Data/Vankovka/",
         "LogoColor": "#FFE7EA",
+		"WayToCenre": "zastávka Úzka\n - tramvaj: 12\n - autobus: 40, 47, 48, 49, 60, 61, 63, 67, 77, 82",
         "Hours": 
 			{
 			"Monday": "07:00-22:00",
@@ -2564,6 +2565,7 @@
 		"MaxFloor": 1,
         "DataFolder": "ms-appx:///Data/Futurum/",
         "LogoColor": "#CBE6FF",
+		"WayToCenre": "zastávka OC FUTURUM\n - autobus: 82\n\n zastávka Ořechovská\n - tramvaj: 2\n - autobus: 96, 501",
         "Hours": 
 			{
 			"Monday": "09:00-21:00",
