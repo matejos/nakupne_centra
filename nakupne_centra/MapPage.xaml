@@ -21,7 +21,7 @@
 
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen"/>
 
-        <ScrollViewer  x:Name="MapScrollViewer" Grid.Row="1" ZoomMode="Enabled" MinZoomFactor="0.3" MaxZoomFactor="1.5" DoubleTapped="ScrollViewer_DoubleTapped" 
+        <ScrollViewer  x:Name="MapScrollViewer" Grid.Row="1" ZoomMode="Enabled" MinZoomFactor="0.2" MaxZoomFactor="1.5" DoubleTapped="ScrollViewer_DoubleTapped" 
                        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
             <Viewbox>
                 <Grid>

@@ -19,6 +19,9 @@ namespace nakupne_centra.DataModel
             this.Floor1 = floor1;
             this.Hours = hours;
             this.LogoColor = logoColor;
+            this.Floor0Height = 0;
+            this.Floor1Height = 0;
+            this.Floor0Width = 0;
         }
 
         public string Name { get; private set; }
@@ -32,6 +35,7 @@ namespace nakupne_centra.DataModel
         public StoresListViewModel viewModel { get; set; }
         public string LogoColor { get; set; }
         public double Floor0Height { get; set; }
+        public double Floor0Width { get; set; }
         public double Floor1Height { get; set; }
         public int MinFloor { get; set; }
         public int MaxFloor { get; set; }

@@ -52,6 +52,10 @@ namespace nakupne_centra.ViewModel
             {
                 ZoomSelectedStore();
             }
+            else
+            {
+                ZoomOut();
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -108,6 +112,8 @@ namespace nakupne_centra.ViewModel
             if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0)
             {
                 DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height = (img.Source as BitmapImage).PixelHeight;
+                DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Width = (img.Source as BitmapImage).PixelWidth;
+                ZoomOut();
             }
             else if (img.Source == DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1)
             {
@@ -135,6 +141,26 @@ namespace nakupne_centra.ViewModel
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
                     MapScrollViewer.ChangeView(X, Y, null, false);
+                });
+            }
+            , period);
+        }
+
+        private void ZoomOut()
+        {
+            if (DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Width == 0)
+                return;
+            TimeSpan period = TimeSpan.FromMilliseconds(200);
+            float factor = (float)(Window.Current.Bounds.Width / DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Width);
+            if (factor > 1f)
+                factor = 1f;
+            double X = (DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Width / 2) * factor;
+            double Y = (DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor0Height / 2) * factor;
+            Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
+            {
+                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                {
+                    MapScrollViewer.ChangeView(X, Y, factor, false);
                 });
             }
             , period);
