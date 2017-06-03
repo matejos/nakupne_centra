@@ -50,7 +50,26 @@ namespace nakupne_centra.ViewModel
 
                 if (viewModel.SelectedStore != null)
                 {
-                    FloorSlider.Value = Int32.Parse(viewModel.SelectedStore.Floor);
+                    switch (viewModel.SelectedStore.Floor)
+                    {
+                        case "0":
+                            FloorSlider.Value = 0;
+                            break;
+                        case "1":
+                            FloorSlider.Value = 1;
+                            break;
+                    };
+                    TimeSpan period = TimeSpan.FromMilliseconds(200);
+
+                    Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
+                    {
+                        await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                        {
+                            MapScrollViewer.ChangeView(viewModel.SelectedStore.PositionX / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2,
+                                      viewModel.SelectedStore.PositionY / MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7, null, false);
+                        });
+                    }
+                    , period);
                 }
             }
         }
@@ -92,13 +111,49 @@ namespace nakupne_centra.ViewModel
             Slider slider = sender as Slider;
             if (slider != null)
             {
+                double X = MapScrollViewer.HorizontalOffset;
+                double Y = MapScrollViewer.VerticalOffset;
                 if (slider.Value == 0)
                 {
                     Map.Source = viewModel.Map0;
+                    if (viewModel.SelectedStore != null)
+                    {
+                        switch (viewModel.SelectedStore.Floor)
+                        {
+                            case "1":
+                                StorePosition.Visibility = Visibility.Collapsed;
+                                break;
+                            default:
+                                StorePosition.Visibility = Visibility.Visible;
+                                break;
+                        };
+                    }
                 } else
                 {
                     Map.Source = viewModel.Map1;
+                    if (viewModel.SelectedStore != null)
+                    {
+                        switch (viewModel.SelectedStore.Floor)
+                        {
+                            case "0":
+                                StorePosition.Visibility = Visibility.Collapsed;
+                                break;
+                            default:
+                                StorePosition.Visibility = Visibility.Visible;
+                                break;
+                        };
+                    }
                 }
+                TimeSpan period = TimeSpan.FromMilliseconds(200);
+
+                Windows.System.Threading.ThreadPoolTimer.CreateTimer(async (source) =>
+                {
+                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                    {
+                        MapScrollViewer.ChangeView(X, Y, null, true);
+                    });
+                }
+                , period);
             }
         }
 
