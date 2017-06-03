@@ -240,5 +240,11 @@ namespace nakupne_centra
             MapCentreStore css = new MapCentreStore(viewModel.Centre, store);
             this.Frame.Navigate(typeof(MapPage), css);
         }
+
+        private void ButtonClickNavigateSelectedStore(object sender, RoutedEventArgs e)
+        {
+            MapCentreStore css = new MapCentreStore(viewModel.Centre, viewModel.SelectedStore);
+            this.Frame.Navigate(typeof(MapPage), css);
+        }
     }
 }

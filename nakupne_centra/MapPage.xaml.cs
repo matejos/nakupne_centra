@@ -138,7 +138,6 @@ namespace nakupne_centra.ViewModel
                 });
             }
             , period);
-            Debug.WriteLine("Zoomed on " + viewModel.SelectedStore.Name + " on " + X + "," + Y + " with zoomfactor " + MapScrollViewer.ZoomFactor);
         }
     }
 }

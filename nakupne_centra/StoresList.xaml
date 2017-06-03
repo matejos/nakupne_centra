@@ -112,18 +112,28 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
                         <StackPanel Grid.Row="0" Margin="0,10,0,0">
-                            <TextBlock Text="{Binding StoreName}" Style="{StaticResource HeaderStyle}" />
-                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}"/>
+                            <TextBlock Text="{Binding StoreName}" Style="{StaticResource HeaderStyle}" TextWrapping="WrapWholeWords"/>
+                            <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}" TextWrapping="WrapWholeWords"/>
                         </StackPanel>
-                        <Viewbox Grid.Row="1" MaxHeight="400">
+                        <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="{Binding SelectedStore, Converter={StaticResource NullToVisibilityConverter}}" Click="ButtonClickNavigateSelectedStore">
+                            <StackPanel>
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE816;"/>
+                                <TextBlock x:Uid="OnMap"/>
+                            </StackPanel>
+                        </Button>
+                        <Viewbox Grid.Row="1" Grid.ColumnSpan="2" MaxHeight="400">
                             <Grid>
                                 <Image x:Name="Map" MaxHeight="{Binding MapHeight}" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}" Loaded="Map_Loaded" ImageOpened="Map_ImageOpened" />
                                 <Image x:Name="StorePosition" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
                             </Grid>
                         </Viewbox>
-                        <TextBlock Grid.Row="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="Wrap"/>
-                        <StackPanel x:Name="OpeningHoursPanel" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding StoreDesc}" Margin="25" Style="{StaticResource StoreDescriptionStyle}" TextWrapping="Wrap"/>
+                        <StackPanel x:Name="OpeningHoursPanel" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
                             <StackPanel Margin="10">
                                 <TextBlock x:Uid="Monday" Style="{StaticResource HoursDayStyle}"/>
                                 <TextBlock x:Uid="Tuesday" Style="{StaticResource HoursDayStyle}"/>
