@@ -43,7 +43,7 @@
                             <TextBlock x:Uid="Stores" Margin="10"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch">
+                    <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="MapButtonClick">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Map"/>
                             <TextBlock x:Uid="Map" Margin="10"/>

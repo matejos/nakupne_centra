@@ -51,5 +51,10 @@ namespace nakupne_centra
                 rootFrame.GoBack();
             }
         }
+
+        private void MapButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MapPage), viewModel.Centre);
+        }
     }
 }

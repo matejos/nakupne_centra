@@ -230,5 +230,10 @@ namespace nakupne_centra
                 viewModel.MapHeight = DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1Height;
             }
         }
+
+        private void ButtonClickNavigate(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MapPage), viewModel.Centre);
+        }
     }
 }
