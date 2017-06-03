@@ -63,7 +63,7 @@ namespace nakupne_centra.ViewModel
             }
             if (DataStorage.Centres.Count == 0)
             {
-                Uri dataUri = new Uri("ms-appx:///DataModel/CentresData.json");
+                Uri dataUri = new Uri("ms-appx:///Data/Data.json");
 
                 StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
                 string jsonText = await FileIO.ReadTextAsync(file);

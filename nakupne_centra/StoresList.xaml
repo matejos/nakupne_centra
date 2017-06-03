@@ -115,7 +115,7 @@
                             <TextBlock Text="{Binding StoreName}" Style="{StaticResource HeaderStyle}" />
                             <TextBlock Text="{Binding StoreCategory}" Style="{StaticResource SubsubheaderStyle}"/>
                         </StackPanel>
-                        <Viewbox Grid.Row="1">
+                        <Viewbox Grid.Row="1" MaxHeight="400">
                             <Grid>
                                 <Image x:Name="Map" MaxHeight="{Binding MapHeight}" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}" Loaded="Map_Loaded" ImageOpened="Map_ImageOpened" />
                                 <Image x:Name="StorePosition" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>

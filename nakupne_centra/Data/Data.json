@@ -4,7 +4,7 @@
         "Name": "Galerie Vaňkovka",
         "Address": "Ve Vaňkovce 1, 602 00 Brno",
         "DataFolder": "ms-appx:///Data/Vankovka/",
-        "LogoColor": "#FFFFFF",
+        "LogoColor": "#FFE7EA",
         "Hours": 
 			{
 			"Monday": "07:00-22:00",
@@ -2296,10 +2296,10 @@
 			]
       },
       {
-        "Name": "Olympia",
-        "Address": "U Dálnice 777, 664 42 Modřice, Brno",
-        "DataFolder": "ms-appx:///Data/Olympia/",
-        "LogoColor": "#00306E",
+        "Name": "Futurum",
+        "Address": "Vídeňská 100, 619 00 Brno",
+        "DataFolder": "ms-appx:///Data/Futurum/",
+        "LogoColor": "#CBE6FF",
         "Hours": 
 			{
 			"Monday": "08:00-23:00",
