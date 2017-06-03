@@ -5,6 +5,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
 using nakupne_centra.DataModel;
 using Windows.Foundation;
+using Windows.UI.Core;
 
 
 
@@ -23,7 +24,7 @@ namespace nakupne_centra.ViewModel
         public MapPage()
         {
             this.InitializeComponent();
-
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -31,6 +32,11 @@ namespace nakupne_centra.ViewModel
             viewModel = new CentreViewModel(e.Parameter as Centre);
             DataContext = viewModel;
             (App.Current as App).CategoryExpanded = new System.Collections.Generic.Dictionary<string, bool>();
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
         }
 
         private void ScrollViewer_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
@@ -58,6 +64,17 @@ namespace nakupne_centra.ViewModel
                 });
             }
             , period);
+        }
+
+        public void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if (rootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
         }
     }
 }
