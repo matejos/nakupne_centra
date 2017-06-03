@@ -27,8 +27,6 @@ namespace nakupne_centra
                 ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
                 string categoryCode = HeaderContent;
                 string newHeaderContent = resourceLoader.GetString("Category" + categoryCode);
-                Debug.WriteLine(categoryCode);
-                Debug.WriteLine(newHeaderContent);
                 if (newHeaderContent != "")
                 {
                     HeaderContent = newHeaderContent;

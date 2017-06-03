@@ -124,7 +124,7 @@
     <value>By type</value>
   </data>
   <data name="CategoryBeauty" xml:space="preserve">
-    <value>Health and Beauty</value>
+    <value>Beauty and Healty</value>
   </data>
   <data name="CategoryBooksGiftsToys" xml:space="preserve">
     <value>Books, Gifts and Toys</value>
@@ -148,7 +148,7 @@
     <value>Home</value>
   </data>
   <data name="CategoryJewellery" xml:space="preserve">
-    <value>Watches and Jewellery</value>
+    <value>Jewellery and Watches</value>
   </data>
   <data name="CategoryServices" xml:space="preserve">
     <value>Services</value>

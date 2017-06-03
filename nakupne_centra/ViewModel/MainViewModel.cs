@@ -89,7 +89,6 @@ namespace nakupne_centra.ViewModel
                                                            new BitmapImage(new Uri(dataFolder + "floor1.png")),
                                                            centreHours,
                                                            centreObject["LogoColor"].GetString());
-                    Debug.WriteLine(centre.Name + " is " + new BitmapImage(new Uri(dataFolder + "floor0.png")).DecodePixelHeight);
                     ObservableCollection<Store> stores = new ObservableCollection<Store>();
                     foreach (JsonValue storeJson in centreObject["Stores"].GetArray())
                     {

@@ -15,7 +15,7 @@ namespace nakupne_centra.ViewModel
         {
             Centre = centre;
             Name = Centre.Name;
-            Stores = new ObservableCollection<Store>(from i in centre.Stores orderby i.Name select i); ;
+            Stores = new ObservableCollection<Store>(from i in centre.Stores orderby i.Name select i);
             FilteredStores = Stores;
             Map = Centre.Floor0;
             NameFilter = "";
@@ -45,9 +45,9 @@ namespace nakupne_centra.ViewModel
             set { _filteredStores = value; NotifyPropertyChanged("FilteredStores"); }
         }
 
-        private Dictionary<string, ObservableCollection<Store>> _filteredCategories;
+        private SortedDictionary<string, ObservableCollection<Store>> _filteredCategories;
 
-        public Dictionary<string, ObservableCollection<Store>> FilteredCategories
+        public SortedDictionary<string, ObservableCollection<Store>> FilteredCategories
         {
             get { return _filteredCategories; }
             set { _filteredCategories = value; NotifyPropertyChanged("FilteredCategories"); }
@@ -137,7 +137,7 @@ namespace nakupne_centra.ViewModel
         {
             var filter = NameFilter.ToLower();
             ObservableCollection<Store> newFilteredStores;
-            Dictionary<string, ObservableCollection<Store>> newFilteredCategories = new Dictionary<string, ObservableCollection<Store>>();
+            SortedDictionary<string, ObservableCollection<Store>> newFilteredCategories = new SortedDictionary<string, ObservableCollection<Store>>();
 
             newFilteredStores = new ObservableCollection<Store>();
             foreach (Store store in Stores)
@@ -152,7 +152,7 @@ namespace nakupne_centra.ViewModel
                     newFilteredCategories[store.Category].Add(store);
                 }
             }
-
+            
             FilteredCategories = newFilteredCategories;
             
 

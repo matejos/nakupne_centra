@@ -129,8 +129,8 @@
   <data name="CategoryBooksGiftsToys" xml:space="preserve">
     <value>Knihy, dárky a hračky</value>
   </data>
-  <data name="CategoryBooths" xml:space="preserve">
-    <value>Stánky</value>
+  <data name="CategoryElectronics" xml:space="preserve">
+    <value>Elektro</value>
   </data>
   <data name="CategoryFashion" xml:space="preserve">
     <value>Móda</value>
@@ -143,6 +143,9 @@
   </data>
   <data name="CategoryGroceries" xml:space="preserve">
     <value>Potraviny</value>
+  </data>
+  <data name="CategoryHome" xml:space="preserve">
+    <value>Domácnost</value>
   </data>
   <data name="CategoryJewellery" xml:space="preserve">
     <value>Hodiny a klenoty</value>
