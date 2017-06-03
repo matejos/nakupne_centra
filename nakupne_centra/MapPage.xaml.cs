@@ -180,5 +180,12 @@ namespace nakupne_centra.ViewModel
                 DataStorage.Centres[DataStorage.Centres.IndexOf(viewModel.Centre)].Floor1Height = (img.Source as BitmapImage).PixelHeight;
             }
         }
+
+        private void SearchBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
+        {
+            sender.Text = (args.SelectedItem as Store).Name;
+            viewModel.SelectedStore = (args.SelectedItem as Store);
+            viewModel.RefreshSelectedStore();
+        }
     }
 }

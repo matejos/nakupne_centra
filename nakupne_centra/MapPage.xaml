@@ -7,13 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <DataTemplate x:Key="StoresItemTemplate">
+            <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}"/>
+        </DataTemplate>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" />
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen"/>
 
         <ScrollViewer  x:Name="MapScrollViewer" Grid.Row="1" ZoomMode="Enabled" MinZoomFactor="0.3" MaxZoomFactor="1.5" DoubleTapped="ScrollViewer_DoubleTapped" 
                        HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">

@@ -1,5 +1,7 @@
 ﻿using nakupne_centra.DataModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using Windows.UI.Xaml.Media;
 
 namespace nakupne_centra.ViewModel
@@ -9,6 +11,7 @@ namespace nakupne_centra.ViewModel
         public MapViewModel(Centre centre, Store store)
         {
             Centre = centre;
+            Stores = new ObservableCollection<Store>(from i in centre.Stores orderby i.Name select i);
             Name = Centre.Name;
             SelectedStore = store;
 
@@ -20,6 +23,8 @@ namespace nakupne_centra.ViewModel
             Map1 = Centre.Floor1;
 
             RefreshSelectedStore();
+            FilteredStores = Stores;
+            NameFilter = "";
         }
 
         private Centre _centre;
@@ -28,6 +33,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _centre; }
             set { _centre = value; NotifyPropertyChanged("Centre"); }
+        }
+
+        private ObservableCollection<Store> _stores;
+
+        public ObservableCollection<Store> Stores
+        {
+            get { return _stores; }
+            set { _stores = value; NotifyPropertyChanged("Stores"); }
         }
 
         private string _name;
@@ -96,6 +109,40 @@ namespace nakupne_centra.ViewModel
             set { _map1 = value; NotifyPropertyChanged("Map"); }
         }
 
+        private ObservableCollection<Store> _filteredStores;
+
+        public ObservableCollection<Store> FilteredStores
+        {
+            get { return _filteredStores; }
+            set { _filteredStores = value; NotifyPropertyChanged("FilteredStores"); }
+        }
+
+        private string _nameFilter;
+
+        public string NameFilter
+        {
+            get { return _nameFilter; }
+            set { _nameFilter = value; NotifyPropertyChanged("NameFilter"); RefreshFilteredData(); }
+        }
+
+        public void RefreshFilteredData()
+        {
+            var filter = NameFilter.ToLower();
+            ObservableCollection<Store> newFilteredStores = new ObservableCollection<Store>();
+            foreach (Store store in Stores)
+            {
+                if (StoreFilter.Match(store.Name, filter))
+                {
+                    newFilteredStores.Add(store);
+                }
+            }
+
+            if (FilteredStores.Except(newFilteredStores).Count() == 0 && newFilteredStores.Except(FilteredStores).Count() == 0)
+                return;
+
+            FilteredStores = newFilteredStores;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void NotifyPropertyChanged(string propName)
@@ -104,7 +151,7 @@ namespace nakupne_centra.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
 
-        private void RefreshSelectedStore()
+        public void RefreshSelectedStore()
         {
             //TODO
             //zmeni poschodie a presunie ikonku miesta na poziciu obchodu
