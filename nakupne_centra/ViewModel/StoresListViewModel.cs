@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml.Media;
 
 namespace nakupne_centra.ViewModel
@@ -169,7 +170,9 @@ namespace nakupne_centra.ViewModel
             {
                 StoreName = SelectedStore.Name;
                 StoreDesc = SelectedStore.Description;
-                StoreCategory = SelectedStore.Category;
+                StoreCategory = ResourceLoader.GetForCurrentView().GetString("Category" + SelectedStore.Category);
+                if (StoreCategory == "")
+                    StoreCategory = SelectedStore.Category;
                 StorePosition = SelectedStore.PositionX + "," + SelectedStore.PositionY;
                 Hours = SelectedStore.StoreHours;
                 string storeFloor = SelectedStore.Floor;

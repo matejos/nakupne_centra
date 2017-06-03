@@ -56,5 +56,36 @@
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
+        <Style x:Key="CategoryFashionStyle" TargetType="Border">
+            <Setter Property="Background" Value="Orange"/>
+        </Style>
+        <Style x:Key="CategoryFootwearStyle" TargetType="Border">
+            <Setter Property="Background" Value="Yellow"/>
+        </Style>
+        <Style x:Key="CategoryGroceriesStyle" TargetType="Border">
+            <Setter Property="Background" Value="Blue"/>
+        </Style>
+        <Style x:Key="CategoryBooksGiftsToysStyle" TargetType="Border">
+            <Setter Property="Background" Value="Lime"/>
+        </Style>
+        <Style x:Key="CategoryBoothsStyle" TargetType="Border">
+            <Setter Property="Background" Value="Cyan"/>
+        </Style>
+        <Style x:Key="CategoryJewelleryStyle" TargetType="Border">
+            <Setter Property="Background" Value="Firebrick"/>
+        </Style>
+        <Style x:Key="CategoryGastronomyStyle" TargetType="Border">
+            <Setter Property="Background" Value="LightBlue"/>
+        </Style>
+        <Style x:Key="CategoryBeautyStyle" TargetType="Border">
+            <Setter Property="Background" Value="Pink"/>
+        </Style>
+        <Style x:Key="CategorySportStyle" TargetType="Border">
+            <Setter Property="Background" Value="Purple"/>
+        </Style>
+        <Style x:Key="CategoryServicesStyle" TargetType="Border">
+            <Setter Property="Background" Value="Peru"/>
+        </Style>
+        
     </Application.Resources>
 </Application>

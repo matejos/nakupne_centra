@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
@@ -20,9 +22,25 @@ namespace nakupne_centra
 
         public void PanelLoaded()
         {
-            ReturnExpandState();
+            if (!loaded)
+            {
+                ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
+                string categoryCode = HeaderContent;
+                string newHeaderContent = resourceLoader.GetString("Category" + categoryCode);
+                Debug.WriteLine(categoryCode);
+                Debug.WriteLine(newHeaderContent);
+                if (newHeaderContent != "")
+                {
+                    HeaderContent = newHeaderContent;
+                    var buttonBorder = (Border)GetTemplateChild("ButtonBorder");
+                    buttonBorder.Style = (Style)App.Current.Resources["Category" + categoryCode + "Style"];
+                }
+                ReturnExpandState();
+                loaded = true;
+            }
         }
 
+        private bool loaded = false;
         private bool _useTransitions = true;
         private VisualState _collapsedState;
         private Windows.UI.Xaml.Controls.Primitives.ToggleButton toggleExpander;
@@ -38,6 +56,10 @@ namespace nakupne_centra
 
         public static readonly DependencyProperty CornerRadiusProperty =
         DependencyProperty.Register("CornerRadius", typeof(CornerRadius),
+        typeof(ExpandPanel), null);
+
+        public static readonly DependencyProperty ButtonFillProperty =
+        DependencyProperty.Register("ButtonFill", typeof(Style),
         typeof(ExpandPanel), null);
 
         public string HeaderContent
@@ -56,6 +78,12 @@ namespace nakupne_centra
         {
             get { return (CornerRadius)GetValue(CornerRadiusProperty); }
             set { SetValue(CornerRadiusProperty, value); }
+        }
+
+        public Style ButtonFill
+        {
+            get { return (Style)GetValue(ButtonFillProperty); }
+            set { SetValue(ButtonFillProperty, value); }
         }
 
         private void changeVisualState(bool useTransitions)
