@@ -16,7 +16,7 @@
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="0" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" />
 
         <ScrollViewer  Name="MapScrollViewer" Grid.Row="1" MinZoomFactor="0.3" MaxZoomFactor="1.5" ZoomMode="Enabled" DoubleTapped="ScrollViewer_DoubleTapped" 
-                       HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
+                       HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
             <Viewbox Grid.Row="1">
                 <Grid>
                     <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}"/>
