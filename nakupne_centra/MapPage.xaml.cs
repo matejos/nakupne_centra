@@ -126,7 +126,7 @@ namespace nakupne_centra.ViewModel
         private void ZoomSelectedStore()
         {
             double X = viewModel.SelectedStore.PositionX * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2;
-            double Y = viewModel.SelectedStore.PositionY * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height * 0.7;
+            double Y = viewModel.SelectedStore.PositionY * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height / 2;
             
             TimeSpan period = TimeSpan.FromMilliseconds(200);
 
