@@ -57,37 +57,37 @@
             <Setter Property="HorizontalAlignment" Value="Right"/>
         </Style>
         <Style x:Key="CategoryFashionStyle" TargetType="Border">
-            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Background" Value="#ef8091"/>
         </Style>
         <Style x:Key="CategoryFootwearStyle" TargetType="Border">
-            <Setter Property="Background" Value="Yellow"/>
+            <Setter Property="Background" Value="#edad92"/>
         </Style>
         <Style x:Key="CategoryGroceriesStyle" TargetType="Border">
-            <Setter Property="Background" Value="Blue"/>
+            <Setter Property="Background" Value="#f8df13"/>
         </Style>
         <Style x:Key="CategoryBooksGiftsToysStyle" TargetType="Border">
-            <Setter Property="Background" Value="Lime"/>
+            <Setter Property="Background" Value="#e58225"/>
         </Style>
         <Style x:Key="CategoryElectronicsStyle" TargetType="Border">
-            <Setter Property="Background" Value="Cyan"/>
+            <Setter Property="Background" Value="#0071b7"/>
         </Style>
         <Style x:Key="CategoryJewelleryStyle" TargetType="Border">
-            <Setter Property="Background" Value="Firebrick"/>
+            <Setter Property="Background" Value="#84d0f0"/>
         </Style>
         <Style x:Key="CategoryGastronomyStyle" TargetType="Border">
-            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Background" Value="#eda33a"/>
         </Style>
         <Style x:Key="CategoryBeautyStyle" TargetType="Border">
-            <Setter Property="Background" Value="Pink"/>
+            <Setter Property="Background" Value="#a5f5a9"/>
         </Style>
         <Style x:Key="CategorySportStyle" TargetType="Border">
-            <Setter Property="Background" Value="Purple"/>
+            <Setter Property="Background" Value="#4f9123"/>
         </Style>
         <Style x:Key="CategoryServicesStyle" TargetType="Border">
-            <Setter Property="Background" Value="Peru"/>
+            <Setter Property="Background" Value="#cd227e"/>
         </Style>
         <Style x:Key="CategoryHomeStyle" TargetType="Border">
-            <Setter Property="Background" Value="Azure"/>
+            <Setter Property="Background" Value="#8d1996"/>
         </Style>
     </Application.Resources>
 </Application>
