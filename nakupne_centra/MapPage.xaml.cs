@@ -8,7 +8,6 @@ using Windows.Foundation;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media.Imaging;
-using System.Diagnostics;
 using Windows.Devices.Geolocation;
 
 
@@ -27,6 +26,7 @@ namespace nakupne_centra.ViewModel
         private bool pageLoaded = false;
         private double latitude;
         private double longitude;
+        private Geolocator geoLocator;
 
         public MapPage()
         {
@@ -193,20 +193,41 @@ namespace nakupne_centra.ViewModel
         {
             var accessStatus = await Geolocator.RequestAccessAsync();
 
-            if (accessStatus == GeolocationAccessStatus.Allowed) {
-                var geoLocator = new Geolocator();
-                geoLocator.DesiredAccuracy = PositionAccuracy.High;
-                var Geopositionpos = await geoLocator.GetGeopositionAsync();
-                latitude = Geopositionpos.Coordinate.Point.Position.Latitude;
-                longitude = Geopositionpos.Coordinate.Point.Position.Longitude;
+            if (accessStatus == GeolocationAccessStatus.Allowed)
+            {
+                geoLocator = new Geolocator();
+
+                UpdateLocationData(geoLocator);
                 //TODO overiť, či je poloha v danom centre a poriešiť oba prípady
-                //TODO? nastaviť tracker polohy = sledovať zmenu lokácie a na základe toho posúvať pajáca na mapke
+                //TODO? keď užívateľ zmení nastavenia
+
+                geoLocator.PositionChanged += OnPositionChanged;
             } else
             {
                 PopUp.Visibility = Visibility.Visible;
                 //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku
-            }
-            
+            }   
+        }
+
+        private async void UpdateLocationData(Geolocator geoLocator)
+        {
+            if (geoLocator != null)
+            {
+                //TODO? na základe zmeny posúvať pajáca na mapke
+                geoLocator.DesiredAccuracy = PositionAccuracy.High;
+
+                Geoposition pos = await geoLocator.GetGeopositionAsync();
+                latitude = pos.Coordinate.Point.Position.Latitude;
+                longitude = pos.Coordinate.Point.Position.Longitude;
+            }           
+        }
+
+        async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs e)
+        {
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                UpdateLocationData(sender);
+            });
         }
 
         private void LocateButton_LayoutUpdated(object sender, object e)
