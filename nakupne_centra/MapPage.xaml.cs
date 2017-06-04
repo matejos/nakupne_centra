@@ -9,6 +9,7 @@ using Windows.UI.Core;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Diagnostics;
+using Windows.Devices.Geolocation;
 
 
 
@@ -24,6 +25,8 @@ namespace nakupne_centra.ViewModel
     {
         private MapViewModel viewModel;
         private bool pageLoaded = false;
+        private double latitude;
+        private double longitude;
 
         public MapPage()
         {
@@ -173,9 +176,37 @@ namespace nakupne_centra.ViewModel
             SearchBox.IsSuggestionListOpen = true;
         }
 
-        private void LocateButton_Click(object sender, RoutedEventArgs e)
+        private void OKPopUpButtonClick(object sender, RoutedEventArgs e)
         {
+            LocateButton.Focus(FocusState.Programmatic);
+            PopUp.Visibility = Visibility.Collapsed;
+        }
+        
 
+        private void FindStorePopUpButtonClick(object sender, RoutedEventArgs e)
+        {
+            PopUp.Visibility = Visibility.Collapsed;
+            //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
+        }
+
+        private async void LocateButton_Click(object sender, RoutedEventArgs e)
+        {
+            var accessStatus = await Geolocator.RequestAccessAsync();
+
+            if (accessStatus == GeolocationAccessStatus.Allowed) {
+                var geoLocator = new Geolocator();
+                geoLocator.DesiredAccuracy = PositionAccuracy.High;
+                var Geopositionpos = await geoLocator.GetGeopositionAsync();
+                latitude = Geopositionpos.Coordinate.Point.Position.Latitude;
+                longitude = Geopositionpos.Coordinate.Point.Position.Longitude;
+                //TODO overiť, či je poloha v danom centre a poriešiť oba prípady
+                //TODO? nastaviť tracker polohy = sledovať zmenu lokácie a na základe toho posúvať pajáca na mapke
+            } else
+            {
+                PopUp.Visibility = Visibility.Visible;
+                //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku
+            }
+            
         }
 
         private void LocateButton_LayoutUpdated(object sender, object e)
