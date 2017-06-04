@@ -25,7 +25,7 @@
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
         
-        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen"/>
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen" GotFocus="SearchBox_GotFocus" />
 
         <Grid Grid.Row="2" Background="LightGray">
             <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
                 <TextBlock Text="{Binding FloorSliderValue}" VerticalAlignment="Center" Margin="5,0,0,0"/>
                 <Slider x:Name="FloorSlider"  Value="{Binding FloorSliderValue, Mode=TwoWay}" IsThumbToolTipEnabled="False" Margin="20,0,0,0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
             </StackPanel>
-            <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+            <Button x:Name="LocateButton" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="LocateButton_Click" LayoutUpdated="LocateButton_LayoutUpdated" >
                 <StackPanel Orientation="Horizontal">
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE81D;" VerticalAlignment="Center" FontSize="20"/>
                     <TextBlock x:Uid="Locate" Margin="5,0" VerticalAlignment="Center"/>

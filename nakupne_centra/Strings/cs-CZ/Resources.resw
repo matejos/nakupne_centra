@@ -162,6 +162,9 @@
   <data name="Friday.Text" xml:space="preserve">
     <value>Pátek</value>
   </data>
+  <data name="HowToGetHere.Text" xml:space="preserve">
+    <value>Kudy k nám</value>
+  </data>
   <data name="Locate.Text" xml:space="preserve">
     <value>Lokace</value>
   </data>
@@ -178,7 +181,7 @@
     <value>Nenalezeny žádné výsledky.</value>
   </data>
   <data name="OnMap.Text" xml:space="preserve">
-    <value>Na mape</value>
+    <value>Na mapě</value>
   </data>
   <data name="OpeningHours.Text" xml:space="preserve">
     <value>Otevírací hodiny</value>

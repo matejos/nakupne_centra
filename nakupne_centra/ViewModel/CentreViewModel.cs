@@ -15,6 +15,7 @@ namespace nakupne_centra.ViewModel
             LogoSquare = Centre.LogoSquare;
             LogoColor = Centre.LogoColor;
             Map = Centre.Floor0;
+            WayToCentre = Centre.WayToCentre;
         }
 
         private Centre _centre;
@@ -39,6 +40,14 @@ namespace nakupne_centra.ViewModel
         {
             get { return _logoColor; }
             set { _logoColor = value; NotifyPropertyChanged("LogoColor"); }
+        }
+
+        private string _wayToCentre;
+
+        public string WayToCentre
+        {
+            get { return _wayToCentre; }
+            set { _wayToCentre = value; NotifyPropertyChanged("WayToCentre"); }
         }
 
         private Hours _hours;

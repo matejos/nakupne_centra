@@ -162,6 +162,9 @@
   <data name="Friday.Text" xml:space="preserve">
     <value>Friday</value>
   </data>
+  <data name="HowToGetHere.Text" xml:space="preserve">
+    <value>How to get here</value>
+  </data>
   <data name="Locate.Text" xml:space="preserve">
     <value>Locate</value>
   </data>
