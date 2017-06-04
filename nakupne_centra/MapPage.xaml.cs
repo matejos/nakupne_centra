@@ -23,6 +23,7 @@ namespace nakupne_centra.ViewModel
     public sealed partial class MapPage : Page
     {
         private MapViewModel viewModel;
+        private bool pageLoaded = false;
 
         public MapPage()
         {
@@ -56,6 +57,7 @@ namespace nakupne_centra.ViewModel
             {
                 ZoomOut();
             }
+            pageLoaded = true;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -164,6 +166,25 @@ namespace nakupne_centra.ViewModel
                 });
             }
             , period);
+        }
+
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            SearchBox.IsSuggestionListOpen = true;
+        }
+
+        private void LocateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LocateButton_LayoutUpdated(object sender, object e)
+        {
+            if (pageLoaded)
+            {
+                LocateButton.Focus(FocusState.Programmatic);
+                pageLoaded = false;
+            }
         }
     }
 }
