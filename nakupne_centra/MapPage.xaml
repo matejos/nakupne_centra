@@ -56,14 +56,21 @@
             </Viewbox>
         </ScrollViewer>
         <Border x:Name="PopUp" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" Background="Gray" BorderThickness="2" BorderBrush="DarkSlateGray">
-            <RelativePanel Margin="15">
-                <TextBlock x:Name="PopUpText" Margin="0,0,0,10" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
-                <Button x:Name="PopUpButton1" RelativePanel.Below="PopUpText" RelativePanel.AlignLeftWithPanel="True" 
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="PopUpText" Margin="10" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
+                <Button x:Name="PopUpButton1" Grid.Row="1" Grid.Column="0" Margin="10" HorizontalAlignment="Left"
                         BorderBrush="DarkSlateGray" BorderThickness="1"/>
-                <Button x:Name="PopUpButton2" 
-                        RelativePanel.Below="PopUpText" RelativePanel.AlignRightWithPanel="True" RelativePanel.RightOf="OKPopUpButton" 
+                <Button x:Name="PopUpButton2" Grid.Row="1" Grid.Column="1" Margin="10" HorizontalAlignment="Right"
                         BorderBrush="DarkSlateGray" BorderThickness="1"/>
-            </RelativePanel>
+            </Grid>
         </Border>
     </Grid>
 </Page>
