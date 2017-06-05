@@ -217,15 +217,15 @@ namespace nakupne_centra.ViewModel
         {
             LocationToPointInStore();
             var accessStatus = await Geolocator.RequestAccessAsync();
-
+            ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
             if (accessStatus == GeolocationAccessStatus.Allowed)
             {
                 Geolocator geoLocator = new Geolocator();
 
                 UpdateLocationData(geoLocator);
                 //TODO overiť, či je poloha v danom centre a poriešiť oba prípady
-                if ((latitude < 49.189278) && (latitude > 49.186439)
-                    && (longitude < 16.616090) && (longitude > 16.613531)) //overenie priamo pre vankovku TODO nahodit to do dat, nacitat...
+                if ((latitude < viewModel.Centre.MaxLatitude) && (latitude > viewModel.Centre.MinLatitude)
+                    && (longitude < viewModel.Centre.MaxLongitude) && (longitude > viewModel.Centre.MinLatitude)) //overenie priamo pre vankovku TODO nahodit to do dat, nacitat...
                 {
                     LocationToPointInStore();
                     //TODO vykreslit pajaca na mape pomocou spocitanych coordinatov na mapku
@@ -233,7 +233,6 @@ namespace nakupne_centra.ViewModel
                 else
                 {
                     PopUp.Visibility = Visibility.Visible;
-                    ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
                     PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
                     PopUpButton1.Content = resourceLoader.GetString("OK");
                     PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
@@ -250,7 +249,6 @@ namespace nakupne_centra.ViewModel
             else
             {
                 PopUp.Visibility = Visibility.Visible;
-                ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
                 PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
                 PopUpButton1.Content = resourceLoader.GetString("OK");
                 PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
