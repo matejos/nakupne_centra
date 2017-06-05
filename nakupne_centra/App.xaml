@@ -12,6 +12,7 @@
         <converters:EmptyCollectionToVisibilityConverter x:Key="EmptyCollectionToVisibilityConverter"/>
         <converters:CoordinatesConverter x:Key="CoordinatesConverter"/>
         <BitmapImage x:Key="MapPinIcon" UriSource="ms-appx:///Data/Pin.png"/>
+        <BitmapImage x:Key="MapPin2Icon" UriSource="ms-appx:///Data/Pin2.png"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
         <Style x:Key="NoResultsFoundStyle" TargetType="TextBlock">

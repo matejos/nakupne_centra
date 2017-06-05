@@ -66,12 +66,36 @@ namespace nakupne_centra.ViewModel
             set { _storePositionVisibility = value; NotifyPropertyChanged("StorePositionVisibility"); }
         }
 
+        private string _yourPosition;
+
+        public string YourPosition
+        {
+            get { return _yourPosition; }
+            set { _yourPosition = value; NotifyPropertyChanged("YourPosition"); }
+        }
+
+        private bool __yourPositionVisibility;
+
+        public bool YourPositionVisibility
+        {
+            get { return __yourPositionVisibility; }
+            set { __yourPositionVisibility = value; NotifyPropertyChanged("YourPositionVisibility"); }
+        }
+
         private Store _selectedStore;
 
         public Store SelectedStore
         {
             get { return _selectedStore; }
             set { _selectedStore = value; NotifyPropertyChanged("SelectedStore"); RefreshSelectedStore(); }
+        }
+
+        private Store _locatedStore;
+
+        public Store LocatedStore
+        {
+            get { return _locatedStore; }
+            set { _locatedStore = value; NotifyPropertyChanged("LocatedStore"); RefreshLocatedStore(); }
         }
 
         private int _floors;
@@ -180,6 +204,28 @@ namespace nakupne_centra.ViewModel
             }
         }
 
+        void RefreshLocatedStore()
+        {
+            if (LocatedStore != null)
+            {
+                switch (LocatedStore.Floor)
+                {
+                    case "0":
+                        FloorSliderValue = 0;
+                        break;
+                    case "1":
+                        FloorSliderValue = 1;
+                        break;
+                };
+                YourPositionVisibility = true;
+                YourPosition = LocatedStore.PositionX + "," + LocatedStore.PositionY;
+            }
+            else
+            {
+                YourPositionVisibility = false;
+            }
+        }
+
         void ChangeFloor()
         {
             if (FloorSliderValue == 0)
@@ -199,6 +245,17 @@ namespace nakupne_centra.ViewModel
                 else
                 {
                     StorePositionVisibility = false;
+                }
+            }
+            if (LocatedStore != null)
+            {
+                if (LocatedStore.Floor.Contains(FloorSliderValue.ToString()))
+                {
+                    YourPositionVisibility = true;
+                }
+                else
+                {
+                    YourPositionVisibility = false;
                 }
             }
         }

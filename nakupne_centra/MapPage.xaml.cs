@@ -30,6 +30,8 @@ namespace nakupne_centra.ViewModel
         private int horizontalPosition;
         private int verticalPosition;
         //private Geolocator geoLocator;
+        private bool geoLocatorPositionChangedAssigned = false;
+        private bool selectingManualPosition = false;
 
         public MapPage()
         {
@@ -58,7 +60,7 @@ namespace nakupne_centra.ViewModel
             }
             if (viewModel.SelectedStore != null)
             {
-                ZoomSelectedStore();
+                ZoomOnStore(viewModel.SelectedStore);
             }
             else
             {
@@ -134,14 +136,23 @@ namespace nakupne_centra.ViewModel
         {
             Store selectedStore = args.SelectedItem as Store;
             sender.Text = selectedStore.Name;
-            viewModel.SelectedStore = selectedStore;
-            ZoomSelectedStore();
+            if (selectingManualPosition)
+            {
+
+                viewModel.LocatedStore = selectedStore;
+
+            }
+            else
+            {
+                viewModel.SelectedStore = selectedStore;
+                ZoomOnStore(viewModel.SelectedStore);
+            }
         }
 
-        private void ZoomSelectedStore()
+        private void ZoomOnStore(Store store)
         {
-            double X = viewModel.SelectedStore.PositionX * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2;
-            double Y = viewModel.SelectedStore.PositionY * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height / 2;
+            double X = store.PositionX * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Width / 2;
+            double Y = store.PositionY * MapScrollViewer.ZoomFactor - Window.Current.Bounds.Height / 2;
             
             TimeSpan period = TimeSpan.FromMilliseconds(200);
 
@@ -191,6 +202,7 @@ namespace nakupne_centra.ViewModel
         {
             PopUp.Visibility = Visibility.Collapsed;
             //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
+            selectingManualPosition = true;
         }
 
         private void LocationToPointInStore()
@@ -241,7 +253,11 @@ namespace nakupne_centra.ViewModel
 
                 //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
 
-                geoLocator.PositionChanged += OnPositionChanged;
+                if (!geoLocatorPositionChangedAssigned)
+                {
+                    geoLocator.PositionChanged += OnPositionChanged;
+                    geoLocatorPositionChangedAssigned = true;
+                }
             }
             else
             {
@@ -284,6 +300,11 @@ namespace nakupne_centra.ViewModel
                 LocateButton.Focus(FocusState.Programmatic);
                 pageLoaded = false;
             }
+        }
+
+        private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            selectingManualPosition = false;
         }
     }
 }

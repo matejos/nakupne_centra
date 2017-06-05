@@ -25,7 +25,7 @@
             <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderStyle}"/>
         </Border>
         
-        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen" GotFocus="SearchBox_GotFocus" />
+        <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}" ItemsSource="{Binding FilteredStores}" ItemTemplate="{StaticResource StoresItemTemplate}" SuggestionChosen="SearchBox_SuggestionChosen" GotFocus="SearchBox_GotFocus" LostFocus="SearchBox_LostFocus" />
 
         <Grid Grid.Row="2" Background="LightGray">
             <Grid.ColumnDefinitions>
@@ -36,7 +36,19 @@
                 <TextBlock x:Uid="FloorSlider" VerticalAlignment="Center" Margin="10,0,0,0"/>
                 <TextBlock Text=":" VerticalAlignment="Center"/>
                 <TextBlock Text="{Binding FloorSliderValue}" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                <Slider x:Name="FloorSlider"  Value="{Binding FloorSliderValue, Mode=TwoWay}" IsThumbToolTipEnabled="False" Margin="20,0,0,0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed"/>
+                <Slider x:Name="FloorSlider"  Value="{Binding FloorSliderValue, Mode=TwoWay}" IsThumbToolTipEnabled="False" Margin="20,0,0,0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed">
+                    <Slider.Resources>
+                        <SolidColorBrush x:Key="SliderTrackValueFill" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderTrackValueFillPointerOver" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderTrackFill" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderTrackFillPressed" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderTrackFillPointerOver" Color="Gray"/>
+                        <SolidColorBrush x:Key="SliderThumbBackgroundPointerOver" Color="DodgerBlue"/>
+                        <SolidColorBrush x:Key="SliderThumbBackgroundPressed" Color="MidnightBlue"/>
+                        
+                    </Slider.Resources>
+                </Slider>
             </StackPanel>
             <Button x:Name="LocateButton" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="LocateButton_Click" LayoutUpdated="LocateButton_LayoutUpdated" >
                 <StackPanel Orientation="Horizontal">
@@ -52,6 +64,7 @@
                 <Grid>
                     <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}" ImageOpened="Map_ImageOpened"/>
                     <Image x:Name="StorePosition" Visibility="{Binding StorePositionVisibility}" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
+                    <Image x:Name="YourPosition" Visibility="{Binding YourPositionVisibility}" Margin="{Binding YourPosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPin2Icon}"/>
                 </Grid>
             </Viewbox>
         </ScrollViewer>

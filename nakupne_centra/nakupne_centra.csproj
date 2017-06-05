@@ -141,6 +141,7 @@
     <Content Include="Data\Futurum\logoRect.png" />
     <Content Include="Data\Futurum\logoSquare.png" />
     <Content Include="Data\Pin.png" />
+    <Content Include="Data\Pin2.png" />
     <Content Include="Data\Vankovka\floor0.png" />
     <Content Include="Data\Vankovka\floor1.png" />
     <Content Include="Data\Vankovka\logoRect.png" />
