@@ -95,7 +95,10 @@ namespace nakupne_centra.ViewModel
                                                            centreObject["MinLatitude"].GetNumber(),
                                                            centreObject["MaxLatitude"].GetNumber(),
                                                            centreObject["MinLongitude"].GetNumber(),
-                                                           centreObject["MaxLongitude"].GetNumber()
+                                                           centreObject["MaxLongitude"].GetNumber(),
+                                                           centreObject["ALatitude"].GetNumber(), centreObject["ALongitude"].GetNumber(),
+                                                           centreObject["BLatitude"].GetNumber(), centreObject["BLongitude"].GetNumber(),
+                                                           centreObject["CLatitude"].GetNumber(), centreObject["CLongitude"].GetNumber()
                                                            );
                     ObservableCollection<Store> stores = new ObservableCollection<Store>();
                     foreach (JsonValue storeJson in centreObject["Stores"].GetArray())

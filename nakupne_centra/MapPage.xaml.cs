@@ -31,7 +31,7 @@ namespace nakupne_centra.ViewModel
         private double longitude;
         private int horizontalPosition;
         private int verticalPosition;
-        //private Geolocator geoLocator;
+        private Geolocator geoLocator;
         private bool geoLocatorPositionChangedAssigned = false;
         private bool selectingManualPosition = false;
         private ResourceLoader resourceLoader;
@@ -199,24 +199,37 @@ namespace nakupne_centra.ViewModel
 
         private void LocationToPointInStore()
         {
-            viewModel.YourPositionVisibility = true;
-            double x = 0, y = 0;
-            switch (viewModel.Name)
-            {
-                case "Galerie Vaňkovka":
-                    // y = (1081 - (49.187155 * 159 / 49.188827)) / (16.614252 - (49.187155 * 16.613679 / 49.188827));
-                    // x = (159 - (16.613679 * y)) / 49.188827;
-                    y = (1081 - (765 * 159 / 2427)) / (724 - (765 * 179 / 2427));
-                    x = (159 - (179 * y)) / 2427;
-                    //Debug.WriteLine(755 * x + 652 * y);
-                    //horizontalPosition = (latitude-viewModel.Centre.MinLatitude)*x + (longitude - viewModel.Centre.MinLongitude) * y; 
-                    verticalPosition = 0;
-                    break;
-                case "Futurum":
-                    Debug.WriteLine("ešči neni");
-                    break;
-            }
+            Point A = new Point(viewModel.Centre.ALongitude, viewModel.Centre.ALatitude);
+            Point B = new Point(viewModel.Centre.BLongitude, viewModel.Centre.BLatitude);
+            Point C = new Point(viewModel.Centre.CLongitude, viewModel.Centre.CLatitude);
+            Point P = new Point(longitude, latitude);
+
+            double width = Math.Sqrt((B.X - A.X) * (B.X - A.X) + (B.Y - A.Y) * (B.Y - A.Y));
+            double height = Math.Sqrt((C.X - A.X) * (C.X - A.X) + (C.Y - A.Y) * (C.Y - A.Y));
+            double a, b, c, p, s, S, v_p;
+
+            a = Math.Sqrt((P.X - C.X) * (P.X - C.X) + (P.Y - C.Y) * (P.Y - C.Y));
+            c = Math.Sqrt((P.X - A.X) * (P.X - A.X) + (P.Y - A.Y) * (P.Y - A.Y));
+            p = height; //Math.Sqrt((A.X - C.X) * (A.X - C.X) + (A.Y - C.Y) * (A.Y - C.Y));
+            s = (a + c + p) / 2;
+            S = Math.Sqrt(s * (s - a) * (s - c) * (s - p));
+            v_p = 2 * S / p;
+                    
+            double xpomer = v_p / width;
+
+            a = Math.Sqrt((P.X - B.X) * (P.X - B.X) + (P.Y - B.Y) * (P.Y - B.Y));
+            b = c; //Math.Sqrt((P.X - A.X) * (P.X - A.X) + (P.Y - A.Y) * (P.Y - A.Y));
+            p = width; //Math.Sqrt((A.X - B.X) * (A.X - B.X) + (A.Y - B.Y) * (A.Y - B.Y));
+            s = (a + b + p) / 2;
+            S = Math.Sqrt(s * (s - a) * (s - b) * (s - p));
+            v_p = 2 * S / p;
+            double ypomer = v_p / height;
+
+            int x = (int)(viewModel.Centre.Floor0Width * xpomer);
+            int y = (int)(viewModel.Centre.Floor0Height * ypomer);
+
             viewModel.YourPosition = x + "," + y;
+            viewModel.YourPositionVisibility = true;
         }
 
         private async void LocateButton_Click(object sender, RoutedEventArgs e)
@@ -224,7 +237,8 @@ namespace nakupne_centra.ViewModel
             var accessStatus = await Geolocator.RequestAccessAsync();
             if (accessStatus == GeolocationAccessStatus.Allowed)
             {
-                Geolocator geoLocator = new Geolocator();
+                if (geoLocator == null)
+                    geoLocator = new Geolocator();
 
                 await UpdateLocationData(geoLocator);
                 if (CheckIfInCentre())
@@ -258,9 +272,12 @@ namespace nakupne_centra.ViewModel
                 Geoposition pos = await geoLocator.GetGeopositionAsync();
                 latitude = pos.Coordinate.Point.Position.Latitude;
                 longitude = pos.Coordinate.Point.Position.Longitude;
-                // fake pos
-                latitude = 49.187637;
-                longitude = 16.615180;
+                // fake pos 49.187558, 16.614713 stred fontany
+                latitude = 49.187558;
+                longitude = 16.614713;
+                // fake pos 49.187469, 16.614156 zapadny vchod (na mapke dole v strede)
+                //latitude = 49.187469;
+                //longitude = 16.614156;
             }
         }
 
@@ -281,7 +298,8 @@ namespace nakupne_centra.ViewModel
                 }
                 else
                 {
-
+                    geoLocator.PositionChanged -= OnPositionChanged;
+                    PopUpLocationOutOfCentre();
                 }
             });
         }

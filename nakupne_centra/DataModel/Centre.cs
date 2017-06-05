@@ -10,7 +10,8 @@ namespace nakupne_centra.DataModel
         public Centre(string name, string address, int MinFloor, int MaxFloor, 
             ImageSource logoSquare, ImageSource logoRect, ImageSource floor0, ImageSource floor1, 
             Hours hours, string logoColor, string wayToCentre,
-            double minLat, double maxLat, double minLong, double maxLong)
+            double minLat, double maxLat, double minLong, double maxLong,
+            double aLatitude, double aLongitude, double bLatitude, double bLongitude, double cLatitude, double cLongitude)
         {
             this.Name = name;
             this.Address = address;
@@ -27,6 +28,12 @@ namespace nakupne_centra.DataModel
             this.MaxLatitude = maxLat;
             this.MinLongitude = minLong;
             this.MaxLongitude = maxLong;
+            this.ALatitude = aLatitude;
+            this.ALongitude = aLongitude;
+            this.BLatitude = bLatitude;
+            this.BLongitude = bLongitude;
+            this.CLatitude = cLatitude;
+            this.CLongitude = cLongitude;
 
             this.Floor0Height = 0;
             this.Floor1Height = 0;
@@ -53,5 +60,11 @@ namespace nakupne_centra.DataModel
         public double MaxLatitude { get; set; }
         public double MinLongitude { get; set; }
         public double MaxLongitude { get; set; }
+        public double ALatitude { get; set; }
+        public double ALongitude { get; set; }
+        public double BLatitude { get; set; }
+        public double BLongitude { get; set; }
+        public double CLatitude { get; set; }
+        public double CLongitude { get; set; }
     }
 }
