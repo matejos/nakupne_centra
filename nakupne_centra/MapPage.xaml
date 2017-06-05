@@ -57,10 +57,10 @@
         </ScrollViewer>
         <Border x:Name="PopUp" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" Background="Gray" BorderThickness="2" BorderBrush="DarkSlateGray">
             <RelativePanel Margin="15">
-                <TextBlock x:Name="PopUpText" Text="Lokalizace pre tuhle aplikaci je zakázána." Margin="0,0,0,10" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
-                <Button x:Name="OKPopUpButton" Content="OK" Click="OKPopUpButtonClick" RelativePanel.Below="PopUpText" RelativePanel.AlignLeftWithPanel="True" 
+                <TextBlock x:Name="PopUpText" Margin="0,0,0,10" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
+                <Button x:Name="PopUpButton1" RelativePanel.Below="PopUpText" RelativePanel.AlignLeftWithPanel="True" 
                         BorderBrush="DarkSlateGray" BorderThickness="1"/>
-                <Button x:Name="FindStorePopUpButton" Content="Najdi obchod před kterým stojím" Click="FindStorePopUpButtonClick" 
+                <Button x:Name="PopUpButton2" 
                         RelativePanel.Below="PopUpText" RelativePanel.AlignRightWithPanel="True" RelativePanel.RightOf="OKPopUpButton" 
                         BorderBrush="DarkSlateGray" BorderThickness="1"/>
             </RelativePanel>

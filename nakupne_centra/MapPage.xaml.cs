@@ -9,6 +9,7 @@ using Windows.UI.Core;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Devices.Geolocation;
+using System.Diagnostics;
 
 
 
@@ -26,7 +27,9 @@ namespace nakupne_centra.ViewModel
         private bool pageLoaded = false;
         private double latitude;
         private double longitude;
-        private Geolocator geoLocator;
+        private int horizontalPosition;
+        private int verticalPosition;
+        //private Geolocator geoLocator;
 
         public MapPage()
         {
@@ -46,7 +49,8 @@ namespace nakupne_centra.ViewModel
             if (viewModel.Floors == 1)
             {
                 FloorSlider.Visibility = Visibility.Collapsed;
-            } else
+            }
+            else
             {
                 FloorSlider.Visibility = Visibility.Visible;
                 FloorSlider.Maximum = viewModel.MaxFloor;
@@ -189,23 +193,66 @@ namespace nakupne_centra.ViewModel
             //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
         }
 
+        private void LocationToPointInStore()
+        {
+            switch (viewModel.Name)
+            {
+                case "Galerie Vaňkovka":
+                    //double y = (1081 - (49.187155 * 159 / 49.188827)) / (16.614252 - (49.187155 * 16.613679 / 49.188827));
+                    //double x = (159 - (16.613679 * y)) / 49.188827;
+                    double y = (1081 - (765 * 159 / 2427)) / (724 - (765 * 179 / 2427));
+                    double x = (159 - (179 * y)) / 2427;
+                    //Debug.WriteLine(755 * x + 652 * y);
+                    //horizontalPosition = (latitude-viewModel.Centre.MinLatitude)*x + (longitude - viewModel.Centre.MinLongitude) * y; 
+                    verticalPosition = 0;
+                    break;
+                case "Futurum":
+                    Debug.WriteLine("ešči neni");
+                    break;
+            }
+        }
+
         private async void LocateButton_Click(object sender, RoutedEventArgs e)
         {
+            LocationToPointInStore();
             var accessStatus = await Geolocator.RequestAccessAsync();
 
             if (accessStatus == GeolocationAccessStatus.Allowed)
             {
-                geoLocator = new Geolocator();
+                Geolocator geoLocator = new Geolocator();
 
                 UpdateLocationData(geoLocator);
                 //TODO overiť, či je poloha v danom centre a poriešiť oba prípady
-                //TODO? keď užívateľ zmení nastavenia
+                if ((latitude < 49.189278) && (latitude > 49.186439)
+                    && (longitude < 16.616090) && (longitude > 16.613531)) //overenie priamo pre vankovku TODO nahodit to do dat, nacitat...
+                {
+                    LocationToPointInStore();
+                    //TODO vykreslit pajaca na mape pomocou spocitanych coordinatov na mapku
+                }
+                else
+                {
+                    PopUp.Visibility = Visibility.Visible;
+                    PopUpText.Text = "Lokalizace určila vašu polohu mimo tohle centrum.";
+                    PopUpButton1.Content = "OK";
+                    PopUpButton2.Content = "Zadat obchod před kterým stojím";
+                    PopUpButton1.Click += OKPopUpButtonClick;
+                    PopUpButton2.Click += FindStorePopUpButtonClick;
+                }
+
+                //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
 
                 geoLocator.PositionChanged += OnPositionChanged;
-            } else
+            }
+            else
             {
                 PopUp.Visibility = Visibility.Visible;
-                //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku
+                PopUpText.Text = "Lokalizace pre tuhle aplikaci je zakázána.";
+                PopUpButton1.Content = "OK";
+                PopUpButton2.Content = "Zadat obchod před kterým stojím";
+                PopUpButton1.Click += OKPopUpButtonClick;
+                PopUpButton2.Click += FindStorePopUpButtonClick;
+
+                //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku (tiez v hornom linku snad je)
             }   
         }
 
