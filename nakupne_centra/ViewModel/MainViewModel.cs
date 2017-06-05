@@ -92,10 +92,10 @@ namespace nakupne_centra.ViewModel
                                                            centreHours,
                                                            centreObject["LogoColor"].GetString(),
                                                            centreObject["WayToCentre"].GetString(),
-                                                           Convert.ToInt32(centreObject["MinLatitude"].GetNumber()),
-                                                           Convert.ToInt32(centreObject["MaxLatitude"].GetNumber()),
-                                                           Convert.ToInt32(centreObject["MinLongitude"].GetNumber()),
-                                                           Convert.ToInt32(centreObject["MaxLongitude"].GetNumber())
+                                                           centreObject["MinLatitude"].GetNumber(),
+                                                           centreObject["MaxLatitude"].GetNumber(),
+                                                           centreObject["MinLongitude"].GetNumber(),
+                                                           centreObject["MaxLongitude"].GetNumber()
                                                            );
                     ObservableCollection<Store> stores = new ObservableCollection<Store>();
                     foreach (JsonValue storeJson in centreObject["Stores"].GetArray())

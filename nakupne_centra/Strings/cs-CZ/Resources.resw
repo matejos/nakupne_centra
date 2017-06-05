@@ -168,6 +168,9 @@
   <data name="Locate.Text" xml:space="preserve">
     <value>Lokace</value>
   </data>
+  <data name="LocationDenied" xml:space="preserve">
+    <value>Lokalizace pre tuhle aplikaci je zakázána.</value>
+  </data>
   <data name="LocationInputStore" xml:space="preserve">
     <value>Zadat obchod před kterým stojím</value>
   </data>

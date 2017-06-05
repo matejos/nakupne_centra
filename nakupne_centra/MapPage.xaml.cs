@@ -11,6 +11,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.Devices.Geolocation;
 using System.Diagnostics;
 using Windows.ApplicationModel.Resources;
+using System.Threading.Tasks;
 
 
 
@@ -33,11 +34,13 @@ namespace nakupne_centra.ViewModel
         //private Geolocator geoLocator;
         private bool geoLocatorPositionChangedAssigned = false;
         private bool selectingManualPosition = false;
+        private ResourceLoader resourceLoader;
 
         public MapPage()
         {
             this.InitializeComponent();
             SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+            resourceLoader = ResourceLoader.GetForCurrentView();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -196,13 +199,15 @@ namespace nakupne_centra.ViewModel
 
         private void LocationToPointInStore()
         {
+            viewModel.YourPositionVisibility = true;
+            double x = 0, y = 0;
             switch (viewModel.Name)
             {
                 case "Galerie Vaňkovka":
-                    //double y = (1081 - (49.187155 * 159 / 49.188827)) / (16.614252 - (49.187155 * 16.613679 / 49.188827));
-                    //double x = (159 - (16.613679 * y)) / 49.188827;
-                    double y = (1081 - (765 * 159 / 2427)) / (724 - (765 * 179 / 2427));
-                    double x = (159 - (179 * y)) / 2427;
+                    // y = (1081 - (49.187155 * 159 / 49.188827)) / (16.614252 - (49.187155 * 16.613679 / 49.188827));
+                    // x = (159 - (16.613679 * y)) / 49.188827;
+                    y = (1081 - (765 * 159 / 2427)) / (724 - (765 * 179 / 2427));
+                    x = (159 - (179 * y)) / 2427;
                     //Debug.WriteLine(755 * x + 652 * y);
                     //horizontalPosition = (latitude-viewModel.Centre.MinLatitude)*x + (longitude - viewModel.Centre.MinLongitude) * y; 
                     verticalPosition = 0;
@@ -211,71 +216,90 @@ namespace nakupne_centra.ViewModel
                     Debug.WriteLine("ešči neni");
                     break;
             }
+            viewModel.YourPosition = x + "," + y;
         }
 
         private async void LocateButton_Click(object sender, RoutedEventArgs e)
         {
-            LocationToPointInStore();
             var accessStatus = await Geolocator.RequestAccessAsync();
-            ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
             if (accessStatus == GeolocationAccessStatus.Allowed)
             {
                 Geolocator geoLocator = new Geolocator();
 
-                UpdateLocationData(geoLocator);
-                //TODO overiť, či je poloha v danom centre a poriešiť oba prípady
-                if ((latitude < viewModel.Centre.MaxLatitude) && (latitude > viewModel.Centre.MinLatitude)
-                    && (longitude < viewModel.Centre.MaxLongitude) && (longitude > viewModel.Centre.MinLatitude)) //overenie priamo pre vankovku TODO nahodit to do dat, nacitat...
+                await UpdateLocationData(geoLocator);
+                if (CheckIfInCentre())
                 {
                     LocationToPointInStore();
-                    //TODO vykreslit pajaca na mape pomocou spocitanych coordinatov na mapku
+                    if (!geoLocatorPositionChangedAssigned)
+                    {
+                        geoLocator.PositionChanged += OnPositionChanged;
+                        geoLocatorPositionChangedAssigned = true;
+                    }
                 }
                 else
                 {
-                    PopUp.Visibility = Visibility.Visible;
-                    PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
-                    PopUpButton1.Content = resourceLoader.GetString("OK");
-                    PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
+                    PopUpLocationOutOfCentre();
                 }
-
                 //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
-
-                if (!geoLocatorPositionChangedAssigned)
-                {
-                    geoLocator.PositionChanged += OnPositionChanged;
-                    geoLocatorPositionChangedAssigned = true;
-                }
             }
             else
             {
-                PopUp.Visibility = Visibility.Visible;
-                PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
-                PopUpButton1.Content = resourceLoader.GetString("OK");
-                PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
-
+                PopUpLocationDenied();
                 //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku (tiez v hornom linku snad je)
             }   
         }
 
-        private async void UpdateLocationData(Geolocator geoLocator)
+        private async Task UpdateLocationData(Geolocator geoLocator)
         {
             if (geoLocator != null)
             {
-                //TODO? na základe zmeny posúvať pajáca na mapke
                 geoLocator.DesiredAccuracy = PositionAccuracy.High;
 
                 Geoposition pos = await geoLocator.GetGeopositionAsync();
                 latitude = pos.Coordinate.Point.Position.Latitude;
                 longitude = pos.Coordinate.Point.Position.Longitude;
-            }           
+                // fake pos
+                latitude = 49.187637;
+                longitude = 16.615180;
+            }
+        }
+
+        private bool CheckIfInCentre()
+        {
+            return (latitude < viewModel.Centre.MaxLatitude) && (latitude > viewModel.Centre.MinLatitude)
+                    && (longitude < viewModel.Centre.MaxLongitude) && (longitude > viewModel.Centre.MinLongitude);
         }
 
         async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs e)
         {
-            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
-                UpdateLocationData(sender);
+                await UpdateLocationData(sender);
+                if (CheckIfInCentre())
+                {
+                    LocationToPointInStore();
+                }
+                else
+                {
+
+                }
             });
+        }
+
+        private void PopUpLocationOutOfCentre()
+        {
+            PopUp.Visibility = Visibility.Visible;
+            PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
+            PopUpButton1.Content = resourceLoader.GetString("OK");
+            PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
+        }
+
+        private void PopUpLocationDenied()
+        {
+            PopUp.Visibility = Visibility.Visible;
+            PopUpText.Text = resourceLoader.GetString("LocationDenied");
+            PopUpButton1.Content = resourceLoader.GetString("OK");
+            PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
         }
 
         private void LocateButton_LayoutUpdated(object sender, object e)
@@ -306,7 +330,6 @@ namespace nakupne_centra.ViewModel
             if (true)   // ked to ma byt find store button
             {
                 PopUp.Visibility = Visibility.Collapsed;
-                //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
                 selectingManualPosition = true;
                 viewModel.NameFilter = "";
             }
