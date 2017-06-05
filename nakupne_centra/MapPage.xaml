@@ -80,9 +80,9 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="PopUpText" Margin="10" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True"/>
                 <Button x:Name="PopUpButton1" Grid.Row="1" Grid.Column="0" Margin="10" HorizontalAlignment="Left"
-                        BorderBrush="DarkSlateGray" BorderThickness="1"/>
+                        BorderBrush="DarkSlateGray" BorderThickness="1" Click="PopUpButton1_Click" />
                 <Button x:Name="PopUpButton2" Grid.Row="1" Grid.Column="1" Margin="10" HorizontalAlignment="Right"
-                        BorderBrush="DarkSlateGray" BorderThickness="1"/>
+                        BorderBrush="DarkSlateGray" BorderThickness="1" Click="PopUpButton2_Click" />
             </Grid>
         </Border>
     </Grid>

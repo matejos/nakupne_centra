@@ -168,6 +168,12 @@
   <data name="Locate.Text" xml:space="preserve">
     <value>Locate</value>
   </data>
+  <data name="LocationInputStore" xml:space="preserve">
+    <value>Input a store I am in front of</value>
+  </data>
+  <data name="LocationOutOfCentre" xml:space="preserve">
+    <value>Localization determined you out of this centre.</value>
+  </data>
   <data name="MainPageHeader.Text" xml:space="preserve">
     <value>Shopping centres</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="NoResultsFound.Text" xml:space="preserve">
     <value>No results found.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="OnMap.Text" xml:space="preserve">
     <value>On Map</value>

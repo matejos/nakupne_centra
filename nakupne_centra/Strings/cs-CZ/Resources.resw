@@ -168,6 +168,12 @@
   <data name="Locate.Text" xml:space="preserve">
     <value>Lokace</value>
   </data>
+  <data name="LocationInputStore" xml:space="preserve">
+    <value>Zadat obchod před kterým stojím</value>
+  </data>
+  <data name="LocationOutOfCentre" xml:space="preserve">
+    <value>Lokalizace určila vašu polohu mimo tohle centrum.</value>
+  </data>
   <data name="MainPageHeader.Text" xml:space="preserve">
     <value>Nákupní centra</value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="NoResultsFound.Text" xml:space="preserve">
     <value>Nenalezeny žádné výsledky.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="OnMap.Text" xml:space="preserve">
     <value>Na mapě</value>

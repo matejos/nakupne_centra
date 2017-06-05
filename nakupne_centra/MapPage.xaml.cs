@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Devices.Geolocation;
 using System.Diagnostics;
+using Windows.ApplicationModel.Resources;
 
 
 
@@ -135,18 +136,20 @@ namespace nakupne_centra.ViewModel
         private void SearchBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
             Store selectedStore = args.SelectedItem as Store;
-            sender.Text = selectedStore.Name;
+            viewModel.NameFilter = "";
+            viewModel.NameFilter = selectedStore.Name;
+            Debug.WriteLine(viewModel.NameFilter);
             if (selectingManualPosition)
             {
-
                 viewModel.LocatedStore = selectedStore;
-
+                ZoomOnStore(viewModel.LocatedStore);
             }
             else
             {
                 viewModel.SelectedStore = selectedStore;
                 ZoomOnStore(viewModel.SelectedStore);
             }
+            LocateButton.Focus(FocusState.Programmatic);
         }
 
         private void ZoomOnStore(Store store)
@@ -191,20 +194,6 @@ namespace nakupne_centra.ViewModel
             SearchBox.IsSuggestionListOpen = true;
         }
 
-        private void OKPopUpButtonClick(object sender, RoutedEventArgs e)
-        {
-            LocateButton.Focus(FocusState.Programmatic);
-            PopUp.Visibility = Visibility.Collapsed;
-        }
-        
-
-        private void FindStorePopUpButtonClick(object sender, RoutedEventArgs e)
-        {
-            PopUp.Visibility = Visibility.Collapsed;
-            //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
-            selectingManualPosition = true;
-        }
-
         private void LocationToPointInStore()
         {
             switch (viewModel.Name)
@@ -244,11 +233,10 @@ namespace nakupne_centra.ViewModel
                 else
                 {
                     PopUp.Visibility = Visibility.Visible;
-                    PopUpText.Text = "Lokalizace určila vašu polohu mimo tohle centrum.";
-                    PopUpButton1.Content = "OK";
-                    PopUpButton2.Content = "Zadat obchod před kterým stojím";
-                    PopUpButton1.Click += OKPopUpButtonClick;
-                    PopUpButton2.Click += FindStorePopUpButtonClick;
+                    ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
+                    PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
+                    PopUpButton1.Content = resourceLoader.GetString("OK");
+                    PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
                 }
 
                 //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
@@ -262,11 +250,10 @@ namespace nakupne_centra.ViewModel
             else
             {
                 PopUp.Visibility = Visibility.Visible;
-                PopUpText.Text = "Lokalizace pre tuhle aplikaci je zakázána.";
-                PopUpButton1.Content = "OK";
-                PopUpButton2.Content = "Zadat obchod před kterým stojím";
-                PopUpButton1.Click += OKPopUpButtonClick;
-                PopUpButton2.Click += FindStorePopUpButtonClick;
+                ResourceLoader resourceLoader = ResourceLoader.GetForCurrentView();
+                PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
+                PopUpButton1.Content = resourceLoader.GetString("OK");
+                PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
 
                 //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku (tiez v hornom linku snad je)
             }   
@@ -305,6 +292,26 @@ namespace nakupne_centra.ViewModel
         private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
         {
             selectingManualPosition = false;
+        }
+
+        private void PopUpButton1_Click(object sender, RoutedEventArgs e)
+        {
+            if (true)   // ked to ma byt OK button
+            {
+                LocateButton.Focus(FocusState.Programmatic);
+                PopUp.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void PopUpButton2_Click(object sender, RoutedEventArgs e)
+        {
+            if (true)   // ked to ma byt find store button
+            {
+                PopUp.Visibility = Visibility.Collapsed;
+                //TODO urobiť vyhľadávanie tak, aby neselectovalo obchod, ale položilo pajáca pred obchod
+                selectingManualPosition = true;
+                viewModel.NameFilter = "";
+            }
         }
     }
 }
