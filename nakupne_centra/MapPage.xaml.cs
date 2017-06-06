@@ -103,11 +103,6 @@ namespace nakupne_centra.ViewModel
             , period);
         }
 
-        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            
-        }
-
         public void OnBackRequested(object sender, BackRequestedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -255,16 +250,6 @@ namespace nakupne_centra.ViewModel
                     PopUpUnspecifiedError();
                     break;
             }
-            if (accessStatus == GeolocationAccessStatus.Allowed)
-            {
-                
-                //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
-            }
-            else
-            {
-                
-                //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku (tiez v hornom linku snad je)
-            }   
         }
 
         private async Task UpdateLocationData(Geolocator geoLocator)

@@ -36,7 +36,7 @@
                 <TextBlock x:Uid="FloorSlider" VerticalAlignment="Center" Margin="10,0,0,0"/>
                 <TextBlock Text=":" VerticalAlignment="Center"/>
                 <TextBlock Text="{Binding FloorSliderValue}" VerticalAlignment="Center" Margin="5,0,0,0"/>
-                <Slider x:Name="FloorSlider"  Value="{Binding FloorSliderValue, Mode=TwoWay}" IsThumbToolTipEnabled="False" Margin="20,0,0,0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" ValueChanged="Slider_ValueChanged" Visibility="Collapsed">
+                <Slider x:Name="FloorSlider"  Value="{Binding FloorSliderValue, Mode=TwoWay}" IsThumbToolTipEnabled="False" Margin="20,0,0,0" Width="100" VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed">
                     <Slider.Resources>
                         <SolidColorBrush x:Key="SliderTrackValueFill" Color="Gray"/>
                         <SolidColorBrush x:Key="SliderTrackValueFillPressed" Color="Gray"/>
