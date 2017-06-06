@@ -1,5 +1,6 @@
 ﻿using nakupne_centra.DataModel;
 using nakupne_centra.ViewModel;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -25,18 +26,6 @@ namespace nakupne_centra
             Store clickedStore = e.ClickedItem as Store;
             CentreStoreSearch css = new CentreStoreSearch(clickedStore.Centre, "", clickedStore);
             this.Frame.Navigate(typeof(StoresList), css);
-        }
-
-        private void CentreListView_ContainerContentChanging(ListViewBase sender, ContainerContentChangingEventArgs args)
-        {
-            if (args.ItemIndex % 2 == 0)
-            {
-                args.ItemContainer.Background = new SolidColorBrush(Windows.UI.Colors.White);
-            }
-            else
-            {
-                args.ItemContainer.Background = new SolidColorBrush(Windows.UI.Colors.AliceBlue);
-            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

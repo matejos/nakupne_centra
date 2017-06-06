@@ -13,7 +13,7 @@
         </DataTemplate>
     </Page.Resources>
 
-    <Grid x:Name="mainGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="mainGrid" Style="{StaticResource GlobalBackgroundStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>

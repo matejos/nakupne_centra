@@ -51,7 +51,7 @@
                         <TextBlock Text="{Binding Name}" Style="{StaticResource StoreListStyle}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                     </Viewbox>
                 </Border>
-                
+
                 <FontIcon Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE0E3;" FontSize="20"/>
             </Grid>
         </DataTemplate>
@@ -69,8 +69,8 @@
             </local:ExpandPanel>
         </DataTemplate>
     </Page.Resources>
-    
-    <Grid x:Name="MainGrid">
+
+    <Grid x:Name="MainGrid" Style="{StaticResource GlobalBackgroundStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>
@@ -102,6 +102,7 @@
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="Background" Value="{StaticResource StoresListBackgroundColor}"/>
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>

@@ -103,14 +103,14 @@
                     </StackPanel>
                 </Button>
 
-                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
                     <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
     </Page.Resources>
 
-    <Grid  x:Name="RootGrid">
+    <Grid x:Name="RootGrid" Style="{StaticResource GlobalBackgroundStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="{StaticResource HeaderHeight}"/>
             <RowDefinition Height="{StaticResource SearchBarHeight}"/>
@@ -120,10 +120,11 @@
             <TextBlock x:Uid="MainPageHeader" Style="{StaticResource HeaderStyle}"/>
         </Border>
         <AutoSuggestBox x:Name="SearchBox" Grid.Row="1" x:Uid="SearchStore" Text="{Binding Path=NameFilter, Mode=TwoWay}"/>
-        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding FilteredCentres}" ItemClick="CentreListView_ItemClicked" ContainerContentChanging="CentreListView_ContainerContentChanging">
+        <ListView Grid.Row="2" x:Name="CentreListView" SelectionMode="None" IsItemClickEnabled="True" ItemTemplate="{StaticResource CentresItemTemplateNarrow}" ItemsSource="{Binding FilteredCentres}" ItemClick="CentreListView_ItemClicked">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Background" Value="{StaticResource CentresListBackgroundColor}"/>
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
