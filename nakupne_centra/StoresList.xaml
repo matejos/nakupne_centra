@@ -62,6 +62,8 @@
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="Padding" Value="0,0,10,0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
@@ -103,6 +105,8 @@
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                                 <Setter Property="Background" Value="{StaticResource StoresListBackgroundColor}"/>
+                                <Setter Property="Padding" Value="0,0,20,0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>
@@ -111,6 +115,8 @@
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                                 <Setter Property="Background" Value="{StaticResource StoresListBackgroundColor}"/>
+                                <Setter Property="Padding" Value="0,0,10,0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
                             </Style>
                         </ListView.ItemContainerStyle>
                     </ListView>

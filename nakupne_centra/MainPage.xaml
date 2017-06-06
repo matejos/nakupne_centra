@@ -58,8 +58,15 @@
                     <SymbolIcon Symbol="Find"/>
                 </Button>
 
-                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,0,0,0" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
-                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True"/>
+                <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,0,0,0" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -103,8 +110,15 @@
                     </StackPanel>
                 </Button>
 
-                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
-                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True"/>
+                <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Visibility="{Binding Text, ElementName=SearchBox, Converter={StaticResource EmptyStringToVisibilityConverter}}">
+                    <ListView ItemsSource="{Binding Path=viewModel.FilteredStores, Mode=TwoWay}" ItemTemplate="{StaticResource CentreStoresTemplate}" ItemClick="StoreList_ItemClicked" SelectionMode="None" IsItemClickEnabled="True">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
                 </StackPanel>
             </Grid>
         </DataTemplate>
@@ -125,6 +139,8 @@
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                     <Setter Property="Background" Value="{StaticResource CentresListBackgroundColor}"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BorderThickness" Value="0"/>
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>

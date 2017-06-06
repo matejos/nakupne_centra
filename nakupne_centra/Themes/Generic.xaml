@@ -45,7 +45,7 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <ContentPresenter Grid.Column="0" VerticalAlignment="Center" Content="{TemplateBinding HeaderContent}" FontSize="24"/>
+                                    <ContentPresenter Grid.Column="0" VerticalAlignment="Center" Content="{TemplateBinding HeaderContent}" FontSize="24" Margin="10,0,0,0"/>
                                     <Border Grid.Column="1" x:Name="ButtonBorder">
                                     <ToggleButton  RenderTransformOrigin="0.5,0.5" x:Name="ExpandCollapseButton" Background="Yellow">
                                         <ToggleButton.Template>
