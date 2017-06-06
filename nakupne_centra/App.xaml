@@ -13,6 +13,7 @@
         <converters:CoordinatesConverter x:Key="CoordinatesConverter"/>
         <BitmapImage x:Key="MapPinIcon" UriSource="ms-appx:///Data/Pin.png"/>
         <BitmapImage x:Key="MapPin2Icon" UriSource="ms-appx:///Data/Pin2.png"/>
+        <BitmapImage x:Key="MapPin2IconDisabled" UriSource="ms-appx:///Data/Pin2Disabled.png"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
         <TextBlock x:Key="LocationDisabledMessage" FontStyle="Italic" Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >

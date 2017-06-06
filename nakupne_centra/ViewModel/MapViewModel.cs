@@ -82,6 +82,14 @@ namespace nakupne_centra.ViewModel
             set { __yourPositionVisibility = value; NotifyPropertyChanged("YourPositionVisibility"); }
         }
 
+        private bool _locationOnline;
+
+        public bool LocationOnline
+        {
+            get { return _locationOnline; }
+            set { _locationOnline = value; NotifyPropertyChanged("LocationOnline"); }
+        }
+
         private Store _selectedStore;
 
         public Store SelectedStore
@@ -247,7 +255,7 @@ namespace nakupne_centra.ViewModel
                     StorePositionVisibility = false;
                 }
             }
-            if (LocatedStore != null)
+            if (LocatedStore != null && !LocationOnline)
             {
                 if (LocatedStore.Floor.Contains(FloorSliderValue.ToString()))
                 {

@@ -71,6 +71,21 @@
         </ScrollViewer>
 
         <TextBlock x:Name="ScenarioOutput_Status" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="YourPositionState">
+                <VisualState x:Name="Active">
+                    <VisualState.Setters>
+                        <Setter Target="YourPosition.Source" Value="{StaticResource MapPin2Icon}"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Inactive">
+                    <VisualState.Setters>
+                        <Setter Target="YourPosition.Source" Value="{StaticResource MapPin2IconDisabled}"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
     
 </Page>

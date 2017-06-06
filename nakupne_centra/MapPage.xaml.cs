@@ -91,12 +91,12 @@ namespace nakupne_centra.ViewModel
                     if (sv.ZoomFactor <= 1)
                     {
                         sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Width / 2,
-                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Height * 0.7, (float)1.5, false);
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 1.5 - Window.Current.Bounds.Height / 2, (float)1.5, false);
                     }
                     else
                     {
                         sv.ChangeView((p.X + sv.HorizontalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Width / 2,
-                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Height * 0.7, (float)0.5, false);
+                                      (p.Y + sv.VerticalOffset) / sv.ZoomFactor * 0.5 - Window.Current.Bounds.Height / 2, (float)0.5, false);
                     }
                 });
             }
@@ -144,6 +144,7 @@ namespace nakupne_centra.ViewModel
             {
                 viewModel.LocatedStore = selectedStore;
                 ZoomOnStore(viewModel.LocatedStore);
+                VisualStateManager.GoToState(this, "Active", false);
             }
             else
             {
@@ -279,6 +280,9 @@ namespace nakupne_centra.ViewModel
                 // fake pos 49.187469, 16.614156 zapadny vchod (na mapke dole v strede)
                 //latitude = 49.187469;
                 //longitude = 16.614156;
+                // fake pos 49.156061, 16.598610 futurum cinsky raj
+                //latitude = 49.156061;
+                //longitude = 16.598610;
             }
         }
 
@@ -295,10 +299,12 @@ namespace nakupne_centra.ViewModel
                 await UpdateLocationData(sender);
                 if (CheckIfInCentre())
                 {
+                    viewModel.LocationOnline = true;
                     LocationToPointInStore();
                 }
                 else
                 {
+                    viewModel.LocationOnline = false;
                     geoLocator.PositionChanged -= OnPositionChanged;
                     geoLocatorPositionChangedAssigned = false;
                     PopUpLocationOutOfCentre();
@@ -315,21 +321,25 @@ namespace nakupne_centra.ViewModel
                     case PositionStatus.Ready:
                         // Location platform is providing valid data.
                         ScenarioOutput_Status.Text = "Ready";
+                        VisualStateManager.GoToState(this, "Active", false);
                         break;
 
                     case PositionStatus.Initializing:
                         // Location platform is attempting to acquire a fix.
                         ScenarioOutput_Status.Text = "Initializing";
+                        VisualStateManager.GoToState(this, "Active", false);
                         break;
                         
                     case PositionStatus.NoData:
                         // Location platform could not obtain location data.
                         ScenarioOutput_Status.Text = "No data";
+                        VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     case PositionStatus.Disabled:
                         // The permission to access location data is denied by the user or other policies.
                         ScenarioOutput_Status.Text = "Disabled";
+                        VisualStateManager.GoToState(this, "Inactive", false);
 
                         // Show message to the user to go to location settings.
                         //LocationDisabledMessage.Visibility = Visibility.Visible;
@@ -339,15 +349,18 @@ namespace nakupne_centra.ViewModel
                         // The location platform is not initialized. This indicates that the application
                         // has not made a request for location data.
                         ScenarioOutput_Status.Text = "Not initialized";
+                        VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     case PositionStatus.NotAvailable:
                         // The location platform is not available on this version of the OS.
                         ScenarioOutput_Status.Text = "Not available";
+                        VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     default:
                         ScenarioOutput_Status.Text = "Unknown";
+                        VisualStateManager.GoToState(this, "Inactive", false);
                         break;
                 }
             });
