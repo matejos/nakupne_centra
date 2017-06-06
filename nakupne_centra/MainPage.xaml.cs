@@ -45,6 +45,13 @@ namespace nakupne_centra
             DataContext = viewModel;
         }
 
+        private void ButtonClickNavigate(object sender, RoutedEventArgs e)
+        {
+            Store store = (sender as FrameworkElement).DataContext as Store;
+            MapCentreStore css = new MapCentreStore(store.Centre, store);
+            this.Frame.Navigate(typeof(MapPage), css);
+        }
+
         private void CentreStoresButtonClick(object sender, RoutedEventArgs e)
         {
             var centre = (sender as FrameworkElement).DataContext as Centre;
