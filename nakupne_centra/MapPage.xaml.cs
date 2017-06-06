@@ -29,8 +29,6 @@ namespace nakupne_centra.ViewModel
         private bool pageLoaded = false;
         private double latitude;
         private double longitude;
-        private int horizontalPosition;
-        private int verticalPosition;
         private Geolocator geoLocator;
         private bool geoLocatorPositionChangedAssigned = false;
         private bool selectingManualPosition = false;
@@ -235,30 +233,35 @@ namespace nakupne_centra.ViewModel
         private async void LocateButton_Click(object sender, RoutedEventArgs e)
         {
             var accessStatus = await Geolocator.RequestAccessAsync();
-            if (accessStatus == GeolocationAccessStatus.Allowed)
+            switch (accessStatus)
             {
-                if (geoLocator == null)
-                    geoLocator = new Geolocator();
-
-                await UpdateLocationData(geoLocator);
-                if (CheckIfInCentre())
-                {
-                    LocationToPointInStore();
+                case GeolocationAccessStatus.Allowed:
+                    if (geoLocator == null)
+                    {
+                        geoLocator = new Geolocator { DesiredAccuracyInMeters = 5 };
+                        geoLocator.StatusChanged += OnStatusChanged;
+                    }
                     if (!geoLocatorPositionChangedAssigned)
                     {
                         geoLocator.PositionChanged += OnPositionChanged;
                         geoLocatorPositionChangedAssigned = true;
                     }
-                }
-                else
-                {
-                    PopUpLocationOutOfCentre();
-                }
+                    break;
+                case GeolocationAccessStatus.Denied:
+                    PopUpLocationDenied();
+                    break;
+                case GeolocationAccessStatus.Unspecified:
+                    PopUpUnspecifiedError();
+                    break;
+            }
+            if (accessStatus == GeolocationAccessStatus.Allowed)
+            {
+                
                 //TODO? keď užívateľ zmení nastavenia, dá sa to nájsť tu: https://docs.microsoft.com/en-us/windows/uwp/maps-and-location/get-location
             }
             else
             {
-                PopUpLocationDenied();
+                
                 //TODO? doplniť text o tom ako povoliť lokalizáciu pre apku (tiez v hornom linku snad je)
             }   
         }
@@ -267,8 +270,6 @@ namespace nakupne_centra.ViewModel
         {
             if (geoLocator != null)
             {
-                geoLocator.DesiredAccuracy = PositionAccuracy.High;
-
                 Geoposition pos = await geoLocator.GetGeopositionAsync();
                 latitude = pos.Coordinate.Point.Position.Latitude;
                 longitude = pos.Coordinate.Point.Position.Longitude;
@@ -299,25 +300,97 @@ namespace nakupne_centra.ViewModel
                 else
                 {
                     geoLocator.PositionChanged -= OnPositionChanged;
+                    geoLocatorPositionChangedAssigned = false;
                     PopUpLocationOutOfCentre();
                 }
             });
         }
 
+        async private void OnStatusChanged(Geolocator sender, StatusChangedEventArgs e)
+        {
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                switch (e.Status)
+                {
+                    case PositionStatus.Ready:
+                        // Location platform is providing valid data.
+                        ScenarioOutput_Status.Text = "Ready";
+                        break;
+
+                    case PositionStatus.Initializing:
+                        // Location platform is attempting to acquire a fix.
+                        ScenarioOutput_Status.Text = "Initializing";
+                        break;
+                        
+                    case PositionStatus.NoData:
+                        // Location platform could not obtain location data.
+                        ScenarioOutput_Status.Text = "No data";
+                        break;
+
+                    case PositionStatus.Disabled:
+                        // The permission to access location data is denied by the user or other policies.
+                        ScenarioOutput_Status.Text = "Disabled";
+
+                        // Show message to the user to go to location settings.
+                        //LocationDisabledMessage.Visibility = Visibility.Visible;
+                        break;
+
+                    case PositionStatus.NotInitialized:
+                        // The location platform is not initialized. This indicates that the application
+                        // has not made a request for location data.
+                        ScenarioOutput_Status.Text = "Not initialized";
+                        break;
+
+                    case PositionStatus.NotAvailable:
+                        // The location platform is not available on this version of the OS.
+                        ScenarioOutput_Status.Text = "Not available";
+                        break;
+
+                    default:
+                        ScenarioOutput_Status.Text = "Unknown";
+                        break;
+                }
+            });
+        }
+
+
         private void PopUpLocationOutOfCentre()
         {
-            PopUp.Visibility = Visibility.Visible;
-            PopUpText.Text = resourceLoader.GetString("LocationOutOfCentre");
-            PopUpButton1.Content = resourceLoader.GetString("OK");
-            PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
+            PopUpLocationError(resourceLoader.GetString("LocationOutOfCentre"));
         }
 
         private void PopUpLocationDenied()
         {
-            PopUp.Visibility = Visibility.Visible;
-            PopUpText.Text = resourceLoader.GetString("LocationDenied");
-            PopUpButton1.Content = resourceLoader.GetString("OK");
-            PopUpButton2.Content = resourceLoader.GetString("LocationInputStore");
+            PopUpLocationError(resourceLoader.GetString("LocationDenied"));
+        }
+
+        private void PopUpUnspecifiedError()
+        {
+            PopUpLocationError(resourceLoader.GetString("LocationError"));
+        }
+
+        private async void PopUpLocationError(string title)
+        {
+            ContentDialog locationPromptDialog = new ContentDialog
+            {
+                Title = title,
+                Content = "",
+                PrimaryButtonText = resourceLoader.GetString("OK"),
+                SecondaryButtonText = resourceLoader.GetString("LocationInputStore")
+
+            };
+
+            ContentDialogResult result = await locationPromptDialog.ShowAsync();
+            if (result == ContentDialogResult.Primary)
+            {
+                LocateButton.Focus(FocusState.Programmatic);
+            }
+            if (result == ContentDialogResult.Secondary)
+            {
+                selectingManualPosition = true;
+                viewModel.NameFilter = "";
+                SearchBox.Focus(FocusState.Programmatic);
+            }
         }
 
         private void LocateButton_LayoutUpdated(object sender, object e)
@@ -332,25 +405,6 @@ namespace nakupne_centra.ViewModel
         private void SearchBox_LostFocus(object sender, RoutedEventArgs e)
         {
             selectingManualPosition = false;
-        }
-
-        private void PopUpButton1_Click(object sender, RoutedEventArgs e)
-        {
-            if (true)   // ked to ma byt OK button
-            {
-                LocateButton.Focus(FocusState.Programmatic);
-                PopUp.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void PopUpButton2_Click(object sender, RoutedEventArgs e)
-        {
-            if (true)   // ked to ma byt find store button
-            {
-                PopUp.Visibility = Visibility.Collapsed;
-                selectingManualPosition = true;
-                viewModel.NameFilter = "";
-            }
         }
     }
 }

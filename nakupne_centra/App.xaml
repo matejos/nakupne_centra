@@ -15,6 +15,13 @@
         <BitmapImage x:Key="MapPin2Icon" UriSource="ms-appx:///Data/Pin2.png"/>
         <GridLength x:Key="HeaderHeight">40</GridLength>
         <GridLength x:Key="SearchBarHeight">32</GridLength>
+        <TextBlock x:Key="LocationDisabledMessage" FontStyle="Italic" Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
+                <Run Text="This app is not able to access Location. Go to " />
+                <Hyperlink NavigateUri="ms-settings:privacy-location">
+                    <Run Text="Settings" />
+                </Hyperlink>
+                <Run Text=" to check the location privacy settings."/>
+        </TextBlock>
         <Style x:Key="NoResultsFoundStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="40"/>
             <Setter Property="FontWeight" Value="Medium"/>

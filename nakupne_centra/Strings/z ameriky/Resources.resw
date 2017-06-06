@@ -171,6 +171,9 @@
   <data name="LocationDenied" xml:space="preserve">
     <value>Localization access denied.</value>
   </data>
+  <data name="LocationError" xml:space="preserve">
+    <value>Unspecified error!</value>
+  </data>
   <data name="LocationInputStore" xml:space="preserve">
     <value>Input a store I am in front of</value>
   </data>

@@ -171,6 +171,9 @@
   <data name="LocationDenied" xml:space="preserve">
     <value>Lokalizácia pre túto aplikáciu je zakázaná.</value>
   </data>
+  <data name="LocationError" xml:space="preserve">
+    <value>Neočakávaná chyba!</value>
+  </data>
   <data name="LocationInputStore" xml:space="preserve">
     <value>Zadať obchod pred ktorým stojím</value>
   </data>
