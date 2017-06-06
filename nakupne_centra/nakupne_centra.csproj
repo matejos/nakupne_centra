@@ -102,6 +102,7 @@
     <Compile Include="CentrePage.xaml.cs">
       <DependentUpon>CentrePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\CoordinatesTextConverter.cs" />
     <Compile Include="Converters\EmptyCollectionToVisibilityConverter.cs" />
     <Compile Include="Converters\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converters\CoordinatesConverter.cs" />

@@ -340,6 +340,7 @@ namespace nakupne_centra.ViewModel
                         // The permission to access location data is denied by the user or other policies.
                         ScenarioOutput_Status.Text = resourceLoader.GetString("LocationDisabled");
                         VisualStateManager.GoToState(this, "Inactive", false);
+                        viewModel.LocationOnline = false;
 
                         // Show message to the user to go to location settings.
                         //LocationDisabledMessage.Visibility = Visibility.Visible;

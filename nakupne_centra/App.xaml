@@ -11,6 +11,7 @@
         <converters:EmptyStringToVisibilityConverter x:Key="EmptyStringToVisibilityConverter"/>
         <converters:EmptyCollectionToVisibilityConverter x:Key="EmptyCollectionToVisibilityConverter"/>
         <converters:CoordinatesConverter x:Key="CoordinatesConverter"/>
+        <converters:CoordinatesTextConverter x:Key="CoordinatesTextConverter"/>
         <BitmapImage x:Key="MapPinIcon" UriSource="ms-appx:///Data/Pin.png"/>
         <BitmapImage x:Key="MapPin2Icon" UriSource="ms-appx:///Data/Pin2.png"/>
         <BitmapImage x:Key="MapPin2IconDisabled" UriSource="ms-appx:///Data/Pin2Disabled.png"/>

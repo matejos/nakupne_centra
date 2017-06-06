@@ -243,4 +243,7 @@
   <data name="Wednesday.Text" xml:space="preserve">
     <value>Streda</value>
   </data>
+  <data name="You.Text" xml:space="preserve">
+    <value>Vy</value>
+  </data>
 </root>
