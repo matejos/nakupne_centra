@@ -171,14 +171,35 @@
   <data name="LocationDenied" xml:space="preserve">
     <value>Localization access denied.</value>
   </data>
+  <data name="LocationDisabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
   <data name="LocationError" xml:space="preserve">
     <value>Unspecified error!</value>
+  </data>
+  <data name="LocationInitializing" xml:space="preserve">
+    <value>Initializing</value>
   </data>
   <data name="LocationInputStore" xml:space="preserve">
     <value>Input a store I am in front of</value>
   </data>
+  <data name="LocationNoData" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="LocationNotAvailable" xml:space="preserve">
+    <value>Not available</value>
+  </data>
+  <data name="LocationNotInitialized" xml:space="preserve">
+    <value>Not initialized</value>
+  </data>
   <data name="LocationOutOfCentre" xml:space="preserve">
     <value>Localization determined you out of this centre.</value>
+  </data>
+  <data name="LocationReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="LocationUnknown" xml:space="preserve">
+    <value>Unknown</value>
   </data>
   <data name="MainPageHeader.Text" xml:space="preserve">
     <value>Shopping centres</value>

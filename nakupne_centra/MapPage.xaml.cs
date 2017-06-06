@@ -320,25 +320,25 @@ namespace nakupne_centra.ViewModel
                 {
                     case PositionStatus.Ready:
                         // Location platform is providing valid data.
-                        ScenarioOutput_Status.Text = "Ready";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationReady");
                         VisualStateManager.GoToState(this, "Active", false);
                         break;
 
                     case PositionStatus.Initializing:
                         // Location platform is attempting to acquire a fix.
-                        ScenarioOutput_Status.Text = "Initializing";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationInitializing");
                         VisualStateManager.GoToState(this, "Active", false);
                         break;
                         
                     case PositionStatus.NoData:
                         // Location platform could not obtain location data.
-                        ScenarioOutput_Status.Text = "No data";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationNoData");
                         VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     case PositionStatus.Disabled:
                         // The permission to access location data is denied by the user or other policies.
-                        ScenarioOutput_Status.Text = "Disabled";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationDisabled");
                         VisualStateManager.GoToState(this, "Inactive", false);
 
                         // Show message to the user to go to location settings.
@@ -348,18 +348,18 @@ namespace nakupne_centra.ViewModel
                     case PositionStatus.NotInitialized:
                         // The location platform is not initialized. This indicates that the application
                         // has not made a request for location data.
-                        ScenarioOutput_Status.Text = "Not initialized";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationNotInitialized");
                         VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     case PositionStatus.NotAvailable:
                         // The location platform is not available on this version of the OS.
-                        ScenarioOutput_Status.Text = "Not available";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationNotAvailable");
                         VisualStateManager.GoToState(this, "Inactive", false);
                         break;
 
                     default:
-                        ScenarioOutput_Status.Text = "Unknown";
+                        ScenarioOutput_Status.Text = resourceLoader.GetString("LocationUnknown");
                         VisualStateManager.GoToState(this, "Inactive", false);
                         break;
                 }

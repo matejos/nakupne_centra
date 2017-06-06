@@ -171,14 +171,35 @@
   <data name="LocationDenied" xml:space="preserve">
     <value>Lokalizácia pre túto aplikáciu je zakázaná.</value>
   </data>
+  <data name="LocationDisabled" xml:space="preserve">
+    <value>Vypnuté</value>
+  </data>
   <data name="LocationError" xml:space="preserve">
     <value>Neočakávaná chyba!</value>
+  </data>
+  <data name="LocationInitializing" xml:space="preserve">
+    <value>Inicializuje sa</value>
   </data>
   <data name="LocationInputStore" xml:space="preserve">
     <value>Zadať obchod pred ktorým stojím</value>
   </data>
+  <data name="LocationNoData" xml:space="preserve">
+    <value>Žiadne dáta</value>
+  </data>
+  <data name="LocationNotAvailable" xml:space="preserve">
+    <value>Nedostupné</value>
+  </data>
+  <data name="LocationNotInitialized" xml:space="preserve">
+    <value>Neinicializované</value>
+  </data>
   <data name="LocationOutOfCentre" xml:space="preserve">
     <value>Lokalizácia určila vašu polohu mimo toto centrum.</value>
+  </data>
+  <data name="LocationReady" xml:space="preserve">
+    <value>Prebieha</value>
+  </data>
+  <data name="LocationUnknown" xml:space="preserve">
+    <value>Neznáme</value>
   </data>
   <data name="MainPageHeader.Text" xml:space="preserve">
     <value>Nákupné centrá</value>

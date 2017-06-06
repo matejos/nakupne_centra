@@ -70,7 +70,7 @@
             </Viewbox>
         </ScrollViewer>
 
-        <TextBlock x:Name="ScenarioOutput_Status" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ScenarioOutput_Status" Margin="0,0,10,0"  Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="Gray"/>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="YourPositionState">
