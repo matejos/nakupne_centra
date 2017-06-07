@@ -32,13 +32,13 @@
         <Style x:Key="ListViewItemBackground" TargetType="Border">
             <Setter Property="Background" Value="Transparent"/>
         </Style>
-        <Color x:Key="StoresListBackgroundColor">#dff0ff</Color>
-        <Color x:Key="CentresListBackgroundColor">#fffbf6</Color>
+        <Color x:Key="StoresListBackgroundColor">#e3f1ff</Color>
+        <Color x:Key="CentresListBackgroundColor">#fff4e5</Color>
         <Style x:Key="HeaderBackground" TargetType="Border">
             <Setter Property="Background" Value="#f9cf92"/>
         </Style>
         <Style x:Key="GlobalBackgroundStyle" TargetType="Grid">
-            <Setter Property="Background" Value="#f8eedf"/>
+            <Setter Property="Background" Value="#ffffff"/>
         </Style>
         <Style x:Key="HeaderStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="30"/>

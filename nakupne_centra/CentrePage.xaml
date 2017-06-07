@@ -38,13 +38,13 @@
                     <Border x:Name="Logo" Grid.Row="0" Grid.Column="0" Background="{Binding LogoColor}">
                         <Image Source="{Binding LogoRect}"/>
                     </Border>
-                    <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="ButtonStores_Click">
+                    <Button x:Name="ButtonStores" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="ButtonStores_Click">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Shop"/>
                             <TextBlock x:Uid="Stores" Margin="10,0,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Background="AliceBlue" VerticalAlignment="Stretch" Click="MapButtonClick">
+                    <Button x:Name="ButtonMap" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="MapButtonClick">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="Map"/>
                             <TextBlock x:Uid="Map" Margin="10,0,0,0"/>

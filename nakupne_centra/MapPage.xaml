@@ -64,10 +64,15 @@
             <Viewbox>
                 <Grid>
                     <Image x:Name="Map" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{Binding Map}" ImageOpened="Map_ImageOpened"/>
-                    <TextBlock Visibility="{Binding StorePositionVisibility}" Text="{Binding SelectedStore.Name}"  FontSize="20" TextAlignment="Center" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesTextConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Border Background="White" BorderThickness="1" BorderBrush="Black" Visibility="{Binding StorePositionVisibility}" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesTextConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Margin="3,1" Text="{Binding SelectedStore.Name}" FontSize="20" VerticalAlignment="Center"/>
+                    </Border>
                     <Image x:Name="StorePosition" Visibility="{Binding StorePositionVisibility}" Margin="{Binding StorePosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPinIcon}"/>
+
                     <Border Margin="0,20,0,0">
-                        <TextBlock Visibility="{Binding YourPositionVisibility}" x:Uid="You" FontSize="20" TextAlignment="Center" Margin="{Binding YourPosition, Converter={StaticResource CoordinatesTextConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Border Background="White" BorderThickness="1" BorderBrush="Black" Visibility="{Binding YourPositionVisibility}" Margin="{Binding YourPosition, Converter={StaticResource CoordinatesTextConverter}}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <TextBlock Margin="3,1" x:Uid="You" FontSize="20" VerticalAlignment="Center"/>
+                        </Border>
                     </Border>
                     <Image x:Name="YourPosition" Visibility="{Binding YourPositionVisibility}" Margin="{Binding YourPosition, Converter={StaticResource CoordinatesConverter}}" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="{StaticResource MapPin2Icon}"/>
                 </Grid>

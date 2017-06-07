@@ -12,7 +12,7 @@ namespace nakupne_centra.Converters
                 string[] coords = (value as string).Split(',');
                 double x = Double.Parse(coords[0]);
                 double y = Double.Parse(coords[1]);
-                return (x - 20) + "," + (y - 64 - 28) + ",0,0";
+                return (x - 20) + "," + (y - 64 - 40) + ",0,0";
             }
             return "0";
         }
